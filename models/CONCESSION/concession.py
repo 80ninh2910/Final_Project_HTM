@@ -1,11 +1,13 @@
 class CON:
-    def __init__(self, popcorn, beverage, combo, total_price):
+    def __init__(self, popcorn,Pquantity, beverage,Bquantity, combo,Cquantity):
         self.popcorn = popcorn
         self.beverage = beverage
         self.combo = combo
-        self.total_price = total_price
-
+        self.Pquantity=Pquantity
+        self.Bquantity=Bquantity
+        self.Cquantity=Cquantity
+    def total_price(self,Pprice,Bprice,Cprice):
+        return self.Pquantity*Pprice +self.Bquantity*Bprice+self.Cquantity*Cprice
     def __str__(self):
-        return f"Order: Popcorn={self.popcorn}, Beverage={self.beverage}, Combo={self.combo}, Total Price={self.total_price}"
 
-print(CON)
+        return f"Popcorn: {self.popcorn} (Qty: {self.Pquantity}), Beverage: {self.beverage} (Qty: {self.Bquantity}), Combo: {self.combo} (Qty: {self.Cquantity})"
