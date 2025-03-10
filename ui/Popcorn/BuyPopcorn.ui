@@ -267,8 +267,8 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>888</width>
-       <height>4012</height>
+       <width>880</width>
+       <height>4022</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -553,7 +553,7 @@ QPushButton {
 </string>
           </property>
           <property name="text">
-           <string>1</string>
+           <string>0</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -685,9 +685,9 @@ QPushButton {
         <widget class="QLabel" name="label_12">
          <property name="geometry">
           <rect>
-           <x>100</x>
+           <x>60</x>
            <y>1270</y>
-           <width>121</width>
+           <width>201</width>
            <height>41</height>
           </rect>
          </property>
@@ -714,9 +714,9 @@ QPushButton {
         <widget class="QLabel" name="label_13">
          <property name="geometry">
           <rect>
-           <x>380</x>
+           <x>340</x>
            <y>1270</y>
-           <width>121</width>
+           <width>211</width>
            <height>41</height>
           </rect>
          </property>
@@ -743,9 +743,9 @@ QPushButton {
         <widget class="QLabel" name="label_14">
          <property name="geometry">
           <rect>
-           <x>660</x>
+           <x>600</x>
            <y>1270</y>
-           <width>121</width>
+           <width>241</width>
            <height>41</height>
           </rect>
          </property>
@@ -838,7 +838,7 @@ QPushButton {
 </string>
           </property>
           <property name="text">
-           <string>1</string>
+           <string>0</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -914,7 +914,7 @@ QPushButton {
 </string>
           </property>
           <property name="text">
-           <string>1</string>
+           <string>0</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -990,7 +990,7 @@ QPushButton {
 </string>
           </property>
           <property name="text">
-           <string>1</string>
+           <string>0</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -1066,7 +1066,7 @@ QPushButton {
 </string>
           </property>
           <property name="text">
-           <string>1</string>
+           <string>0</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -1076,9 +1076,9 @@ QPushButton {
         <widget class="QLabel" name="label_17">
          <property name="geometry">
           <rect>
-           <x>640</x>
+           <x>570</x>
            <y>1660</y>
-           <width>161</width>
+           <width>311</width>
            <height>41</height>
           </rect>
          </property>
@@ -1105,9 +1105,9 @@ QPushButton {
         <widget class="QLabel" name="label_18">
          <property name="geometry">
           <rect>
-           <x>380</x>
+           <x>340</x>
            <y>1660</y>
-           <width>121</width>
+           <width>201</width>
            <height>41</height>
           </rect>
          </property>
@@ -1200,7 +1200,7 @@ QPushButton {
 </string>
           </property>
           <property name="text">
-           <string>1</string>
+           <string>0</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -1332,9 +1332,9 @@ QPushButton {
         <widget class="QLabel" name="label_24">
          <property name="geometry">
           <rect>
-           <x>80</x>
+           <x>20</x>
            <y>1660</y>
-           <width>161</width>
+           <width>281</width>
            <height>41</height>
           </rect>
          </property>
@@ -1427,7 +1427,7 @@ QPushButton {
 </string>
           </property>
           <property name="text">
-           <string>1</string>
+           <string>0</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -1503,7 +1503,7 @@ QPushButton {
 </string>
           </property>
           <property name="text">
-           <string>1</string>
+           <string>0</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -1515,7 +1515,7 @@ QPushButton {
           <rect>
            <x>260</x>
            <y>740</y>
-           <width>151</width>
+           <width>161</width>
            <height>161</height>
           </rect>
          </property>
@@ -1544,7 +1544,7 @@ QPushButton {
           <rect>
            <x>670</x>
            <y>740</y>
-           <width>151</width>
+           <width>171</width>
            <height>161</height>
           </rect>
          </property>
@@ -1637,7 +1637,7 @@ color: rgb(255, 255, 255);
           <rect>
            <x>20</x>
            <y>280</y>
-           <width>281</width>
+           <width>351</width>
            <height>71</height>
           </rect>
          </property>
@@ -1666,7 +1666,7 @@ color: rgb(255, 255, 255);
           <rect>
            <x>20</x>
            <y>150</y>
-           <width>241</width>
+           <width>281</width>
            <height>101</height>
           </rect>
          </property>
@@ -1796,7 +1796,7 @@ color: rgb(255, 255, 255);
      <x>0</x>
      <y>0</y>
      <width>906</width>
-     <height>18</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
