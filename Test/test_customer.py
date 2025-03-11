@@ -22,7 +22,7 @@ for i in range(1, 101):
     Phone = random.choice(phone_prefixes) + str(random.randint(1000000, 9999999))
     Mail = CName.lower().replace(" ", "") + "@gmail.com"
     DOB = f"{random.randint(1, 28)}/{random.randint(1, 12)}/{random.randint(1960, 2005)}"
-    customers.append(Customer(CId, CName, Phone, Mail, DOB))
+    customers.append(Customer(Mail,CName, Phone))
 
 jff=JsonFileFactory()
 jff.write_data(customers,"../database/customers.json")

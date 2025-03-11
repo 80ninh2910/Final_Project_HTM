@@ -1,31 +1,31 @@
-
-import json
 import os
+import json
 
 class JsonFileFactory:
-    def write_data(self,arr_data,filename):
+    def write_data(self, arr_data, filename):
+        dir_name = os.path.dirname(filename)
+        if dir_name and not os.path.exists(dir_name):
+            os.makedirs(dir_name)
+
+        json_string = json.dumps(
+            [item.__dict__ if hasattr(item, '__dict__') else item for item in arr_data],
+            default=str, indent=4, ensure_ascii=False
+        )
+
+        with open(filename, 'w', encoding='utf-8') as json_file:
+            json_file.write(json_string or "[]")  # Nếu chuỗi JSON rỗng thì ghi "[]"
+
+    def read_data(self, filename, ClassName):
         """
-        Hàm này dùng để parse object thành jsonstring
-        :param arr_data: mảng đối tượng
-        :param filename: nơi lưu trữ jsonstring cho object
-        :return: True nếu thành công
+        Đọc file JSON và chuyển thành danh sách object.
+        :param filename: Đường dẫn file JSON.
+        :param ClassName: Lớp cần chuyển đổi dữ liệu.
+        :return: Danh sách object hoặc danh sách rỗng nếu file không tồn tại.
         """
-        json_string=json.dumps([item.__dict__ for item in arr_data],
-                               default=str,indent=4,ensure_ascii=False)
-        json_file=open(filename,'w')
-        json_file.write(json_string)
-        json_file.close()
-    def read_data(self,filename,ClassName):
-        """
-        Hàm đọc jsonstring và phục hồi lại mô hình lớp ClassName
-        với ClassName là tên lớp được chỉ định phục hồi OOP
-        :param filename:
-        :param ClassName:
-        :return:
-        """
-        if os.path.isfile(filename)==False:
-            return[]
-        file=open(filename,'r',encoding='utf-8')
-        arr_data=json.loads(file.read(),object_hook=lambda cls:ClassName(**cls))
-        file.close()
+        if not os.path.isfile(filename):
+            return []
+
+        with open(filename, 'r', encoding='utf-8') as file:
+            arr_data = json.loads(file.read(), object_hook=lambda cls: ClassName(**cls))
+
         return arr_data
