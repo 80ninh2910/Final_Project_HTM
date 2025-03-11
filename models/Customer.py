@@ -7,4 +7,4 @@ class Customer:
         self.DOB=DOB
 
     def __str__(self):
-        return f"{self.CName}\t{self.Phone}\t{self.Mail}\t{self.seats}"
+        return f"{self.CName}\t{self.Phone}\t{self.Mail}"
