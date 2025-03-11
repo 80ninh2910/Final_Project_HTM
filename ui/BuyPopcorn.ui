@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>906</width>
+    <width>901</width>
     <height>620</height>
    </rect>
   </property>
@@ -54,7 +54,7 @@ color: rgb(0, 0, 0);
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../../images/ic_ticket.png</normaloff>../../images/ic_ticket.png</iconset>
+      <normaloff>../images/ic_ticket.png</normaloff>../images/ic_ticket.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -266,9 +266,9 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>0</y>
-       <width>880</width>
-       <height>4022</height>
+       <y>-1471</y>
+       <width>888</width>
+       <height>4012</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -355,7 +355,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
           <enum>Qt::AutoText</enum>
          </property>
          <property name="pixmap">
-          <pixmap>../../images/solo.png</pixmap>
+          <pixmap>../images/solo.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -377,7 +377,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../../images/couple.png</pixmap>
+          <pixmap>../images/couple.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -611,7 +611,7 @@ QPushButton {
           <enum>Qt::AutoText</enum>
          </property>
          <property name="pixmap">
-          <pixmap>../../images/coke.png</pixmap>
+          <pixmap>../images/coke.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -642,7 +642,7 @@ QPushButton {
           <enum>Qt::AutoText</enum>
          </property>
          <property name="pixmap">
-          <pixmap>../../images/sprite.png</pixmap>
+          <pixmap>../images/sprite.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -673,7 +673,7 @@ QPushButton {
           <enum>Qt::AutoText</enum>
          </property>
          <property name="pixmap">
-          <pixmap>../../images/fanta.jpg</pixmap>
+          <pixmap>../images/fanta.jpg</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -1239,9 +1239,9 @@ QPushButton {
         <widget class="QLabel" name="label_21">
          <property name="geometry">
           <rect>
-           <x>70</x>
+           <x>60</x>
            <y>1440</y>
-           <width>181</width>
+           <width>211</width>
            <height>221</height>
           </rect>
          </property>
@@ -1258,7 +1258,7 @@ QPushButton {
           <enum>Qt::AutoText</enum>
          </property>
          <property name="pixmap">
-          <pixmap>../../images/org.jpg</pixmap>
+          <pixmap>../images/org.jpg</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -1270,9 +1270,9 @@ QPushButton {
         <widget class="QLabel" name="label_22">
          <property name="geometry">
           <rect>
-           <x>350</x>
+           <x>340</x>
            <y>1440</y>
-           <width>181</width>
+           <width>211</width>
            <height>221</height>
           </rect>
          </property>
@@ -1289,7 +1289,7 @@ QPushButton {
           <enum>Qt::AutoText</enum>
          </property>
          <property name="pixmap">
-          <pixmap>../../images/cheese.webp</pixmap>
+          <pixmap>../images/cheese.webp</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -1320,7 +1320,7 @@ QPushButton {
           <enum>Qt::AutoText</enum>
          </property>
          <property name="pixmap">
-          <pixmap>../../images/caramel.jpg</pixmap>
+          <pixmap>../images/caramel.jpg</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -1581,7 +1581,7 @@ QPushButton {
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../../images/pop.jpg</pixmap>
+          <pixmap>../images/pop.jpg</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -1600,7 +1600,7 @@ QPushButton {
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../../images/crunch.jpg</pixmap>
+          <pixmap>../images/crunch.jpg</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -1684,7 +1684,7 @@ color: rgb(255, 255, 255);
     border: none</string>
          </property>
          <property name="text">
-          <string>Food &amp; Drink at AMC</string>
+          <string>Food &amp; Drink at GFilx</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -1713,7 +1713,7 @@ color: rgb(255, 255, 255);
     border: none</string>
          </property>
          <property name="text">
-          <string>AMC goes far beyond classic concessions like popcorn and fountain drinks to give you an absolutely appetizing experience. We're always innovating and exploring new ways to bring the best food and drinks to our theatres. Select from the options below to learn more about the menu selections, locations and special offers.</string>
+          <string>GFlix goes far beyond classic concessions like popcorn and fountain drinks to give you an absolutely appetizing experience. We're always innovating and exploring new ways to bring the best food and drinks to our theatres. Select from the options below to learn more about the menu selections, locations and special offers.</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -1777,7 +1777,7 @@ color: rgb(255, 255, 255);
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../../images/ic_popcorn.png</normaloff>../../images/ic_popcorn.png</iconset>
+      <normaloff>../images/ic_popcorn.png</normaloff>../images/ic_popcorn.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -1795,8 +1795,8 @@ color: rgb(255, 255, 255);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>906</width>
-     <height>26</height>
+     <width>901</width>
+     <height>18</height>
     </rect>
    </property>
   </widget>

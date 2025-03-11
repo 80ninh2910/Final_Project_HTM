@@ -1,4 +1,4 @@
-# Form implementation generated from reading uifile 'D:\UEL\UEL\PROGRAMMING TECHNIQUES\MIDTERM\ui\Main\Main.ui'
+# Form implementation generated from reading ui file 'D:\UEL\UEL\PROGRAMMING TECHNIQUES\MIDTERM\ui\Main.ui'
 #
 # Created by: PyQt6 UI code generator 6.7.1
 #
@@ -12,6 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
+        MainWindow.setWindowModality(QtCore.Qt.WindowModality.ApplicationModal)
         MainWindow.resize(1000, 600)
         font = QtGui.QFont()
         font.setPointSize(12)
@@ -36,7 +37,7 @@ class Ui_MainWindow(object):
 "    border-radius: 10px;\n"
 "    padding: 5px")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("D:\\UEL\\UEL\\PROGRAMMING TECHNIQUES\\MIDTERM\\ui\\Main\\../../images/ic_ticket.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon.addPixmap(QtGui.QPixmap("D:\\UEL\\UEL\\PROGRAMMING TECHNIQUES\\MIDTERM\\ui\\../images/ic_ticket.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButtonTicket.setIcon(icon)
         self.pushButtonTicket.setIconSize(QtCore.QSize(30, 30))
         self.pushButtonTicket.setObjectName("pushButtonTicket")
@@ -53,7 +54,7 @@ class Ui_MainWindow(object):
 "    border-radius: 10px;\n"
 "    padding: 5px")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("D:\\UEL\\UEL\\PROGRAMMING TECHNIQUES\\MIDTERM\\ui\\Main\\../../images/ic_popcorn.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon1.addPixmap(QtGui.QPixmap("D:\\UEL\\UEL\\PROGRAMMING TECHNIQUES\\MIDTERM\\ui\\../images/ic_popcorn.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButtonBuyPop.setIcon(icon1)
         self.pushButtonBuyPop.setIconSize(QtCore.QSize(30, 30))
         self.pushButtonBuyPop.setAutoRepeatDelay(305)
@@ -70,7 +71,7 @@ class Ui_MainWindow(object):
 "color: rgb(255, 255, 255);\n"
 "    border: none")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("D:\\UEL\\UEL\\PROGRAMMING TECHNIQUES\\MIDTERM\\ui\\Main\\../../images/ic_lg.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon2.addPixmap(QtGui.QPixmap("D:\\UEL\\UEL\\PROGRAMMING TECHNIQUES\\MIDTERM\\ui\\../images/ic_lg.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButtonSignIn.setIcon(icon2)
         self.pushButtonSignIn.setIconSize(QtCore.QSize(30, 30))
         self.pushButtonSignIn.setCheckable(False)
@@ -93,7 +94,7 @@ class Ui_MainWindow(object):
 "    border: none")
         self.pushButton_3.setText("")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("D:\\UEL\\UEL\\PROGRAMMING TECHNIQUES\\MIDTERM\\ui\\Main\\../../images/logoreal.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon3.addPixmap(QtGui.QPixmap("D:\\UEL\\UEL\\PROGRAMMING TECHNIQUES\\MIDTERM\\ui\\../images/logoreal.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButton_3.setIcon(icon3)
         self.pushButton_3.setIconSize(QtCore.QSize(100, 100))
         self.pushButton_3.setObjectName("pushButton_3")
@@ -249,18 +250,18 @@ class Ui_MainWindow(object):
         self.page = QtWidgets.QWidget()
         self.page.setObjectName("page")
         self.label_2 = QtWidgets.QLabel(parent=self.page)
-        self.label_2.setGeometry(QtCore.QRect(0, 0, 751, 241))
+        self.label_2.setGeometry(QtCore.QRect(0, 0, 751, 261))
         self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap("D:\\UEL\\UEL\\PROGRAMMING TECHNIQUES\\MIDTERM\\ui\\Main\\../../images/nhagiat.jpg"))
+        self.label_2.setPixmap(QtGui.QPixmap("D:\\UEL\\UEL\\PROGRAMMING TECHNIQUES\\MIDTERM\\ui\\../images/nhagiat.jpg"))
         self.label_2.setScaledContents(True)
         self.label_2.setObjectName("label_2")
         self.stackedWidget.addWidget(self.page)
         self.page_2 = QtWidgets.QWidget()
         self.page_2.setObjectName("page_2")
         self.label = QtWidgets.QLabel(parent=self.page_2)
-        self.label.setGeometry(QtCore.QRect(0, 0, 751, 231))
+        self.label.setGeometry(QtCore.QRect(0, 0, 751, 241))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("D:\\UEL\\UEL\\PROGRAMMING TECHNIQUES\\MIDTERM\\ui\\Main\\../../images/quynhaptrang.jpg"))
+        self.label.setPixmap(QtGui.QPixmap("D:\\UEL\\UEL\\PROGRAMMING TECHNIQUES\\MIDTERM\\ui\\../images/quynhaptrang.jpg"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.stackedWidget.addWidget(self.page_2)
@@ -278,24 +279,24 @@ class Ui_MainWindow(object):
         self.label_3.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_3.setObjectName("label_3")
         self.label_4 = QtWidgets.QLabel(parent=self.frame)
-        self.label_4.setGeometry(QtCore.QRect(60, 340, 221, 301))
+        self.label_4.setGeometry(QtCore.QRect(60, 330, 221, 311))
         self.label_4.setFrameShadow(QtWidgets.QFrame.Shadow.Sunken)
         self.label_4.setText("")
         self.label_4.setTextFormat(QtCore.Qt.TextFormat.AutoText)
-        self.label_4.setPixmap(QtGui.QPixmap("D:\\UEL\\UEL\\PROGRAMMING TECHNIQUES\\MIDTERM\\ui\\Main\\../../images/quy-nhap-trang-poster.webp"))
+        self.label_4.setPixmap(QtGui.QPixmap("D:\\UEL\\UEL\\PROGRAMMING TECHNIQUES\\MIDTERM\\ui\\../images/quy-nhap-trang-poster.webp"))
         self.label_4.setScaledContents(True)
         self.label_4.setWordWrap(False)
         self.label_4.setObjectName("label_4")
         self.label_5 = QtWidgets.QLabel(parent=self.frame)
-        self.label_5.setGeometry(QtCore.QRect(370, 340, 231, 301))
+        self.label_5.setGeometry(QtCore.QRect(370, 330, 231, 311))
         self.label_5.setText("")
-        self.label_5.setPixmap(QtGui.QPixmap("D:\\UEL\\UEL\\PROGRAMMING TECHNIQUES\\MIDTERM\\ui\\Main\\../../images/nha-gia-tien-sneak.webp"))
+        self.label_5.setPixmap(QtGui.QPixmap("D:\\UEL\\UEL\\PROGRAMMING TECHNIQUES\\MIDTERM\\ui\\../images/nha-gia-tien-sneak.webp"))
         self.label_5.setScaledContents(True)
         self.label_5.setObjectName("label_5")
         self.label_6 = QtWidgets.QLabel(parent=self.frame)
-        self.label_6.setGeometry(QtCore.QRect(700, 340, 221, 301))
+        self.label_6.setGeometry(QtCore.QRect(700, 330, 221, 311))
         self.label_6.setText("")
-        self.label_6.setPixmap(QtGui.QPixmap("D:\\UEL\\UEL\\PROGRAMMING TECHNIQUES\\MIDTERM\\ui\\Main\\../../images/little-emma.webp"))
+        self.label_6.setPixmap(QtGui.QPixmap("D:\\UEL\\UEL\\PROGRAMMING TECHNIQUES\\MIDTERM\\ui\\../images/little-emma.webp"))
         self.label_6.setScaledContents(True)
         self.label_6.setObjectName("label_6")
         self.label_7 = QtWidgets.QLabel(parent=self.frame)
@@ -353,7 +354,7 @@ class Ui_MainWindow(object):
 "color: rgb(255, 255, 255);\n"
 "    border: none")
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("D:\\UEL\\UEL\\PROGRAMMING TECHNIQUES\\MIDTERM\\ui\\Main\\../../images/ic_trailer.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon4.addPixmap(QtGui.QPixmap("D:\\UEL\\UEL\\PROGRAMMING TECHNIQUES\\MIDTERM\\ui\\../images/ic_trailer.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButton_10.setIcon(icon4)
         self.pushButton_10.setIconSize(QtCore.QSize(20, 20))
         self.pushButton_10.setObjectName("pushButton_10")
@@ -474,7 +475,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "HOME"))
         self.pushButtonTicket.setText(_translate("MainWindow", "BUY TICKETS"))
         self.pushButtonBuyPop.setText(_translate("MainWindow", "BUY POPCORN"))
         self.pushButtonSignIn.setText(_translate("MainWindow", "Sign in"))

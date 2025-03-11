@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -18,7 +21,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>HOME</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(15, 23, 42);
@@ -54,7 +57,7 @@ color: rgb(0, 0, 0);
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../../images/ic_ticket.png</normaloff>../../images/ic_ticket.png</iconset>
+      <normaloff>../images/ic_ticket.png</normaloff>../images/ic_ticket.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -91,7 +94,7 @@ color: rgb(255, 255, 255);
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../../images/ic_popcorn.png</normaloff>../../images/ic_popcorn.png</iconset>
+      <normaloff>../images/ic_popcorn.png</normaloff>../images/ic_popcorn.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -130,7 +133,7 @@ color: rgb(255, 255, 255);
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../../images/ic_lg.png</normaloff>../../images/ic_lg.png</iconset>
+      <normaloff>../images/ic_lg.png</normaloff>../images/ic_lg.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -186,7 +189,7 @@ color: rgb(0, 0, 0);
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../../images/logoreal.png</normaloff>../../images/logoreal.png</iconset>
+      <normaloff>../images/logoreal.png</normaloff>../images/logoreal.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -446,14 +449,14 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
              <x>0</x>
              <y>0</y>
              <width>751</width>
-             <height>241</height>
+             <height>261</height>
             </rect>
            </property>
            <property name="text">
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap>../../images/nhagiat.jpg</pixmap>
+            <pixmap>../images/nhagiat.jpg</pixmap>
            </property>
            <property name="scaledContents">
             <bool>true</bool>
@@ -467,14 +470,14 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
              <x>0</x>
              <y>0</y>
              <width>751</width>
-             <height>231</height>
+             <height>241</height>
             </rect>
            </property>
            <property name="text">
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap>../../images/quynhaptrang.jpg</pixmap>
+            <pixmap>../images/quynhaptrang.jpg</pixmap>
            </property>
            <property name="scaledContents">
             <bool>true</bool>
@@ -515,9 +518,9 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
          <property name="geometry">
           <rect>
            <x>60</x>
-           <y>340</y>
+           <y>330</y>
            <width>221</width>
-           <height>301</height>
+           <height>311</height>
           </rect>
          </property>
          <property name="frameShadow">
@@ -530,7 +533,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
           <enum>Qt::AutoText</enum>
          </property>
          <property name="pixmap">
-          <pixmap>../../images/quy-nhap-trang-poster.webp</pixmap>
+          <pixmap>../images/quy-nhap-trang-poster.webp</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -543,16 +546,16 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
          <property name="geometry">
           <rect>
            <x>370</x>
-           <y>340</y>
+           <y>330</y>
            <width>231</width>
-           <height>301</height>
+           <height>311</height>
           </rect>
          </property>
          <property name="text">
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../../images/nha-gia-tien-sneak.webp</pixmap>
+          <pixmap>../images/nha-gia-tien-sneak.webp</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -562,16 +565,16 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
          <property name="geometry">
           <rect>
            <x>700</x>
-           <y>340</y>
+           <y>330</y>
            <width>221</width>
-           <height>301</height>
+           <height>311</height>
           </rect>
          </property>
          <property name="text">
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../../images/little-emma.webp</pixmap>
+          <pixmap>../images/little-emma.webp</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -695,7 +698,7 @@ color: rgb(255, 255, 255);
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../images/ic_trailer.png</normaloff>../../images/ic_trailer.png</iconset>
+           <normaloff>../images/ic_trailer.png</normaloff>../images/ic_trailer.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -816,7 +819,7 @@ color: rgb(255, 255, 255);
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../images/ic_trailer.png</normaloff>../../images/ic_trailer.png</iconset>
+           <normaloff>../images/ic_trailer.png</normaloff>../images/ic_trailer.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -856,7 +859,7 @@ color: rgb(255, 255, 255);
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../images/ic_trailer.png</normaloff>../../images/ic_trailer.png</iconset>
+           <normaloff>../images/ic_trailer.png</normaloff>../images/ic_trailer.png</iconset>
          </property>
          <property name="iconSize">
           <size>
