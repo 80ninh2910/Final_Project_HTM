@@ -1,28 +1,22 @@
 import random
+import string
 
 from libs.JSON_File_Factory import JsonFileFactory
 from models.Customer import Customer
 
-names = [
-    "Nguyen Van An", "Tran Thi Bich", "Le Minh Duc", "Pham Thao Nhi", "Hoang Gia Huy",
-    "Do Hoang Nam", "Bui Huu Phuoc", "Vu Hai Yen", "Ngo Thanh Tung", "Duong Quynh Anh",
-    "Phan Khanh Linh", "Ly Dinh Bao", "Ta Hong Nhung", "Dinh Trong Hieu", "Cao Tuan Kiet",
-    "Dang Thi Mai", "Trinh Ngoc Bao", "Ton Nu Diem My", "Ha Anh Tuan", "Lam Chi Thanh",
-    "Phung Bao Chau", "Hua Ngoc Tram", "Kieu Minh Tuan", "Tong Thao Vi", "Chau Ngoc Bich"
-]
-
-
-phone_prefixes = ["090", "091", "092", "093", "094", "096", "097", "098", "099", "032", "033", "034", "035", "036", "037", "038", "039"]
-
+name_parts = ["cool", "funny", "happy", "chill", "epic", "wild", "crazy", "swift", "fierce", "lucky"]
+chars = string.ascii_lowercase + string.digits
 
 customers = []
 for i in range(1, 101):
     CId = f"{i:04d}"
-    CName = random.choice(names)
-    Phone = random.choice(phone_prefixes) + str(random.randint(1000000, 9999999))
-    Mail = CName.lower().replace(" ", "") + "@gmail.com"
-    DOB = f"{random.randint(1, 28)}/{random.randint(1, 12)}/{random.randint(1960, 2005)}"
-    customers.append(Customer(Mail,CName, Phone))
+    name=random.choice(name_parts)
+    email = f"{name}{CId}@gmail.com"
+    username = name + str(random.randint(10, 99))
+    password = ''.join(random.sample(chars, 6))
+    customers.append(Customer(CId, email, username, password))
 
+for customer in customers:
+    print(customer)
 jff=JsonFileFactory()
-jff.write_data(customers,"../database/customers.json")
+jff.write_data(customers,"../database/Customers.json")
