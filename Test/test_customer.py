@@ -9,12 +9,11 @@ chars = string.ascii_lowercase + string.digits
 
 customers = []
 for i in range(1, 101):
-    CId = f"{i:04d}"
     name=random.choice(name_parts)
-    email = f"{name}{CId}@gmail.com"
+    email = f"{name}@gmail.com"
     username = name + str(random.randint(10, 99))
     password = ''.join(random.sample(chars, 6))
-    customers.append(Customer(CId, email, username, password))
+    customers.append(Customer(email, username, password))
 
 for customer in customers:
     print(customer)
