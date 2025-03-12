@@ -8,5 +8,5 @@ class Showtime:
         self.Theater=Theater
 
     def __str__(self):
-        return f"{self.Movie.MTitle}\t{self.Theater.ThId}\t{self.time}\t{self.seats}"
+        return f"{self.Movie}\t{self.Theater}\t{self.time}\t{self.seats}"
 
