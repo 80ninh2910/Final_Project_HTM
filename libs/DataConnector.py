@@ -16,7 +16,7 @@ class DataConnector:
         self.get_data()
     def get_data(self):
         jff=JsonFileFactory()
-        self.cus=jff.read_data("../database/customers.json",Customer)
+        self.cus=jff.read_data("../database/Customers.json",Customer)
         self.con=jff.read_data("../database/Concession.json",CON)
         self.pop=jff.read_data("../database/Popcorn.json",Popcorn)
         self.bev=jff.read_data("../database/Beverage.json",Beverage)
@@ -26,4 +26,5 @@ class DataConnector:
             if c.username==username and c.password==pw:
                 return c
         return None
+
 
