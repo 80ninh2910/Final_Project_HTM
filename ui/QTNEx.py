@@ -10,9 +10,10 @@ class QTNEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.widgetseat.setVisible(False)
 
         # Gán sự kiện cho các button chọn giờ (đúng với file QNT.py)
-        self.pushButtonhcm_9.clicked.connect(lambda: self.select_showtime("HCM1"))
-        self.pushButtonUel_9.clicked.connect(lambda: self.select_showtime("UEL1"))
-
+        self.pushButtonhcm_9.clicked.connect(lambda: self.select_showtime_hcm("HCM1"))
+        self.pushButtonUel_9.clicked.connect(lambda: self.select_showtime_uel("UEL1"))
+        self.comboBoxSelect2.currentTextChanged.connect(self.show_theater)
+        self.comboBoxSelect1.currentTextChanged.connect(self.show_theater)
 
         # Tạo ghế động trong widgetseat
         self.create_seat_buttons()
@@ -24,8 +25,19 @@ class QTNEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.labelTotal.setVisible(False)
         self.pushButtoncf.setVisible(False)  # Ẩn ban đầu
         self.pushButtoncf.clicked.connect(self.confirm_seats)
+    def show_theater(self,text):
+        self.comboBoxSelect2.setCurrentText(text)
+        self.comboBoxSelect1.setCurrentText(text)
+        if text=="ALL THEATER":
+            self.widgethcm.setVisible(True)
+            self.widgetuel.setVisible(True)
+        elif text=="UEL":
+            self.widgethcm.setVisible(False)
+            self.widgetuel.setVisible(True)
+        else:
+            self.widgetuel.setVisible(False)
+            self.widgethcm.setVisible(True)
     def create_seat_buttons(self):
-        """Tạo ghế động trong màn hình chọn ghế"""
         grid_layout = QtWidgets.QGridLayout(self.widgetseat)
         self.selected_seats = set()
         rows, cols = 4, 5  # Số hàng và số cột ghế
@@ -39,13 +51,15 @@ class QTNEx(QtWidgets.QMainWindow, Ui_MainWindow):
                 btn.clicked.connect(lambda checked, b=btn: self.toggle_seat(b))
                 grid_layout.addWidget(btn, row, col)
 
-    def select_showtime(self, theater):
+    def select_showtime_uel(self, theater):
         """Ẩn rạp còn lại và mở màn hình chọn ghế"""
-        self.widgethcm.setVisible(theater == "HCM1")
-
-        self.widgetuel.setVisible(theater == "UEL1")
-
-
+        self.widgethcm.setVisible(False)
+        self.widgetseat.setVisible(True)  # Hiện màn hình chọn ghế
+        self.pushButtoncf.setVisible(True)  # Hiện nút xác nhận ghế
+        self.labelTotal.setVisible(True)
+    def select_showtime_hcm(self, theater):
+        """Ẩn rạp còn lại và mở màn hình chọn ghế"""
+        self.widgetuel.setVisible(False)
         self.widgetseat.setVisible(True)  # Hiện màn hình chọn ghế
         self.pushButtoncf.setVisible(True)  # Hiện nút xác nhận ghế
         self.labelTotal.setVisible(True)

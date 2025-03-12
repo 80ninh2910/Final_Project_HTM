@@ -20,7 +20,7 @@ class CinemaBooking(QtWidgets.QWidget):
         self.cinema_combo = QtWidgets.QComboBox()
         self.cinema_combo.addItem("Chọn rạp")  # Mục mặc định
         self.cinema_combo.addItems(["Cinestar Quoc Thanh", "Cinestar Hai Ba Trung"])
-        self.cinema_combo.currentIndexChanged.connect(self.show_seat_selection)
+        self.cinema_combo.currentTextChanged.connect(self.show_seat_selection)
         self.layout.addWidget(self.cinema_combo)
         self.cinema_combo.hide()  # Ẩn ban đầu
 
@@ -62,10 +62,12 @@ class CinemaBooking(QtWidgets.QWidget):
         """Hiển thị danh sách rạp khi chọn giờ chiếu"""
         self.cinema_combo.show()
 
-    def show_seat_selection(self):
+    def show_seat_selection(self, text):
+
         """Hiển thị màn hình chọn ghế khi chọn rạp"""
-        if self.cinema_combo.currentIndex() > 0:  # Chỉ mở nếu chọn rạp hợp lệ
+        if text=="Cinestar Quoc Thanh":  # Chỉ mở nếu chọn rạp hợp lệ
             self.seat_selection.show()
+            return
 
     def select_seat(self, seat_name, checked):
         """Cập nhật danh sách ghế khi chọn"""

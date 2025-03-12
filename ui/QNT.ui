@@ -317,7 +317,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-1020</y>
+       <y>-593</y>
        <width>988</width>
        <height>1812</height>
       </rect>
@@ -1248,6 +1248,145 @@ color: rgb(0, 0, 0);
           </size>
          </property>
         </widget>
+        <widget class="QLabel" name="labelusn">
+         <property name="geometry">
+          <rect>
+           <x>310</x>
+           <y>1530</y>
+           <width>181</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">    border-radius: 10px;
+background-color: rgb(105, 0, 157);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="labelPhone">
+         <property name="geometry">
+          <rect>
+           <x>600</x>
+           <y>1530</y>
+           <width>181</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">    border-radius: 10px;
+background-color: rgb(105, 0, 157);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_14">
+         <property name="geometry">
+          <rect>
+           <x>220</x>
+           <y>1530</y>
+           <width>91</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bahnschrift Condensed</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>username:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_15">
+         <property name="geometry">
+          <rect>
+           <x>500</x>
+           <y>1530</y>
+           <width>91</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bahnschrift Condensed</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Phone :</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="comboBoxSelect2">
+         <property name="geometry">
+          <rect>
+           <x>220</x>
+           <y>650</y>
+           <width>81</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bahnschrift Condensed</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border:none
+</string>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QComboBox::AdjustToContents</enum>
+         </property>
+         <item>
+          <property name="text">
+           <string>ALL THEATER</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>UEL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>HỒ CHÍ MINH</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Comming...soom</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+        </widget>
        </widget>
       </item>
      </layout>
@@ -1280,7 +1419,7 @@ color: rgb(0, 0, 0);
      <rect>
       <x>10</x>
       <y>70</y>
-      <width>86</width>
+      <width>81</width>
       <height>16</height>
      </rect>
     </property>
@@ -1301,7 +1440,7 @@ color: rgb(0, 0, 0);
     </property>
     <item>
      <property name="text">
-      <string>SELECT THEATER   </string>
+      <string>ALL THEATER</string>
      </property>
     </item>
     <item>
