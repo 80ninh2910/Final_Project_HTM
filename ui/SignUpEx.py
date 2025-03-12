@@ -18,7 +18,7 @@ class SignUpEx(QtWidgets.QMainWindow, Ui_MainWindow):
 
         # Khởi tạo JsonFileFactory để quản lý dữ liệu người dùng
         self.jff = JsonFileFactory()
-        self.customer_file = "../database/customers.json"
+        self.customer_file = "../database/Customers.json"
 
     def show_message(self, title, text):
         """Hiển thị hộp thoại cảnh báo"""
