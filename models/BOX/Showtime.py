@@ -1,4 +1,3 @@
-
 class Showtime:
     def __init__(self, SId, Movie, Theater, time, seats):
         self.SId = SId

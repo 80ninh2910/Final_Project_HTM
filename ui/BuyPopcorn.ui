@@ -266,9 +266,9 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>0</y>
-       <width>880</width>
-       <height>4022</height>
+       <y>-1664</y>
+       <width>888</width>
+       <height>4012</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -277,7 +277,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
         <property name="minimumSize">
          <size>
           <width>100</width>
-          <height>4000</height>
+          <height>3000</height>
          </size>
         </property>
         <property name="font">
@@ -1722,6 +1722,25 @@ color: rgb(255, 255, 255);
           <bool>true</bool>
          </property>
         </widget>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>1800</y>
+           <width>881</width>
+           <height>181</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bahnschrift Condensed</family>
+           <pointsize>20</pointsize>
+          </font>
+         </property>
+         <property name="title">
+          <string>TOTAL:</string>
+         </property>
+        </widget>
        </widget>
       </item>
      </layout>
@@ -1796,7 +1815,7 @@ color: rgb(255, 255, 255);
      <x>0</x>
      <y>0</y>
      <width>901</width>
-     <height>26</height>
+     <height>18</height>
     </rect>
    </property>
   </widget>
