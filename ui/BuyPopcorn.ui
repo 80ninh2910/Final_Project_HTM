@@ -266,9 +266,9 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-1471</y>
-       <width>888</width>
-       <height>4012</height>
+       <y>0</y>
+       <width>880</width>
+       <height>4022</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -1796,7 +1796,7 @@ color: rgb(255, 255, 255);
      <x>0</x>
      <y>0</y>
      <width>901</width>
-     <height>18</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
