@@ -19,7 +19,6 @@ class MainEx(QMainWindow, Ui_MainWindow):
         self.pushButtonTrlQNT.clicked.connect(self.open_youtube_videoQNT)
         self.pushButtonTrlNGT.clicked.connect(self.open_youtube_videoNGT)
         self.pushButtonTrEmma.clicked.connect(self.open_youtube_videoEmma)
-        self.pushButtonSignIn.clicked.connect(self.signin)
     def showWindow(self):
         self.show()
 

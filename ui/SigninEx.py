@@ -14,7 +14,7 @@ class SignInEx(QtWidgets.QMainWindow, Ui_MainWindow):
         username_or_email = self.lineEdit_2.text().strip()
         password = self.lineEdit_3.text().strip()
 
-        user_file = "../database/customers.json"
+        user_file = "../database/Customers.json"
         if not os.path.exists(user_file):
             QtWidgets.QMessageBox.warning(self, "Lỗi", "Không tìm thấy dữ liệu người dùng! Hãy đăng ký.")
             self.open_register_window()
@@ -33,20 +33,24 @@ class SignInEx(QtWidgets.QMainWindow, Ui_MainWindow):
             return
 
         # Kiểm tra tài khoản
-        for user in customers:
-            if (user.email == username_or_email for user in customers )or (user.username == username_or_email for user in customers) and user.password ==password:
-                msg = QtWidgets.QMessageBox(self)
-                msg.setIcon(QtWidgets.QMessageBox.Icon.Information)
-                msg.setWindowTitle("Thành công")
-                msg.setText("Đăng nhập thành công!")
-                msg.setStyleSheet("QLabel{ color: black; } QWidget{ background-color: white; }")
-                msg.exec()
-                self.home()  # Gọi màn hình Main
-                return
+        valid_user = any(
+            (user.get("email") == username_or_email or user.get("username") == username_or_email)
+            and user.get("password") == password
+            for user in customers
+        )
 
-        # Nếu không tìm thấy tài khoản, chuyển sang đăng ký
-        QtWidgets.QMessageBox.warning(self, "Lỗi", "Tài khoản không tồn tại! Vui lòng đăng ký.")
-        self.open_register_window()
+        if valid_user:
+            msg = QtWidgets.QMessageBox(self)
+            msg.setIcon(QtWidgets.QMessageBox.Icon.Information)
+            msg.setWindowTitle("Thành công")
+            msg.setText("Đăng nhập thành công!")
+            msg.setStyleSheet("QLabel{ color: black; } QWidget{ background-color: white; }")
+            msg.exec()
+            self.home()  # Gọi màn hình Main
+        else:
+            # Nếu không tìm thấy tài khoản, hiển thị lỗi và yêu cầu đăng ký
+            QtWidgets.QMessageBox.warning(self, "Lỗi",
+                                          "Tài khoản không tồn tại hoặc sai mật khẩu! Vui lòng kiểm tra lại.")
 
     def open_register_window(self):
         from ui.SignUpEx import SignUpEx
