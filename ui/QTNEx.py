@@ -1,6 +1,8 @@
 from PyQt6 import QtWidgets, uic
 
 from libs.DataConnector import DataConnector
+from ui.BuyPopcornEx import BuyPopcornEx
+
 from ui.QNT import Ui_MainWindow
 
 class QTNEx(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -28,7 +30,8 @@ class QTNEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.labelTotal.setVisible(False)
         self.pushButtoncf.setVisible(False)  # Ẩn ban đầu
         self.pushButtoncf.clicked.connect(self.confirm_seats)
-
+        self.pushButtonHome.clicked.connect(self.home)
+        self.pushButtonBuyPop.clicked.connect(self.buypop)
         self.displaymovie()
     def show_theater(self,text):
         self.comboBoxSelect2.setCurrentText(text)
@@ -102,8 +105,17 @@ class QTNEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.labelType.setText(movie.MType)
         self.labelDu.setText(movie.dur)
         self.labelDes.setText(movie.des)
+    def home(self):
+        from ui.MainEx import MainEx
+        self.mainwindow = MainEx()
 
+        self.mainwindow.show()
+        self.close()
+    def buypop(self):
+        self.popmainwindow = BuyPopcornEx()
 
+        self.popmainwindow.show()
+        self.close()
 # Chạy ứng dụng
 if __name__ == "__main__":
     import sys

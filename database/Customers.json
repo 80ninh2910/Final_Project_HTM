@@ -505,8 +505,18 @@
         "password": "1"
     },
     {
+        "email": "duc@gmail.com",
+        "username": "ducbumbum",
+        "password": "123"
+    },
+    {
         "email": "ninhcotu@gmail.com",
         "username": "ninhchebim",
+        "password": "123"
+    },
+    {
+        "email": "ngozthanh@gmail.com",
+        "username": "ngo.thanhh",
         "password": "123"
     }
 ]

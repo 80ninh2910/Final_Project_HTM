@@ -18,15 +18,6 @@ class SignInEx(QtWidgets.QMainWindow, Ui_MainWindow):
         password = self.lineEdit_3.text().strip()
 
         valid_user=self.dc.login(username_or_email,password)
-        if not os.path.exists(self.dc.cus):
-            QtWidgets.QMessageBox.warning(self, "Lỗi", "Không tìm thấy dữ liệu người dùng! Hãy đăng ký.")
-            self.open_register_window()
-            return
-
-
-
-        # Kiểm tra tài khoản
-
 
         if valid_user:
             msg = QtWidgets.QMessageBox(self)

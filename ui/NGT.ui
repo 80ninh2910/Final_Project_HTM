@@ -318,8 +318,8 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>980</width>
-       <height>1822</height>
+       <width>988</width>
+       <height>1812</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -1265,8 +1265,8 @@ QPushButton:pressed {
           <rect>
            <x>210</x>
            <y>640</y>
-           <width>134</width>
-           <height>26</height>
+           <width>86</width>
+           <height>16</height>
           </rect>
          </property>
          <property name="font">
@@ -1384,8 +1384,8 @@ color: rgb(0, 0, 0);
      <rect>
       <x>10</x>
       <y>70</y>
-      <width>134</width>
-      <height>26</height>
+      <width>86</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="font">
@@ -1441,7 +1441,7 @@ color: rgb(0, 0, 0);
      <x>0</x>
      <y>0</y>
      <width>1010</width>
-     <height>26</height>
+     <height>18</height>
     </rect>
    </property>
   </widget>
