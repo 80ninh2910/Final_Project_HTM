@@ -19,6 +19,7 @@ class MainEx(QMainWindow, Ui_MainWindow):
         self.pushButtonTrlQNT.clicked.connect(self.open_youtube_videoQNT)
         self.pushButtonTrlNGT.clicked.connect(self.open_youtube_videoNGT)
         self.pushButtonTrEmma.clicked.connect(self.open_youtube_videoEmma)
+        self.pushButtonfb.clicked.connect(self.openfb)
     def showWindow(self):
         self.show()
 
@@ -31,14 +32,15 @@ class MainEx(QMainWindow, Ui_MainWindow):
         self.close()  # Đóng cửa sổ MainEx
     #HÀM MỞ TRAILER TRÊN WEB
     def open_youtube_videoNGT(self):
-        """ Mở video trên YouTube """
         video_url = "https://www.youtube.com/watch?v=hXGozmNBwt4"
         QDesktopServices.openUrl(QUrl(video_url))
     def open_youtube_videoQNT(self):
-        """ Mở video trên YouTube """
         video_url = "https://www.youtube.com/watch?v=EB0nnm6akjA"
         QDesktopServices.openUrl(QUrl(video_url))
     def open_youtube_videoEmma(self):
-        """ Mở video trên YouTube """
         video_url = "https://www.youtube.com/watch?v=kraUpgr_IE4"
         QDesktopServices.openUrl(QUrl(video_url))
+    def openfb(self):
+        contact="https://www.facebook.com/qdinnh/"
+        QDesktopServices.openUrl(QUrl(contact))
+

@@ -57,12 +57,16 @@ class QTNEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.widgetseat.setVisible(True)  # Hiện màn hình chọn ghế
         self.pushButtoncf.setVisible(True)  # Hiện nút xác nhận ghế
         self.labelTotal.setVisible(True)
+        self.comboBoxSelect2.setCurrentText("UEL")
+        self.comboBoxSelect1.setCurrentText("UEL")
     def select_showtime_hcm(self, theater):
         """Ẩn rạp còn lại và mở màn hình chọn ghế"""
         self.widgetuel.setVisible(False)
         self.widgetseat.setVisible(True)  # Hiện màn hình chọn ghế
         self.pushButtoncf.setVisible(True)  # Hiện nút xác nhận ghế
         self.labelTotal.setVisible(True)
+        self.comboBoxSelect2.setCurrentText("HỒ CHÍ MINH")
+        self.comboBoxSelect1.setCurrentText("HỒ CHÍ MINH")
     def toggle_seat(self, btn):
         """Chọn hoặc bỏ chọn ghế"""
         seat_number = btn.text()
@@ -72,7 +76,7 @@ class QTNEx(QtWidgets.QMainWindow, Ui_MainWindow):
                 "background-color: yellow; color: black; border-radius: 10px;")  # Khi chọn, nền vàng chữ đen
         else:
             self.selected_seats.discard(seat_number)
-            btn.setStyleSheet("background-color: white; color: purple;")  # Khi bỏ chọn, nền trắng chữ tím
+            btn.setStyleSheet("background-color: white; color: purple;border-radius: 10px;")  # Khi bỏ chọn, nền trắng chữ tím
 
         # Cập nhật tổng số ghế đã chọn vào labelTotal
         self.labelTotal.setText(f"Số ghế đã chọn: {len(self.selected_seats)} | Ghế: {', '.join(self.selected_seats)}")
