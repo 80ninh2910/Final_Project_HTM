@@ -1,10 +1,13 @@
 from PyQt6 import QtWidgets, uic
+
+from libs.DataConnector import DataConnector
 from ui.QNT import Ui_MainWindow
 
 class QTNEx(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+        self.dc=DataConnector()
 
         # Ẩn màn hình chọn ghế mặc định
         self.widgetseat.setVisible(False)
@@ -19,12 +22,14 @@ class QTNEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.create_seat_buttons()
 
         # Ô hiển thị tổng số ghế đã chọn
-        self.label.setText("")  # Xóa nội dung ban đầu
+          # Xóa nội dung ban đầu
 
         # Tạo nút xác nhận ghế
         self.labelTotal.setVisible(False)
         self.pushButtoncf.setVisible(False)  # Ẩn ban đầu
         self.pushButtoncf.clicked.connect(self.confirm_seats)
+
+        self.displaymovie()
     def show_theater(self,text):
         self.comboBoxSelect2.setCurrentText(text)
         self.comboBoxSelect1.setCurrentText(text)
@@ -89,6 +94,15 @@ class QTNEx(QtWidgets.QMainWindow, Ui_MainWindow):
             self.pushButtoncf.setVisible(False)  # Ẩn nút xác nhận ghế
         else:
             QtWidgets.QMessageBox.warning(self, "Lỗi", "Vui lòng chọn ít nhất một ghế!")
+
+    def displaymovie(self):
+        for i in self.dc.movie:
+            if i.MTitle =="QUỶ NHẬP TRÀNG":
+                movie=i
+        self.labelType.setText(movie.MType)
+        self.labelDu.setText(movie.dur)
+        self.labelDes.setText(movie.des)
+
 
 # Chạy ứng dụng
 if __name__ == "__main__":
