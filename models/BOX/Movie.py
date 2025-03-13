@@ -1,6 +1,6 @@
 class Movie:
-    def __init__(self,Mname,MType,dur,des):
-        self.MTitle=Mname
+    def __init__(self,MTitle,MType,dur,des):
+        self.MTitle=MTitle
         self.MType=MType
         self.dur=dur
         self.des=des
