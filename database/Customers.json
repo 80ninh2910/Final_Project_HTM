@@ -503,5 +503,10 @@
         "email": "hi@gmail.com",
         "username": "hi123",
         "password": "1"
+    },
+    {
+        "email": "ninhcotu@gmail.com",
+        "username": "ninhchebim",
+        "password": "123"
     }
 ]

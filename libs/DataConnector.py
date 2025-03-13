@@ -21,9 +21,9 @@ class DataConnector:
         self.pop=jff.read_data("../database/Popcorn.json",Popcorn)
         self.bev=jff.read_data("../database/Beverage.json",Beverage)
         self.com=jff.read_data("../database/Combo.json",Combo)
-    def login(self,username,pw):
+    def login(self,email_username,pw):
         for c in self.cus:
-            if c.username==username and c.password==pw:
+            if (c.email==email_username or c.username==email_username) and c.password==pw:
                 return c
         return None
 

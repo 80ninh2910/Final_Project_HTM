@@ -1,43 +1,32 @@
 from PyQt6 import QtWidgets
 import os
-import json
+
 import sys
+
+from libs.DataConnector import DataConnector
 from ui.Signin import Ui_MainWindow  # Import giao diện từ Qt Designer
 
 class SignInEx(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
-        self.pushButton.clicked.connect(self.login)  # Nút "Sign In"
+        self.pushButton.clicked.connect(self.login)
+        self.dc=DataConnector()# Nút "Sign In"
 
     def login(self):
         username_or_email = self.lineEdit_2.text().strip()
         password = self.lineEdit_3.text().strip()
 
-        user_file = "../database/Customers.json"
-        if not os.path.exists(user_file):
+        valid_user=self.dc.login(username_or_email,password)
+        if not os.path.exists(self.dc.cus):
             QtWidgets.QMessageBox.warning(self, "Lỗi", "Không tìm thấy dữ liệu người dùng! Hãy đăng ký.")
             self.open_register_window()
             return
 
-        # Đọc dữ liệu từ JSON
-        customers = []
-        try:
-            with open(user_file, "r", encoding="utf-8") as f:
-                customers = json.load(f)
-        except json.JSONDecodeError as e:
-            QtWidgets.QMessageBox.warning(self, "Lỗi", f"File JSON bị lỗi định dạng: {str(e)}")
-            return
-        except Exception as e:
-            QtWidgets.QMessageBox.warning(self, "Lỗi", f"Lỗi khi đọc dữ liệu: {str(e)}")
-            return
+
 
         # Kiểm tra tài khoản
-        valid_user = any(
-            (user.get("email") == username_or_email or user.get("username") == username_or_email)
-            and user.get("password") == password
-            for user in customers
-        )
+
 
         if valid_user:
             msg = QtWidgets.QMessageBox(self)

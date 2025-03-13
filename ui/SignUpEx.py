@@ -84,7 +84,7 @@ class SignUpEx(QtWidgets.QMainWindow, Ui_MainWindow):
         msg = QtWidgets.QMessageBox(self)
         msg.setIcon(QtWidgets.QMessageBox.Icon.Information)
         msg.setWindowTitle("Thành công")
-        msg.setText("Đăng nhập thành công!")
+        msg.setText("Đăng ký thành công!")
         msg.setStyleSheet("QLabel{ color: black; } QWidget{ background-color: white; }")
         msg.exec()
 
