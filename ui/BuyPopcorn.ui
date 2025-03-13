@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>901</width>
-    <height>620</height>
+    <height>845</height>
    </rect>
   </property>
   <property name="font">
@@ -266,9 +266,9 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-1664</y>
-       <width>888</width>
-       <height>4012</height>
+       <y>-1662</y>
+       <width>880</width>
+       <height>3022</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -1722,25 +1722,6 @@ color: rgb(255, 255, 255);
           <bool>true</bool>
          </property>
         </widget>
-        <widget class="QGroupBox" name="groupBox">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>1800</y>
-           <width>881</width>
-           <height>181</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Bahnschrift Condensed</family>
-           <pointsize>20</pointsize>
-          </font>
-         </property>
-         <property name="title">
-          <string>TOTAL:</string>
-         </property>
-        </widget>
        </widget>
       </item>
      </layout>
@@ -1808,6 +1789,16 @@ color: rgb(255, 255, 255);
      <number>305</number>
     </property>
    </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>590</y>
+      <width>841</width>
+      <height>192</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -1815,7 +1806,7 @@ color: rgb(255, 255, 255);
      <x>0</x>
      <y>0</y>
      <width>901</width>
-     <height>18</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
