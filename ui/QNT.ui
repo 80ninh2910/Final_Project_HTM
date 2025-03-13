@@ -317,7 +317,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-110</y>
+       <y>-1351</y>
        <width>980</width>
        <height>1822</height>
       </rect>
