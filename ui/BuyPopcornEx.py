@@ -6,7 +6,7 @@ from ui.BuyPopcorn import Ui_MainWindow
 class BuyPopcornEx(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        self.setupUi(self)  # Gọi UI chính xác
+        self.setupUi(self)
         self.setupSignalAndSlots()
         self.mainwindow = None
 
@@ -23,6 +23,7 @@ class BuyPopcornEx(QMainWindow, Ui_MainWindow):
     def setupSignalAndSlots(self):
         self.pushButtonHome.clicked.connect(self.home)
 
+        #tang
         self.pushButton_7.clicked.connect(lambda: self.updateQuantity("Coca Cola", 1))
         self.pushButton_9.clicked.connect(lambda: self.updateQuantity("Sprite", 1))
         self.pushButton_11.clicked.connect(lambda: self.updateQuantity("Fanta", 1))
@@ -32,7 +33,7 @@ class BuyPopcornEx(QMainWindow, Ui_MainWindow):
         self.pushButton_2.clicked.connect(lambda: self.updateQuantity("Combo Solo", 1))
         self.pushButton_5.clicked.connect(lambda: self.updateQuantity("Combo Couple", 1))
 
-        # 🔹 Nút giảm số lượng sản phẩm
+        #giam
         self.pushButton_6.clicked.connect(lambda: self.updateQuantity("Coca Cola", -1))
         self.pushButton_8.clicked.connect(lambda: self.updateQuantity("Sprite", -1))
         self.pushButton_10.clicked.connect(lambda: self.updateQuantity("Fanta", -1))
@@ -81,7 +82,7 @@ class BuyPopcornEx(QMainWindow, Ui_MainWindow):
             self.labelCouple.setText(str(self.cart[product_name]["quantity"]))
 
     def updateTable(self):
-        """ Cập nhật dữ liệu vào tableWidget với dòng Total """
+
         self.tableWidget.clear()
         self.tableWidget.setRowCount(len(self.cart) + 1)  # Thêm 1 dòng cho Total
         self.tableWidget.setColumnCount(4)
