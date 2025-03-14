@@ -1,10 +1,10 @@
 [
     {
-        "CbName": "Combo Solo",
-        "CbPrice": 90000
+        "Name": "Combo Solo",
+        "Price": 90000
     },
     {
-        "CbName": "Combo Couple",
-        "CbPrice": 110000
+        "Name": "Combo Couple",
+        "Price": 110000
     }
 ]

@@ -29,5 +29,20 @@ class DataConnector:
             if (c.email==email_username or c.username==email_username) and c.password==pw:
                 return c
         return None
+    def get_product_list(self, category):
+
+        if category == "Beverage":
+            return self.bev
+        elif category == "Popcorn":
+            return self.pop
+        elif category == "Combo":
+            return self.com
+
+
+    def save_transaction(self, transaction):
+
+        self.con.append(transaction)
+        jff = JsonFileFactory()
+        jff.write_data(self.con, "Concession.json")
 
 

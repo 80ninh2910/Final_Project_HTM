@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(901, 620)
+        MainWindow.resize(901, 845)
         font = QtGui.QFont()
         font.setPointSize(12)
         font.setBold(False)
@@ -172,7 +172,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, -1664, 888, 4012))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, -1320, 880, 3022))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout.setObjectName("verticalLayout")
@@ -277,16 +277,16 @@ class Ui_MainWindow(object):
         self.pushButton_2 = QtWidgets.QPushButton(parent=self.widget)
         self.pushButton_2.setGeometry(QtCore.QRect(80, 10, 51, 20))
         self.pushButton_2.setObjectName("pushButton_2")
-        self.label = QtWidgets.QLabel(parent=self.widget)
-        self.label.setGeometry(QtCore.QRect(50, 10, 41, 21))
-        self.label.setStyleSheet("QWidget {\n"
+        self.labelSolo = QtWidgets.QLabel(parent=self.widget)
+        self.labelSolo.setGeometry(QtCore.QRect(50, 10, 41, 21))
+        self.labelSolo.setStyleSheet("QWidget {\n"
 "    background-color: rgba(127, 140, 153, 150); /* Màu xám xanh với độ trong suốt */\n"
 "    border-radius: 5px;\n"
 "    border: 2px solid rgba(46, 46, 100, 180); /* Viền xanh với độ trong suốt */border:none\n"
 "}\n"
 "")
-        self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label.setObjectName("label")
+        self.labelSolo.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.labelSolo.setObjectName("labelSolo")
         self.label_11 = QtWidgets.QLabel(parent=self.frame)
         self.label_11.setGeometry(QtCore.QRect(30, 990, 831, 51))
         font = QtGui.QFont()
@@ -392,16 +392,16 @@ class Ui_MainWindow(object):
         self.pushButton_5 = QtWidgets.QPushButton(parent=self.widget_2)
         self.pushButton_5.setGeometry(QtCore.QRect(80, 10, 51, 20))
         self.pushButton_5.setObjectName("pushButton_5")
-        self.label_2 = QtWidgets.QLabel(parent=self.widget_2)
-        self.label_2.setGeometry(QtCore.QRect(50, 10, 41, 21))
-        self.label_2.setStyleSheet("QWidget {\n"
+        self.labelCouple = QtWidgets.QLabel(parent=self.widget_2)
+        self.labelCouple.setGeometry(QtCore.QRect(50, 10, 41, 21))
+        self.labelCouple.setStyleSheet("QWidget {\n"
 "    background-color: rgba(127, 140, 153, 150); /* Màu xám xanh với độ trong suốt */\n"
 "    border-radius: 5px;\n"
 "    border: 2px solid rgba(46, 46, 100, 180); /* Viền xanh với độ trong suốt */border:none\n"
 "}\n"
 "")
-        self.label_2.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label_2.setObjectName("label_2")
+        self.labelCouple.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.labelCouple.setObjectName("labelCouple")
         self.widget_3 = QtWidgets.QWidget(parent=self.frame)
         self.widget_3.setGeometry(QtCore.QRect(90, 1310, 141, 41))
         self.widget_3.setStyleSheet("QWidget {\n"
@@ -425,16 +425,16 @@ class Ui_MainWindow(object):
         self.pushButton_7 = QtWidgets.QPushButton(parent=self.widget_3)
         self.pushButton_7.setGeometry(QtCore.QRect(80, 10, 51, 20))
         self.pushButton_7.setObjectName("pushButton_7")
-        self.label_9 = QtWidgets.QLabel(parent=self.widget_3)
-        self.label_9.setGeometry(QtCore.QRect(50, 10, 41, 21))
-        self.label_9.setStyleSheet("QWidget {\n"
+        self.labelCoke = QtWidgets.QLabel(parent=self.widget_3)
+        self.labelCoke.setGeometry(QtCore.QRect(50, 10, 41, 21))
+        self.labelCoke.setStyleSheet("QWidget {\n"
 "    background-color: rgba(127, 140, 153, 150); /* Màu xám xanh với độ trong suốt */\n"
 "    border-radius: 5px;\n"
 "    border: 2px solid rgba(46, 46, 100, 180); /* Viền xanh với độ trong suốt */border:none\n"
 "}\n"
 "")
-        self.label_9.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label_9.setObjectName("label_9")
+        self.labelCoke.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.labelCoke.setObjectName("labelCoke")
         self.widget_4 = QtWidgets.QWidget(parent=self.frame)
         self.widget_4.setGeometry(QtCore.QRect(370, 1310, 141, 41))
         self.widget_4.setStyleSheet("QWidget {\n"
@@ -458,16 +458,16 @@ class Ui_MainWindow(object):
         self.pushButton_9 = QtWidgets.QPushButton(parent=self.widget_4)
         self.pushButton_9.setGeometry(QtCore.QRect(80, 10, 51, 20))
         self.pushButton_9.setObjectName("pushButton_9")
-        self.label_15 = QtWidgets.QLabel(parent=self.widget_4)
-        self.label_15.setGeometry(QtCore.QRect(50, 10, 41, 21))
-        self.label_15.setStyleSheet("QWidget {\n"
+        self.labelSprite = QtWidgets.QLabel(parent=self.widget_4)
+        self.labelSprite.setGeometry(QtCore.QRect(50, 10, 41, 21))
+        self.labelSprite.setStyleSheet("QWidget {\n"
 "    background-color: rgba(127, 140, 153, 150); /* Màu xám xanh với độ trong suốt */\n"
 "    border-radius: 5px;\n"
 "    border: 2px solid rgba(46, 46, 100, 180); /* Viền xanh với độ trong suốt */border:none\n"
 "}\n"
 "")
-        self.label_15.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label_15.setObjectName("label_15")
+        self.labelSprite.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.labelSprite.setObjectName("labelSprite")
         self.widget_5 = QtWidgets.QWidget(parent=self.frame)
         self.widget_5.setGeometry(QtCore.QRect(650, 1310, 141, 41))
         self.widget_5.setStyleSheet("QWidget {\n"
@@ -491,16 +491,16 @@ class Ui_MainWindow(object):
         self.pushButton_11 = QtWidgets.QPushButton(parent=self.widget_5)
         self.pushButton_11.setGeometry(QtCore.QRect(80, 10, 51, 20))
         self.pushButton_11.setObjectName("pushButton_11")
-        self.label_16 = QtWidgets.QLabel(parent=self.widget_5)
-        self.label_16.setGeometry(QtCore.QRect(50, 10, 41, 21))
-        self.label_16.setStyleSheet("QWidget {\n"
+        self.labelFanta = QtWidgets.QLabel(parent=self.widget_5)
+        self.labelFanta.setGeometry(QtCore.QRect(50, 10, 41, 21))
+        self.labelFanta.setStyleSheet("QWidget {\n"
 "    background-color: rgba(127, 140, 153, 150); /* Màu xám xanh với độ trong suốt */\n"
 "    border-radius: 5px;\n"
 "    border: 2px solid rgba(46, 46, 100, 180); /* Viền xanh với độ trong suốt */border:none\n"
 "}\n"
 "")
-        self.label_16.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label_16.setObjectName("label_16")
+        self.labelFanta.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.labelFanta.setObjectName("labelFanta")
         self.label_17 = QtWidgets.QLabel(parent=self.frame)
         self.label_17.setGeometry(QtCore.QRect(570, 1660, 311, 41))
         font = QtGui.QFont()
@@ -550,18 +550,18 @@ class Ui_MainWindow(object):
         self.pushButton_13 = QtWidgets.QPushButton(parent=self.widget_6)
         self.pushButton_13.setGeometry(QtCore.QRect(80, 10, 51, 20))
         self.pushButton_13.setObjectName("pushButton_13")
-        self.label_19 = QtWidgets.QLabel(parent=self.widget_6)
-        self.label_19.setGeometry(QtCore.QRect(50, 10, 41, 21))
-        self.label_19.setStyleSheet("QWidget {\n"
+        self.labelCaramel = QtWidgets.QLabel(parent=self.widget_6)
+        self.labelCaramel.setGeometry(QtCore.QRect(50, 10, 41, 21))
+        self.labelCaramel.setStyleSheet("QWidget {\n"
 "    background-color: rgba(127, 140, 153, 150); /* Màu xám xanh với độ trong suốt */\n"
 "    border-radius: 5px;\n"
 "    border: 2px solid rgba(46, 46, 100, 180); /* Viền xanh với độ trong suốt */border:none\n"
 "}\n"
 "")
-        self.label_19.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label_19.setObjectName("label_19")
+        self.labelCaramel.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.labelCaramel.setObjectName("labelCaramel")
         self.label_20 = QtWidgets.QLabel(parent=self.frame)
-        self.label_20.setGeometry(QtCore.QRect(30, 1400, 831, 51))
+        self.label_20.setGeometry(QtCore.QRect(30, 1380, 831, 51))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift Condensed")
         font.setPointSize(30)
@@ -639,16 +639,16 @@ class Ui_MainWindow(object):
         self.pushButton_15 = QtWidgets.QPushButton(parent=self.widget_7)
         self.pushButton_15.setGeometry(QtCore.QRect(80, 10, 51, 20))
         self.pushButton_15.setObjectName("pushButton_15")
-        self.label_25 = QtWidgets.QLabel(parent=self.widget_7)
-        self.label_25.setGeometry(QtCore.QRect(50, 10, 41, 21))
-        self.label_25.setStyleSheet("QWidget {\n"
+        self.labelOriginal = QtWidgets.QLabel(parent=self.widget_7)
+        self.labelOriginal.setGeometry(QtCore.QRect(50, 10, 41, 21))
+        self.labelOriginal.setStyleSheet("QWidget {\n"
 "    background-color: rgba(127, 140, 153, 150); /* Màu xám xanh với độ trong suốt */\n"
 "    border-radius: 5px;\n"
 "    border: 2px solid rgba(46, 46, 100, 180); /* Viền xanh với độ trong suốt */border:none\n"
 "}\n"
 "")
-        self.label_25.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label_25.setObjectName("label_25")
+        self.labelOriginal.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.labelOriginal.setObjectName("labelOriginal")
         self.widget_8 = QtWidgets.QWidget(parent=self.frame)
         self.widget_8.setGeometry(QtCore.QRect(370, 1700, 141, 41))
         self.widget_8.setStyleSheet("QWidget {\n"
@@ -672,16 +672,16 @@ class Ui_MainWindow(object):
         self.pushButton_17 = QtWidgets.QPushButton(parent=self.widget_8)
         self.pushButton_17.setGeometry(QtCore.QRect(80, 10, 51, 20))
         self.pushButton_17.setObjectName("pushButton_17")
-        self.label_26 = QtWidgets.QLabel(parent=self.widget_8)
-        self.label_26.setGeometry(QtCore.QRect(50, 10, 41, 21))
-        self.label_26.setStyleSheet("QWidget {\n"
+        self.labelCheese = QtWidgets.QLabel(parent=self.widget_8)
+        self.labelCheese.setGeometry(QtCore.QRect(50, 10, 41, 21))
+        self.labelCheese.setStyleSheet("QWidget {\n"
 "    background-color: rgba(127, 140, 153, 150); /* Màu xám xanh với độ trong suốt */\n"
 "    border-radius: 5px;\n"
 "    border: 2px solid rgba(46, 46, 100, 180); /* Viền xanh với độ trong suốt */border:none\n"
 "}\n"
 "")
-        self.label_26.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label_26.setObjectName("label_26")
+        self.labelCheese.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.labelCheese.setObjectName("labelCheese")
         self.label_27 = QtWidgets.QLabel(parent=self.frame)
         self.label_27.setGeometry(QtCore.QRect(260, 740, 161, 161))
         font = QtGui.QFont()
@@ -773,13 +773,6 @@ class Ui_MainWindow(object):
         self.label_62.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.label_62.setWordWrap(True)
         self.label_62.setObjectName("label_62")
-        self.groupBox = QtWidgets.QGroupBox(parent=self.frame)
-        self.groupBox.setGeometry(QtCore.QRect(0, 1800, 881, 181))
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift Condensed")
-        font.setPointSize(20)
-        self.groupBox.setFont(font)
-        self.groupBox.setObjectName("groupBox")
         self.verticalLayout.addWidget(self.frame)
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
         self.line = QtWidgets.QFrame(parent=self.centralwidget)
@@ -807,9 +800,26 @@ class Ui_MainWindow(object):
         self.pushButtonHome.setIconSize(QtCore.QSize(30, 30))
         self.pushButtonHome.setAutoRepeatDelay(305)
         self.pushButtonHome.setObjectName("pushButtonHome")
+        self.tableWidget = QtWidgets.QTableWidget(parent=self.centralwidget)
+        self.tableWidget.setGeometry(QtCore.QRect(20, 590, 841, 192))
+        self.tableWidget.setStyleSheet("\n"
+"color: rgb(255, 255, 255);\n"
+"font: 75 11pt \"MS Shell Dlg 2\";")
+        self.tableWidget.setObjectName("tableWidget")
+        self.tableWidget.setColumnCount(4)
+        self.tableWidget.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, item)
+        self.tableWidget.horizontalHeader().setDefaultSectionSize(210)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 901, 18))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 901, 26))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
@@ -837,40 +847,47 @@ class Ui_MainWindow(object):
         self.label_10.setText(_translate("MainWindow", "COMBO"))
         self.pushButton.setText(_translate("MainWindow", "-"))
         self.pushButton_2.setText(_translate("MainWindow", "+"))
-        self.label.setText(_translate("MainWindow", "0"))
+        self.labelSolo.setText(_translate("MainWindow", "0"))
         self.label_11.setText(_translate("MainWindow", "BEVERAGES"))
         self.label_12.setText(_translate("MainWindow", "COKE    37.000VND"))
         self.label_13.setText(_translate("MainWindow", "SPRITE  37.000VND"))
         self.label_14.setText(_translate("MainWindow", "FANTA  37.000VND"))
         self.pushButton_4.setText(_translate("MainWindow", "-"))
         self.pushButton_5.setText(_translate("MainWindow", "+"))
-        self.label_2.setText(_translate("MainWindow", "0"))
+        self.labelCouple.setText(_translate("MainWindow", "0"))
         self.pushButton_6.setText(_translate("MainWindow", "-"))
         self.pushButton_7.setText(_translate("MainWindow", "+"))
-        self.label_9.setText(_translate("MainWindow", "0"))
+        self.labelCoke.setText(_translate("MainWindow", "0"))
         self.pushButton_8.setText(_translate("MainWindow", "-"))
         self.pushButton_9.setText(_translate("MainWindow", "+"))
-        self.label_15.setText(_translate("MainWindow", "0"))
+        self.labelSprite.setText(_translate("MainWindow", "0"))
         self.pushButton_10.setText(_translate("MainWindow", "-"))
         self.pushButton_11.setText(_translate("MainWindow", "+"))
-        self.label_16.setText(_translate("MainWindow", "0"))
+        self.labelFanta.setText(_translate("MainWindow", "0"))
         self.label_17.setText(_translate("MainWindow", "CARAMEL  60.000VND"))
         self.label_18.setText(_translate("MainWindow", "CHEESE  60.000"))
         self.pushButton_12.setText(_translate("MainWindow", "-"))
         self.pushButton_13.setText(_translate("MainWindow", "+"))
-        self.label_19.setText(_translate("MainWindow", "0"))
+        self.labelCaramel.setText(_translate("MainWindow", "0"))
         self.label_20.setText(_translate("MainWindow", "POPCORN"))
         self.label_24.setText(_translate("MainWindow", "ORIGINAL  50.000VND"))
         self.pushButton_14.setText(_translate("MainWindow", "-"))
         self.pushButton_15.setText(_translate("MainWindow", "+"))
-        self.label_25.setText(_translate("MainWindow", "0"))
+        self.labelOriginal.setText(_translate("MainWindow", "0"))
         self.pushButton_16.setText(_translate("MainWindow", "-"))
         self.pushButton_17.setText(_translate("MainWindow", "+"))
-        self.label_26.setText(_translate("MainWindow", "0"))
+        self.labelCheese.setText(_translate("MainWindow", "0"))
         self.label_27.setText(_translate("MainWindow", "<html><head/><body><p>COMBO SOLO:<br/>1 Coke + 1 Pop</p><p>90.000VND</p></body></html>"))
         self.label_28.setText(_translate("MainWindow", "<html><head/><body><p>COMBO COUPLE:<br/>2 Coke + 1 Pop</p><p>110.000VND</p></body></html>"))
         self.label_60.setText(_translate("MainWindow", "Crunch, Munch, and Sip"))
         self.label_61.setText(_translate("MainWindow", "Food & Drink at GFilx"))
         self.label_62.setText(_translate("MainWindow", "GFlix goes far beyond classic concessions like popcorn and fountain drinks to give you an absolutely appetizing experience. We\'re always innovating and exploring new ways to bring the best food and drinks to our theatres. Select from the options below to learn more about the menu selections, locations and special offers."))
-        self.groupBox.setTitle(_translate("MainWindow", "TOTAL:"))
         self.pushButtonHome.setText(_translate("MainWindow", "HOME"))
+        item = self.tableWidget.horizontalHeaderItem(0)
+        item.setText(_translate("MainWindow", "Sản phẩm"))
+        item = self.tableWidget.horizontalHeaderItem(1)
+        item.setText(_translate("MainWindow", "Số lượng"))
+        item = self.tableWidget.horizontalHeaderItem(2)
+        item.setText(_translate("MainWindow", "Đơn giá"))
+        item = self.tableWidget.horizontalHeaderItem(3)
+        item.setText(_translate("MainWindow", "Thành tiền"))
