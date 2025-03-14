@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>901</width>
-    <height>845</height>
+    <height>640</height>
    </rect>
   </property>
   <property name="font">
@@ -266,7 +266,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-1320</y>
+       <y>-600</y>
        <width>880</width>
        <height>3022</height>
       </rect>
@@ -1722,6 +1722,50 @@ color: rgb(255, 255, 255);
           <bool>true</bool>
          </property>
         </widget>
+        <widget class="QTableWidget" name="tableWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>1760</y>
+           <width>1000</width>
+           <height>800</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>1000</width>
+           <height>800</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+color: rgb(255, 255, 255);
+font: 75 11pt &quot;MS Shell Dlg 2&quot;;</string>
+         </property>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>210</number>
+         </attribute>
+         <column>
+          <property name="text">
+           <string>Sản phẩm</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Số lượng</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Đơn giá</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Thành tiền</string>
+          </property>
+         </column>
+        </widget>
        </widget>
       </item>
      </layout>
@@ -1788,44 +1832,6 @@ color: rgb(255, 255, 255);
     <property name="autoRepeatDelay">
      <number>305</number>
     </property>
-   </widget>
-   <widget class="QTableWidget" name="tableWidget">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>590</y>
-      <width>841</width>
-      <height>192</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">
-color: rgb(255, 255, 255);
-font: 75 11pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <attribute name="horizontalHeaderDefaultSectionSize">
-     <number>210</number>
-    </attribute>
-    <column>
-     <property name="text">
-      <string>Sản phẩm</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Số lượng</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Đơn giá</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Thành tiền</string>
-     </property>
-    </column>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

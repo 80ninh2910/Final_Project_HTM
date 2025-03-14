@@ -6,7 +6,7 @@ from ui.BuyPopcorn import Ui_MainWindow
 class BuyPopcornEx(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        self.setupUi(self)  # Gọi UI chính xác
+        self.setupUi(self)
         self.setupSignalAndSlots()
         self.mainwindow = None
 
@@ -23,6 +23,7 @@ class BuyPopcornEx(QMainWindow, Ui_MainWindow):
     def setupSignalAndSlots(self):
         self.pushButtonHome.clicked.connect(self.home)
 
+        #tang
         self.pushButton_7.clicked.connect(lambda: self.updateQuantity("Coca Cola", 1))
         self.pushButton_9.clicked.connect(lambda: self.updateQuantity("Sprite", 1))
         self.pushButton_11.clicked.connect(lambda: self.updateQuantity("Fanta", 1))
@@ -32,7 +33,7 @@ class BuyPopcornEx(QMainWindow, Ui_MainWindow):
         self.pushButton_2.clicked.connect(lambda: self.updateQuantity("Combo Solo", 1))
         self.pushButton_5.clicked.connect(lambda: self.updateQuantity("Combo Couple", 1))
 
-        # 🔹 Nút giảm số lượng sản phẩm
+        #giam
         self.pushButton_6.clicked.connect(lambda: self.updateQuantity("Coca Cola", -1))
         self.pushButton_8.clicked.connect(lambda: self.updateQuantity("Sprite", -1))
         self.pushButton_10.clicked.connect(lambda: self.updateQuantity("Fanta", -1))
@@ -81,17 +82,27 @@ class BuyPopcornEx(QMainWindow, Ui_MainWindow):
             self.labelCouple.setText(str(self.cart[product_name]["quantity"]))
 
     def updateTable(self):
-        """ Cập nhật dữ liệu vào tableWidget """
 
         self.tableWidget.clear()
-        self.tableWidget.setRowCount(len(self.cart))
+        self.tableWidget.setRowCount(len(self.cart) + 1)  # Thêm 1 dòng cho Total
+        self.tableWidget.setColumnCount(4)
+        self.tableWidget.setHorizontalHeaderLabels(["Sản phẩm", "Số lượng", "Đơn giá", "Thành tiền"])
 
-
+        total_price = 0
         row = 0
+
         for product, data in self.cart.items():
             if data["quantity"] > 0:
                 self.tableWidget.setItem(row, 0, QTableWidgetItem(product))
                 self.tableWidget.setItem(row, 1, QTableWidgetItem(str(data["quantity"])))
                 self.tableWidget.setItem(row, 2, QTableWidgetItem(f"{data['price']} VND"))
-                self.tableWidget.setItem(row, 3, QTableWidgetItem(f"{data['quantity'] * data['price']} VND"))
-            row += 1
+                total_item_price = data["quantity"] * data["price"]
+                self.tableWidget.setItem(row, 3, QTableWidgetItem(f"{total_item_price} VND"))
+
+                total_price += total_item_price
+                row += 1
+
+        # 🔹 Thêm dòng Total vào cuối bảng
+        self.tableWidget.setItem(row, 0, QTableWidgetItem("Total"))  # Cột Sản phẩm: "Total"
+        self.tableWidget.setItem(row, 3, QTableWidgetItem(f"{total_price} VND"))  # Cột Thành tiền: Tổng tiền
+

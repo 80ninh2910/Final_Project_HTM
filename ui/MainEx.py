@@ -41,7 +41,7 @@ class MainEx(QMainWindow, Ui_MainWindow):
         video_url = "https://www.youtube.com/watch?v=kraUpgr_IE4"
         QDesktopServices.openUrl(QUrl(video_url))
     def openfb(self):
-        contact="https://www.facebook.com/qdinnh/"
+        contact="https://www.facebook.com/profile.php?id=61573908070943"
         QDesktopServices.openUrl(QUrl(contact))
     def openQNT(self):
         self.qnt_window = QTNEx()
