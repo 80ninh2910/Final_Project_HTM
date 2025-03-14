@@ -1,8 +1,8 @@
 class Combo:
-    def __init__(self, CbName,  CbPrice):
-        self.CbName=CbName
+    def __init__(self, Name,  Price):
+        self.Name=Name
 
-        self.CbPrice = CbPrice
+        self.Price = Price
 
     def __str__(self):
-        return f"{self.CbName}\t{self.CbPrice}"
+        return f"{self.Name}\t{self.Price}"

@@ -1,14 +1,14 @@
 [
     {
-        "BName": "Coca Cola",
-        "BPrice": 37000
+        "Name": "Coca Cola",
+        "Price": 37000
     },
     {
-        "BName": "Sprite",
-        "BPrice": 37000
+        "Name": "Sprite",
+        "Price": 37000
     },
     {
-        "BName": "Fanta",
-        "BPrice": 37000
+        "Name": "Fanta",
+        "Price": 37000
     }
 ]

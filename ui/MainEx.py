@@ -26,12 +26,10 @@ class MainEx(QMainWindow, Ui_MainWindow):
         self.show()
 
     def open_BuyPopcorn_Window(self):
-        """ Mở cửa sổ BuyPopcornEx và đóng MainEx """
-        if self.buyPopcornWindow is None:  # Chỉ tạo nếu chưa có
-            self.buyPopcornWindow = BuyPopcornEx()
-
-        self.buyPopcornWindow.show()  # Hiển thị cửa sổ BuyPopcornEx
-        self.close()  # Đóng cửa sổ MainEx
+        """ Mở cửa sổ BuyPopcornEx """
+        self.buyPopcornWindow = BuyPopcornEx()  # Luôn tạo cửa sổ mới
+        self.buyPopcornWindow.show()
+        self.close() # Đóng cửa sổ MainEx
     #HÀM MỞ TRAILER TRÊN WEB
     def open_youtube_videoNGT(self):
         video_url = "https://www.youtube.com/watch?v=hXGozmNBwt4"

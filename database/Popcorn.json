@@ -1,14 +1,14 @@
 [
     {
-        "PName": "Original",
-        "PPrice": 50000
+        "Name": "Original",
+        "Price": 50000
     },
     {
-        "PName": "Cheese",
-        "PPrice": 60000
+        "Name": "Cheese",
+        "Price": 60000
     },
     {
-        "PName": "Caramel",
-        "PPrice": 60000
+        "Name": "Caramel",
+        "Price": 60000
     }
 ]

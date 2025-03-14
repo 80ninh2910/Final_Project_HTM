@@ -2,9 +2,9 @@ from numpy.f2py.symbolic import number_types
 
 
 class Beverage:
-    def __init__(self, BName, BPrice):
-        self.BName=BName
+    def __init__(self, Name, Price):
+        self.Name=Name
 
-        self.BPrice=BPrice
+        self.Price=Price
     def __str__(self):
-        return f"{self.BName}\t{self.BPrice}"
+        return f"{self.Name}\t{self.Price}"
