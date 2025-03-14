@@ -81,17 +81,27 @@ class BuyPopcornEx(QMainWindow, Ui_MainWindow):
             self.labelCouple.setText(str(self.cart[product_name]["quantity"]))
 
     def updateTable(self):
-        """ Cập nhật dữ liệu vào tableWidget """
-
+        """ Cập nhật dữ liệu vào tableWidget với dòng Total """
         self.tableWidget.clear()
-        self.tableWidget.setRowCount(len(self.cart))
+        self.tableWidget.setRowCount(len(self.cart) + 1)  # Thêm 1 dòng cho Total
+        self.tableWidget.setColumnCount(4)
+        self.tableWidget.setHorizontalHeaderLabels(["Sản phẩm", "Số lượng", "Đơn giá", "Thành tiền"])
 
-
+        total_price = 0
         row = 0
+
         for product, data in self.cart.items():
             if data["quantity"] > 0:
                 self.tableWidget.setItem(row, 0, QTableWidgetItem(product))
                 self.tableWidget.setItem(row, 1, QTableWidgetItem(str(data["quantity"])))
                 self.tableWidget.setItem(row, 2, QTableWidgetItem(f"{data['price']} VND"))
-                self.tableWidget.setItem(row, 3, QTableWidgetItem(f"{data['quantity'] * data['price']} VND"))
-            row += 1
+                total_item_price = data["quantity"] * data["price"]
+                self.tableWidget.setItem(row, 3, QTableWidgetItem(f"{total_item_price} VND"))
+
+                total_price += total_item_price
+                row += 1
+
+        # 🔹 Thêm dòng Total vào cuối bảng
+        self.tableWidget.setItem(row, 0, QTableWidgetItem("Total"))  # Cột Sản phẩm: "Total"
+        self.tableWidget.setItem(row, 3, QTableWidgetItem(f"{total_price} VND"))  # Cột Thành tiền: Tổng tiền
+
