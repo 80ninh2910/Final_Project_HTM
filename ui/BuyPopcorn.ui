@@ -266,9 +266,9 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-600</y>
-       <width>880</width>
-       <height>3022</height>
+       <y>-1720</y>
+       <width>888</width>
+       <height>3012</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -1726,7 +1726,7 @@ color: rgb(255, 255, 255);
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>1760</y>
+           <y>1750</y>
            <width>1000</width>
            <height>800</height>
           </rect>
@@ -1738,16 +1738,36 @@ color: rgb(255, 255, 255);
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">
-color: rgb(255, 255, 255);
-font: 75 11pt &quot;MS Shell Dlg 2&quot;;</string>
+          <string notr="true">background-color: rgb(116, 116, 174);
+color: rgb(0, 0, 0);
+font: 75 11pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;</string>
          </property>
          <attribute name="horizontalHeaderDefaultSectionSize">
-          <number>210</number>
+          <number>220</number>
          </attribute>
          <column>
           <property name="text">
            <string>Sản phẩm</string>
+          </property>
+          <property name="textAlignment">
+           <set>AlignCenter</set>
+          </property>
+          <property name="background">
+           <color>
+            <red>113</red>
+            <green>113</green>
+            <blue>170</blue>
+           </color>
+          </property>
+          <property name="foreground">
+           <brush brushstyle="NoBrush">
+            <color alpha="255">
+             <red>0</red>
+             <green>0</green>
+             <blue>0</blue>
+            </color>
+           </brush>
           </property>
          </column>
          <column>
@@ -1840,7 +1860,7 @@ color: rgb(255, 255, 255);
      <x>0</x>
      <y>0</y>
      <width>901</width>
-     <height>26</height>
+     <height>18</height>
     </rect>
    </property>
   </widget>

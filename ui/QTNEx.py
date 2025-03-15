@@ -1,5 +1,6 @@
 from PyQt6 import QtWidgets, uic
-from libs.DataConnector import DataConnector
+
+from librarys.DataConnector import DataConnector
 from ui.QNT import Ui_MainWindow
 
 class SeatSelectionWindow(QtWidgets.QDialog):

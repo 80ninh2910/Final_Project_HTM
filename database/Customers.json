@@ -518,5 +518,10 @@
         "email": "ngozthanh@gmail.com",
         "username": "ngo.thanhh",
         "password": "123"
+    },
+    {
+        "email": "viet12@gmail.com",
+        "username": "viet123",
+        "password": "123"
     }
 ]

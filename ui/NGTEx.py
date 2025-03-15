@@ -1,6 +1,6 @@
 from PyQt6 import QtWidgets, uic
 
-from libs.DataConnector import DataConnector
+from librarys.DataConnector import DataConnector
 from ui.NGT import Ui_MainWindow
 
 class NGTEx(QtWidgets.QMainWindow, Ui_MainWindow):

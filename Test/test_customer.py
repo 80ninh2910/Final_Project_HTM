@@ -1,7 +1,7 @@
 import random
 import string
 
-from libs.JSON_File_Factory import JsonFileFactory
+from librarys.JSON_File_Factory import JsonFileFactory
 from models.Customer import Customer
 
 name_parts = ["cool", "funny", "happy", "chill", "epic", "wild", "crazy", "swift", "fierce", "lucky"]

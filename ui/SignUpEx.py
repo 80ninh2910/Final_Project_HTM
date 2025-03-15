@@ -2,7 +2,7 @@ from PyQt6 import QtWidgets
 import sys
 import os
 import json
-from libs.JSON_File_Factory import JsonFileFactory
+from librarys.JSON_File_Factory import JsonFileFactory
 from models.Customer import Customer
 from ui.SigninEx import SignInEx
 from ui.SignUp import Ui_MainWindow

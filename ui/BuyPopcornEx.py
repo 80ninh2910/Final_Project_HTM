@@ -1,5 +1,5 @@
 from PyQt6.QtWidgets import QMainWindow, QTableWidgetItem
-from libs.DataConnector import DataConnector
+from librarys.DataConnector import DataConnector
 from models.CONCESSION.Concession import CON
 from ui.BuyPopcorn import Ui_MainWindow
 
@@ -19,7 +19,8 @@ class BuyPopcornEx(QMainWindow, Ui_MainWindow):
 
         self.cart = {}
         self.setup_cart()
-
+    def showWindow(self):
+        self.show()
     def setupSignalAndSlots(self):
         self.pushButtonHome.clicked.connect(self.home)
 

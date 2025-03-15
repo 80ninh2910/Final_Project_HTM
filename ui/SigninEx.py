@@ -3,7 +3,7 @@ import os
 
 import sys
 
-from libs.DataConnector import DataConnector
+from librarys.DataConnector import DataConnector
 from ui.Signin import Ui_MainWindow  # Import giao diện từ Qt Designer
 
 class SignInEx(QtWidgets.QMainWindow, Ui_MainWindow):
