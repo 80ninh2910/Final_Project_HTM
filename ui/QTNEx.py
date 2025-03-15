@@ -98,7 +98,7 @@ class QTNEx(QtWidgets.QMainWindow, Ui_MainWindow):
         elif text == "UEL":
             self.widgethcm.setVisible(False)
             self.widgetuel.setVisible(True)
-        elif text == "HCM":
+        elif text == "HỒ CHÍ MINH":
             self.widgethcm.setVisible(True)
             self.widgetuel.setVisible(False)
 

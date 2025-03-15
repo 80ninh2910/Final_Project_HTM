@@ -317,7 +317,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-1351</y>
+       <y>-931</y>
        <width>980</width>
        <height>1822</height>
       </rect>
@@ -1120,28 +1120,6 @@ QPushButton:pressed {
           </property>
          </widget>
         </widget>
-        <widget class="QLabel" name="label_13">
-         <property name="geometry">
-          <rect>
-           <x>220</x>
-           <y>1000</y>
-           <width>551</width>
-           <height>71</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Bahnschrift Condensed</family>
-           <pointsize>30</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>SELECT SEAT</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
         <widget class="QWidget" name="widgetseat" native="true">
          <property name="geometry">
           <rect>
@@ -1150,167 +1128,6 @@ QPushButton:pressed {
            <width>561</width>
            <height>371</height>
           </rect>
-         </property>
-         <widget class="QLabel" name="label_5">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>0</y>
-            <width>541</width>
-            <height>21</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);
-border-radius: 10px</string>
-          </property>
-          <property name="text">
-           <string>Screen</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-        </widget>
-        <widget class="QLabel" name="labelTotal">
-         <property name="geometry">
-          <rect>
-           <x>220</x>
-           <y>1470</y>
-           <width>561</width>
-           <height>51</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(105, 0, 157);</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButtoncf">
-         <property name="geometry">
-          <rect>
-           <x>660</x>
-           <y>1480</y>
-           <width>111</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Bahnschrift Condensed</family>
-           <pointsize>14</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 0);
-color: rgb(0, 0, 0);
-    border-radius: 10px;
-    padding: 5px</string>
-         </property>
-         <property name="text">
-          <string>CONFIRM</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../images/ic_ticket.png</normaloff>../images/ic_ticket.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>30</width>
-           <height>30</height>
-          </size>
-         </property>
-        </widget>
-        <widget class="QLabel" name="labelusn">
-         <property name="geometry">
-          <rect>
-           <x>310</x>
-           <y>1530</y>
-           <width>181</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">    border-radius: 10px;
-background-color: rgb(105, 0, 157);</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-        <widget class="QLabel" name="labelPhone">
-         <property name="geometry">
-          <rect>
-           <x>600</x>
-           <y>1530</y>
-           <width>181</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">    border-radius: 10px;
-background-color: rgb(105, 0, 157);</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_14">
-         <property name="geometry">
-          <rect>
-           <x>220</x>
-           <y>1530</y>
-           <width>91</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Bahnschrift Condensed</family>
-           <pointsize>12</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>username:</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_15">
-         <property name="geometry">
-          <rect>
-           <x>500</x>
-           <y>1530</y>
-           <width>91</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Bahnschrift Condensed</family>
-           <pointsize>12</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Phone :</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
         </widget>
         <widget class="QComboBox" name="comboBoxSelect2">
@@ -1464,6 +1281,146 @@ background-color: rgb(105, 0, 157);</string>
          </property>
          <property name="text">
           <string>Description:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="labelTotal">
+         <property name="geometry">
+          <rect>
+           <x>220</x>
+           <y>1030</y>
+           <width>551</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(105, 0, 157);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_14">
+         <property name="geometry">
+          <rect>
+           <x>230</x>
+           <y>1110</y>
+           <width>81</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bahnschrift Condensed</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>username:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="labelPhone">
+         <property name="geometry">
+          <rect>
+           <x>590</x>
+           <y>1110</y>
+           <width>181</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">    border-radius: 10px;
+background-color: rgb(105, 0, 157);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtoncf">
+         <property name="geometry">
+          <rect>
+           <x>650</x>
+           <y>1050</y>
+           <width>111</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bahnschrift Condensed</family>
+           <pointsize>14</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 0);
+color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 5px</string>
+         </property>
+         <property name="text">
+          <string>CONFIRM</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../images/ic_ticket.png</normaloff>../images/ic_ticket.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QLabel" name="labelusn">
+         <property name="geometry">
+          <rect>
+           <x>310</x>
+           <y>1110</y>
+           <width>181</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">    border-radius: 10px;
+background-color: rgb(105, 0, 157);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_15">
+         <property name="geometry">
+          <rect>
+           <x>530</x>
+           <y>1110</y>
+           <width>51</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bahnschrift Condensed</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Phone :</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
         </widget>
        </widget>
