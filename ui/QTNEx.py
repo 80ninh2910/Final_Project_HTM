@@ -65,6 +65,7 @@ class QTNEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.selected_seats = set()
         self.theater = None
         self.showtime = None
+        self.film="QUỶ NHẬP TRÀNG"
 
         # Kết nối sự kiện chọn suất chiếu
         self.pushButtonhcm_9.clicked.connect(lambda: self.select_showtime("HCM", "9:00"))
@@ -112,7 +113,7 @@ class QTNEx(QtWidgets.QMainWindow, Ui_MainWindow):
             self.selected_seats = seat_window.get_selected_seats()
             self.theater = theater
             self.showtime = showtime
-            self.labelTotal.setText(f"Rạp: {self.theater} | Giờ: {self.showtime} | Ghế đã chọn: {len(self.selected_seats)} | Ghế: {', '.join(self.selected_seats)}")
+            self.labelTotal.setText(f"Phim: {self.film} | Rạp: {self.theater} | Giờ: {self.showtime} | Ghế đã chọn: {len(self.selected_seats)} | Ghế: {', '.join(self.selected_seats)}")
             self.labelTotal.setVisible(True)
             self.pushButtoncf.setVisible(True)
 
@@ -125,7 +126,7 @@ class QTNEx(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def displaymovie(self):
         for i in self.dc.movie:
-            if i.MTitle == "QUỶ NHẬP TRÀNG":
+            if i.MTitle == self.film:
                 movie = i
         self.labelType.setText(movie.MType)
         self.labelDu.setText(movie.dur)
