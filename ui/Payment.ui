@@ -203,9 +203,9 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-916</y>
+       <y>0</y>
        <width>988</width>
-       <height>3012</height>
+       <height>1312</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -247,14 +247,14 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
            <x>-10</x>
            <y>0</y>
            <width>991</width>
-           <height>171</height>
+           <height>251</height>
           </rect>
          </property>
          <property name="text">
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../images/Screenshot 2025-03-17 023810.png</pixmap>
+          <pixmap>../images/Red And Yellow Illustrated Movie Night Perfomance Invitation Outdor Banner.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -284,41 +284,6 @@ color: rgb(255, 255, 255);
          </property>
          <property name="text">
           <string/>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_61">
-         <property name="geometry">
-          <rect>
-           <x>180</x>
-           <y>20</y>
-           <width>611</width>
-           <height>221</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Bahnschrift Condensed</family>
-           <pointsize>25</pointsize>
-           <weight>75</weight>
-           <italic>false</italic>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: transparent;
-    border: none</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="pixmap">
-          <pixmap>../images/Screenshot 2025-03-17 024320.png</pixmap>
-         </property>
-         <property name="scaledContents">
-          <bool>true</bool>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
          </property>
         </widget>
         <widget class="QLabel" name="label_3">
@@ -1003,11 +968,57 @@ color:rgb(0, 0, 0);
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
+        <widget class="QLabel" name="label_16">
+         <property name="geometry">
+          <rect>
+           <x>340</x>
+           <y>110</y>
+           <width>331</width>
+           <height>71</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Cooper Black</family>
+           <pointsize>40</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:transparent;
+color: rgb(148, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>CHECK OUT</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_6">
+         <property name="geometry">
+          <rect>
+           <x>360</x>
+           <y>160</y>
+           <width>261</width>
+           <height>71</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Cooper Black</family>
+           <pointsize>40</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:transparent</string>
+         </property>
+         <property name="text">
+          <string>PAYMENT</string>
+         </property>
+        </widget>
         <zorder>label_2</zorder>
         <zorder>label</zorder>
         <zorder>label_29</zorder>
         <zorder>pushButtonDiscounts_4</zorder>
-        <zorder>label_61</zorder>
         <zorder>label_3</zorder>
         <zorder>label_4</zorder>
         <zorder>label_5</zorder>
@@ -1031,6 +1042,8 @@ color:rgb(0, 0, 0);
         <zorder>pushButtonfb</zorder>
         <zorder>pushButton_4</zorder>
         <zorder>label_42</zorder>
+        <zorder>label_16</zorder>
+        <zorder>label_6</zorder>
        </widget>
       </item>
      </layout>
