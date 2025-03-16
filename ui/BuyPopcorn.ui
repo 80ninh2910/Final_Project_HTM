@@ -203,7 +203,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>0</y>
+       <y>-2192</y>
        <width>988</width>
        <height>3012</height>
       </rect>
@@ -214,7 +214,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
         <property name="minimumSize">
          <size>
           <width>100</width>
-          <height>3000</height>
+          <height>2600</height>
          </size>
         </property>
         <property name="font">
@@ -1596,6 +1596,189 @@ QTableWidget::item {
            <string>Thành tiền</string>
           </property>
          </column>
+        </widget>
+        <widget class="QLabel" name="label_44">
+         <property name="geometry">
+          <rect>
+           <x>290</x>
+           <y>2340</y>
+           <width>381</width>
+           <height>71</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bahnschrift Condensed</family>
+           <pointsize>20</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;
+    border: none</string>
+         </property>
+         <property name="text">
+          <string>CONTACT US</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_43">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>2510</y>
+           <width>411</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bahnschrift Condensed</family>
+           <pointsize>15</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;
+    border: none</string>
+         </property>
+         <property name="text">
+          <string>© Copyright 2025 GFlix Theatres</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_18">
+         <property name="geometry">
+          <rect>
+           <x>410</x>
+           <y>2440</y>
+           <width>141</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;
+
+    border: none</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../images/logoreal.png</normaloff>../images/logoreal.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>100</width>
+           <height>100</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_42">
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>2480</y>
+           <width>441</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bahnschrift Condensed</family>
+           <pointsize>20</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;
+    border: none</string>
+         </property>
+         <property name="text">
+          <string>WE MAKE MOVIES BETTER</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtonfb">
+         <property name="geometry">
+          <rect>
+           <x>420</x>
+           <y>2400</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bahnschrift Condensed</family>
+           <pointsize>13</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:  rgb(255, 255, 255);
+color:rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 5px</string>
+         </property>
+         <property name="text">
+          <string>Facebook</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../images/fb.png</normaloff>../images/fb.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="autoRepeatDelay">
+          <number>305</number>
+         </property>
+        </widget>
+        <widget class="Line" name="line_2">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>2350</y>
+           <width>1001</width>
+           <height>1</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>1</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
         </widget>
        </widget>
       </item>
