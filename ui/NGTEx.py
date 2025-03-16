@@ -56,7 +56,7 @@ class SeatSelectionWindow(QtWidgets.QDialog):
 
         return self.selected_seats
 
-class QTNEx(QtWidgets.QMainWindow, Ui_MainWindow):
+class NGTEx(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
@@ -135,6 +135,6 @@ class QTNEx(QtWidgets.QMainWindow, Ui_MainWindow):
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    window = QTNEx()
+    window = NGTEx()
     window.show()
     sys.exit(app.exec())
