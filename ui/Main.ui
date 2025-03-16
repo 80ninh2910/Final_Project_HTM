@@ -143,7 +143,7 @@ color: rgb(255, 255, 255);
    <widget class="QPushButton" name="pushButtonShwtm">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>10</x>
       <y>70</y>
       <width>101</width>
       <height>31</height>
@@ -169,7 +169,7 @@ color: rgb(255, 255, 255);
    <widget class="QPushButton" name="pushButtonDiscounts">
     <property name="geometry">
      <rect>
-      <x>630</x>
+      <x>830</x>
       <y>70</y>
       <width>81</width>
       <height>31</height>
@@ -190,32 +190,6 @@ color: rgb(255, 255, 255);
     </property>
     <property name="text">
      <string>Discounts</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButtonEnterOp">
-    <property name="geometry">
-     <rect>
-      <x>730</x>
-      <y>70</y>
-      <width>181</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bahnschrift Condensed</family>
-      <pointsize>15</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: transparent;
-color: rgb(255, 255, 255);
-    border: none</string>
-    </property>
-    <property name="text">
-     <string>Entertainment Options</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButtonAboutUs">
@@ -343,7 +317,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-336</y>
+       <y>-136</y>
        <width>988</width>
        <height>1512</height>
       </rect>
@@ -375,10 +349,10 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
         <widget class="QStackedWidget" name="stackedWidget">
          <property name="geometry">
           <rect>
-           <x>110</x>
+           <x>0</x>
            <y>50</y>
-           <width>751</width>
-           <height>241</height>
+           <width>981</width>
+           <height>301</height>
           </rect>
          </property>
          <property name="currentIndex">
@@ -390,8 +364,8 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>751</width>
-             <height>261</height>
+             <width>961</width>
+             <height>291</height>
             </rect>
            </property>
            <property name="text">
@@ -411,8 +385,8 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>751</width>
-             <height>241</height>
+             <width>981</width>
+             <height>301</height>
             </rect>
            </property>
            <property name="text">
@@ -430,10 +404,10 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
         <widget class="QLabel" name="label_3">
          <property name="geometry">
           <rect>
-           <x>380</x>
-           <y>0</y>
+           <x>390</x>
+           <y>-10</y>
            <width>221</width>
-           <height>51</height>
+           <height>61</height>
           </rect>
          </property>
          <property name="font">
@@ -460,7 +434,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
          <property name="geometry">
           <rect>
            <x>60</x>
-           <y>330</y>
+           <y>390</y>
            <width>221</width>
            <height>311</height>
           </rect>
@@ -488,7 +462,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
          <property name="geometry">
           <rect>
            <x>370</x>
-           <y>330</y>
+           <y>390</y>
            <width>231</width>
            <height>311</height>
           </rect>
@@ -507,7 +481,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
          <property name="geometry">
           <rect>
            <x>700</x>
-           <y>330</y>
+           <y>390</y>
            <width>221</width>
            <height>311</height>
           </rect>
@@ -526,7 +500,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
          <property name="geometry">
           <rect>
            <x>60</x>
-           <y>640</y>
+           <y>700</y>
            <width>221</width>
            <height>51</height>
           </rect>
@@ -555,7 +529,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
          <property name="geometry">
           <rect>
            <x>380</x>
-           <y>640</y>
+           <y>700</y>
            <width>221</width>
            <height>51</height>
           </rect>
@@ -584,7 +558,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
          <property name="geometry">
           <rect>
            <x>700</x>
-           <y>640</y>
+           <y>700</y>
            <width>221</width>
            <height>51</height>
           </rect>
@@ -613,7 +587,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
          <property name="geometry">
           <rect>
            <x>60</x>
-           <y>690</y>
+           <y>750</y>
            <width>91</width>
            <height>31</height>
           </rect>
@@ -653,7 +627,7 @@ color: rgb(255, 255, 255);
          <property name="geometry">
           <rect>
            <x>170</x>
-           <y>690</y>
+           <y>750</y>
            <width>111</width>
            <height>31</height>
           </rect>
@@ -680,7 +654,7 @@ color: rgb(0, 0, 0);
          <property name="geometry">
           <rect>
            <x>490</x>
-           <y>690</y>
+           <y>750</y>
            <width>111</width>
            <height>31</height>
           </rect>
@@ -707,7 +681,7 @@ color: rgb(0, 0, 0);
          <property name="geometry">
           <rect>
            <x>810</x>
-           <y>690</y>
+           <y>750</y>
            <width>111</width>
            <height>31</height>
           </rect>
@@ -734,7 +708,7 @@ color: rgb(0, 0, 0);
          <property name="geometry">
           <rect>
            <x>370</x>
-           <y>690</y>
+           <y>750</y>
            <width>91</width>
            <height>31</height>
           </rect>
@@ -774,7 +748,7 @@ color: rgb(255, 255, 255);
          <property name="geometry">
           <rect>
            <x>700</x>
-           <y>690</y>
+           <y>750</y>
            <width>91</width>
            <height>31</height>
           </rect>
@@ -1090,7 +1064,7 @@ color: rgb(255, 255, 255);
          <property name="geometry">
           <rect>
            <x>370</x>
-           <y>760</y>
+           <y>790</y>
            <width>221</width>
            <height>51</height>
           </rect>
@@ -1328,8 +1302,8 @@ color:rgb(0, 0, 0);
    <widget class="QComboBox" name="comboBox">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>75</y>
+      <x>150</x>
+      <y>70</y>
       <width>86</width>
       <height>16</height>
      </rect>
