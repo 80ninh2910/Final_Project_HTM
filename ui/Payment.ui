@@ -203,7 +203,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-341</y>
+       <y>-180</y>
        <width>980</width>
        <height>1322</height>
       </rect>
@@ -339,7 +339,7 @@ color: rgb(75, 60, 41);</string>
            <x>10</x>
            <y>250</y>
            <width>959</width>
-           <height>331</height>
+           <height>361</height>
           </rect>
          </property>
          <property name="text">
@@ -355,8 +355,8 @@ color: rgb(75, 60, 41);</string>
         <widget class="QLabel" name="label_5">
          <property name="geometry">
           <rect>
-           <x>290</x>
-           <y>370</y>
+           <x>40</x>
+           <y>350</y>
            <width>161</width>
            <height>31</height>
           </rect>
@@ -380,8 +380,8 @@ color: rgb(75, 60, 41);</string>
         <widget class="QLabel" name="labelusname">
          <property name="geometry">
           <rect>
-           <x>450</x>
-           <y>370</y>
+           <x>40</x>
+           <y>390</y>
            <width>161</width>
            <height>31</height>
           </rect>
@@ -405,8 +405,8 @@ color: rgb(75, 60, 41);</string>
         <widget class="QLabel" name="label_7">
          <property name="geometry">
           <rect>
-           <x>290</x>
-           <y>410</y>
+           <x>40</x>
+           <y>450</y>
            <width>71</width>
            <height>31</height>
           </rect>
@@ -430,8 +430,8 @@ color: rgb(75, 60, 41);</string>
         <widget class="QLabel" name="labelMail">
          <property name="geometry">
           <rect>
-           <x>400</x>
-           <y>410</y>
+           <x>40</x>
+           <y>490</y>
            <width>161</width>
            <height>31</height>
           </rect>
@@ -455,8 +455,8 @@ color: rgb(75, 60, 41);</string>
         <widget class="QLabel" name="labelTheater">
          <property name="geometry">
           <rect>
-           <x>400</x>
-           <y>450</y>
+           <x>420</x>
+           <y>390</y>
            <width>161</width>
            <height>31</height>
           </rect>
@@ -481,7 +481,7 @@ color: rgb(75, 60, 41);</string>
          <property name="geometry">
           <rect>
            <x>290</x>
-           <y>450</y>
+           <y>390</y>
            <width>131</width>
            <height>31</height>
           </rect>
@@ -506,7 +506,7 @@ color: rgb(75, 60, 41);</string>
          <property name="geometry">
           <rect>
            <x>290</x>
-           <y>490</y>
+           <y>460</y>
            <width>91</width>
            <height>31</height>
           </rect>
@@ -531,7 +531,7 @@ color: rgb(75, 60, 41);</string>
          <property name="geometry">
           <rect>
            <x>380</x>
-           <y>490</y>
+           <y>460</y>
            <width>141</width>
            <height>31</height>
           </rect>
@@ -555,7 +555,7 @@ color: rgb(75, 60, 41);</string>
         <widget class="QLabel" name="label_13">
          <property name="geometry">
           <rect>
-           <x>290</x>
+           <x>300</x>
            <y>530</y>
            <width>71</width>
            <height>31</height>
@@ -580,7 +580,7 @@ color: rgb(75, 60, 41);</string>
         <widget class="QLabel" name="labelSeat">
          <property name="geometry">
           <rect>
-           <x>370</x>
+           <x>380</x>
            <y>530</y>
            <width>151</width>
            <height>31</height>
@@ -605,35 +605,42 @@ color: rgb(75, 60, 41);</string>
         <widget class="QLabel" name="label_15">
          <property name="geometry">
           <rect>
-           <x>60</x>
-           <y>250</y>
-           <width>171</width>
+           <x>50</x>
+           <y>260</y>
+           <width>191</width>
            <height>71</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Cooper Black</family>
-           <pointsize>40</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
+           <pointsize>14</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
           </font>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color:transparent;
+font: 14pt &quot;Cooper Black&quot;;
+
+
 color: rgb(148, 0, 0);</string>
          </property>
          <property name="text">
-          <string>F&amp;B</string>
+          <string>CUSTOMER</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
         <widget class="QTableWidget" name="tableWidget">
          <property name="geometry">
           <rect>
-           <x>40</x>
-           <y>320</y>
-           <width>201</width>
-           <height>181</height>
+           <x>60</x>
+           <y>620</y>
+           <width>501</width>
+           <height>271</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -675,64 +682,24 @@ QTableWidget::item {
            <string>Quantity</string>
           </property>
          </column>
-        </widget>
-        <widget class="QLabel" name="label_8">
-         <property name="geometry">
-          <rect>
-           <x>30</x>
-           <y>500</y>
-           <width>111</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Cambria</family>
-           <pointsize>20</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color:transparent;
-color: rgb(75, 60, 41);</string>
-         </property>
-         <property name="text">
-          <string>TOTAL:</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="labeltotal">
-         <property name="geometry">
-          <rect>
-           <x>140</x>
-           <y>500</y>
-           <width>111</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Cambria</family>
-           <pointsize>15</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color:transparent;
-color: rgb(75, 60, 41);</string>
-         </property>
-         <property name="text">
-          <string>34000000VND</string>
-         </property>
+         <column>
+          <property name="text">
+           <string>Price</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Total</string>
+          </property>
+         </column>
         </widget>
         <widget class="QPushButton" name="pushButtonPay">
          <property name="geometry">
           <rect>
-           <x>410</x>
-           <y>610</y>
-           <width>161</width>
-           <height>61</height>
+           <x>660</x>
+           <y>700</y>
+           <width>211</width>
+           <height>91</height>
           </rect>
          </property>
          <property name="font">
@@ -1033,8 +1000,6 @@ color: rgb(148, 0, 0);</string>
         <zorder>labelSeat</zorder>
         <zorder>label_15</zorder>
         <zorder>tableWidget</zorder>
-        <zorder>label_8</zorder>
-        <zorder>labeltotal</zorder>
         <zorder>pushButtonPay</zorder>
         <zorder>line_2</zorder>
         <zorder>label_44</zorder>

@@ -45,4 +45,11 @@ class DataConnector:
         jff = JsonFileFactory()
         jff.write_data(self.con, "Concession.json")
 
+    def get_price(self, product_name):
+
+        for product in self.bev + self.pop + self.com:
+            if product.Name == product_name:
+                return product.Price
+        return 0
+
 
