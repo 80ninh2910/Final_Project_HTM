@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1000</width>
-    <height>700</height>
+    <height>713</height>
    </rect>
   </property>
   <property name="font">
@@ -203,9 +203,9 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-2192</y>
-       <width>988</width>
-       <height>3012</height>
+       <y>-1920</y>
+       <width>980</width>
+       <height>2622</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -1499,7 +1499,7 @@ color: rgb(255, 255, 255);
         <widget class="QTableWidget" name="tableWidget">
          <property name="geometry">
           <rect>
-           <x>120</x>
+           <x>20</x>
            <y>2040</y>
            <width>711</width>
            <height>281</height>
@@ -1780,6 +1780,47 @@ color:rgb(0, 0, 0);
           <enum>Qt::Horizontal</enum>
          </property>
         </widget>
+        <widget class="QPushButton" name="pushButtonPayment">
+         <property name="geometry">
+          <rect>
+           <x>770</x>
+           <y>2150</y>
+           <width>161</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bahnschrift Condensed</family>
+           <pointsize>13</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(173, 54, 68);
+background-color: rgb(255, 157, 76);
+color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 5px</string>
+         </property>
+         <property name="text">
+          <string>ORDER</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../images/ic_popcorn.png</normaloff>../images/ic_popcorn.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="autoRepeatDelay">
+          <number>305</number>
+         </property>
+        </widget>
        </widget>
       </item>
      </layout>
@@ -1854,7 +1895,7 @@ color: rgb(255, 255, 255);
      <x>0</x>
      <y>0</y>
      <width>1000</width>
-     <height>18</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

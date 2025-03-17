@@ -1,6 +1,8 @@
 from PyQt6.QtWidgets import QMainWindow, QTableWidgetItem
+
+from librarys.CartManager import CartManager
 from librarys.DataConnector import DataConnector
-from models.CONCESSION.Concession import CON
+
 from ui.BuyPopcorn import Ui_MainWindow
 
 class BuyPopcornEx(QMainWindow, Ui_MainWindow):
@@ -17,7 +19,8 @@ class BuyPopcornEx(QMainWindow, Ui_MainWindow):
         self.combos = self.data_connector.com
 
 
-        self.cart = {}
+        self.cm = CartManager()
+
         self.setup_cart()
     def showWindow(self):
         self.show()
@@ -44,8 +47,15 @@ class BuyPopcornEx(QMainWindow, Ui_MainWindow):
         self.pushButton.clicked.connect(lambda: self.updateQuantity("Combo Solo", -1))
         self.pushButton_4.clicked.connect(lambda: self.updateQuantity("Combo Couple", -1))
 
-    def home(self):
+        self.pushButtonPayment.clicked.connect(self.payment)
 
+    def payment(self):
+        from PaymentEx import PaymentEx  # ✅ Import PaymentEx tại đây để tránh lỗi vòng lặp import
+        self.payment_window = PaymentEx()  # ✅ Tạo cửa sổ thanh toán
+        self.payment_window.show()  # ✅ Hiển thị cửa sổ thanh toán
+        self.close()
+    def home(self):
+        self.cm.clear()
         from ui.MainEx import MainEx
         self.mainwindow = MainEx()
         self.mainwindow.show()
@@ -54,56 +64,60 @@ class BuyPopcornEx(QMainWindow, Ui_MainWindow):
     def setup_cart(self):
 
         for product in self.beverages + self.popcorns + self.combos:
-            self.cart[product.Name] = {"price": product.Price, "quantity": 0}
+            self.cm.add_product(product.Name,0)
         self.updateTable()
 
     def updateQuantity(self, product_name, change):
+        if change > 0:
+            self.cm.add_product(product_name, change)
+        else:
+            self.cm.delete_product(product_name)
 
-        if product_name in self.cart:
-            self.cart[product_name]["quantity"] += change
-            if self.cart[product_name]["quantity"] < 0:
-                self.cart[product_name]["quantity"] = 0
-                print(f"✅ {product_name}: {self.cart[product_name]['quantity']}")
+        quantity = self.cm.cart["products"].get(product_name, 0)
+
+
         self.updateTable()
         if product_name == "Coca Cola":
-            self.labelCoke.setText(str(self.cart[product_name]["quantity"]))
+            self.labelCoke.setText(str(quantity))
         elif product_name == "Sprite":
-            self.labelSprite.setText(str(self.cart[product_name]["quantity"]))
+            self.labelSprite.setText(str(quantity))
         elif product_name == "Fanta":
-            self.labelFanta.setText(str(self.cart[product_name]["quantity"]))
+            self.labelFanta.setText(str(quantity))
         elif product_name == "Original":
-            self.labelOriginal.setText(str(self.cart[product_name]["quantity"]))
+            self.labelOriginal.setText(str(quantity))
         elif product_name == "Cheese":
-            self.labelCheese.setText(str(self.cart[product_name]["quantity"]))
+            self.labelCheese.setText(str(quantity))
         elif product_name == "Caramel":
-            self.labelCaramel.setText(str(self.cart[product_name]["quantity"]))
+            self.labelCaramel.setText(str(quantity))
         elif product_name == "Combo Solo":
-            self.labelSolo.setText(str(self.cart[product_name]["quantity"]))
+            self.labelSolo.setText(str(quantity))
         elif product_name == "Combo Couple":
-            self.labelCouple.setText(str(self.cart[product_name]["quantity"]))
+            self.labelCouple.setText(str(quantity))
 
     def updateTable(self):
-
         self.tableWidget.clear()
-        self.tableWidget.setRowCount(len(self.cart) + 1)  # Thêm 1 dòng cho Total
+        self.tableWidget.setRowCount(len(self.cm.cart["products"]) + 1)  # ✅ Đúng
         self.tableWidget.setColumnCount(4)
         self.tableWidget.setHorizontalHeaderLabels(["Sản phẩm", "Số lượng", "Đơn giá", "Thành tiền"])
 
         total_price = 0
         row = 0
 
-        for product, data in self.cart.items():
-            if data["quantity"] > 0:
+        for product, quantity in self.cm.cart["products"].items():  # ✅ Đúng
+            if quantity > 0:
+                price = next((p.Price for p in self.beverages + self.popcorns + self.combos if p.Name == product), 0)
+                total_item_price = quantity * price
+
                 self.tableWidget.setItem(row, 0, QTableWidgetItem(product))
-                self.tableWidget.setItem(row, 1, QTableWidgetItem(str(data["quantity"])))
-                self.tableWidget.setItem(row, 2, QTableWidgetItem(f"{data['price']} VND"))
-                total_item_price = data["quantity"] * data["price"]
+                self.tableWidget.setItem(row, 1, QTableWidgetItem(str(quantity)))
+                self.tableWidget.setItem(row, 2, QTableWidgetItem(f"{price} VND"))
                 self.tableWidget.setItem(row, 3, QTableWidgetItem(f"{total_item_price} VND"))
 
                 total_price += total_item_price
                 row += 1
 
         # 🔹 Thêm dòng Total vào cuối bảng
-        self.tableWidget.setItem(row, 0, QTableWidgetItem("Total"))  # Cột Sản phẩm: "Total"
-        self.tableWidget.setItem(row, 3, QTableWidgetItem(f"{total_price} VND"))  # Cột Thành tiền: Tổng tiền
+        self.tableWidget.setItem(row, 0, QTableWidgetItem("Total"))
+        self.tableWidget.setItem(row, 3, QTableWidgetItem(f"{total_price} VND"))
+
 

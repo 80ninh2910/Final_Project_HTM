@@ -1,7 +1,11 @@
 from PyQt6 import QtWidgets, uic
+from PyQt6.QtCore import QUrl
+from PyQt6.QtGui import QDesktopServices
 
+from librarys.CartManager import CartManager
 from librarys.DataConnector import DataConnector
 from ui.QNT import Ui_MainWindow
+
 
 class SeatSelectionWindow(QtWidgets.QDialog):
 
@@ -56,12 +60,13 @@ class SeatSelectionWindow(QtWidgets.QDialog):
 
         return self.selected_seats
 
-class QTNEx(QtWidgets.QMainWindow, Ui_MainWindow):
+class QNTEx(QtWidgets.QMainWindow, Ui_MainWindow):
+
     def __init__(self):
         super().__init__()
         self.setupUi(self)
         self.dc = DataConnector()
-
+        self.cart= CartManager()
         self.selected_seats = set()
         self.theater = None
         self.showtime = None
@@ -82,6 +87,9 @@ class QTNEx(QtWidgets.QMainWindow, Ui_MainWindow):
 
         self.comboBoxSelect2.currentTextChanged.connect(self.show_theater)
         self.comboBoxSelect1.currentTextChanged.connect(self.show_theater)
+
+        self.pushButtonfb.clicked.connect(self.openfb)
+
 
         self.labelTotal.setVisible(False)
         self.pushButtoncf.setVisible(False)
@@ -113,14 +121,22 @@ class QTNEx(QtWidgets.QMainWindow, Ui_MainWindow):
             self.selected_seats = seat_window.get_selected_seats()
             self.theater = theater
             self.showtime = showtime
+            for seat in self.selected_seats:
+                row, col = seat[0], seat[1:]
+                self.cart.add_seat(row, col,self.theater,self.showtime)
             self.labelTotal.setText(f"Phim: {self.film} | Rạp: {self.theater} | Giờ: {self.showtime} | Ghế đã chọn: {len(self.selected_seats)} | Ghế: {', '.join(self.selected_seats)}")
             self.labelTotal.setVisible(True)
             self.pushButtoncf.setVisible(True)
 
     def confirm_seats(self):
+
         if self.selected_seats:
             QtWidgets.QMessageBox.information(self, "Thành công", f"Rạp: {self.theater}\nGiờ: {self.showtime}\nBạn đã chọn: {', '.join(self.selected_seats)}")
             self.pushButtoncf.setVisible(False)
+            from BuyPopcornEx import BuyPopcornEx
+            self.popcorn_window = BuyPopcornEx()
+            self.popcorn_window.show()
+            self.hide()
         else:
             QtWidgets.QMessageBox.warning(self, "Lỗi", "Vui lòng chọn ít nhất một ghế!")
 
@@ -132,9 +148,13 @@ class QTNEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.labelDu.setText(movie.dur)
         self.labelDes.setText(movie.des)
 
+    def openfb(self):
+        contact="https://www.facebook.com/profile.php?id=61573908070943"
+        QDesktopServices.openUrl(QUrl(contact))
+
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    window = QTNEx()
+    window = QNTEx()
     window.show()
     sys.exit(app.exec())

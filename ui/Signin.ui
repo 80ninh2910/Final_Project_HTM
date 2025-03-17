@@ -94,13 +94,12 @@
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(212, 229, 255,150);
+font: 75 11pt &quot;MS Shell Dlg 2&quot;;
 border:rgb(0, 0, 255);
-color: rgb(255, 255, 255);
-    border-radius: 5px;
-    padding: 5px</string>
+</string>
     </property>
     <property name="text">
-     <string>TÌM, CHỌN PHIM ĐI NGƯỜI ĐẸP ƠI!!!!</string>
+     <string>viet123</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_3">
@@ -114,13 +113,12 @@ color: rgb(255, 255, 255);
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(212, 229, 255,150);
+font: 75 11pt &quot;MS Shell Dlg 2&quot;;
 border:rgb(0, 0, 255);
-color: rgb(255, 255, 255);
-    border-radius: 5px;
-    padding: 5px</string>
+</string>
     </property>
     <property name="text">
-     <string>TÌM, CHỌN PHIM ĐI NGƯỜI ĐẸP ƠI!!!!</string>
+     <string>123</string>
     </property>
     <property name="echoMode">
      <enum>QLineEdit::Password</enum>
