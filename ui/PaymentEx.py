@@ -18,12 +18,14 @@ class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
     def load_data(self):
 
         seats=self.cart.get_seats()
-        for seat_id, info in seats.items():
-            theater = info["theater"]
-            showtime = info["showtime"]
-            self.labelSeat.setText(str(seat_id))
-            self.labelTheater.setText(str(theater))
-            self.labelTime.setText(str(showtime))
+        info=next(iter(seats.values()))
+        theater = info["theater"]
+        showtime = info["showtime"]
+        seat_text = ", ".join(seats.keys())
+
+        self.labelSeat.setText(str(seat_text))
+        self.labelTheater.setText(str(theater))
+        self.labelTime.setText(str(showtime))
 
     def signalandslot(self):
         self.pushButtonfb.clicked.connect(self.openfb)
@@ -43,8 +45,6 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     window = PaymentEx()
-    window.cart.add_seat("A", "1", "CGV UEL", "19:00")
-    window.cart.add_seat("B", "2", "CGV UEL", "21:00")
     window.show()
     window.load_data()
     sys.exit(app.exec())

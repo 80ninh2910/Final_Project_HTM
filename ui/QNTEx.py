@@ -67,6 +67,7 @@ class QNTEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.dc = DataConnector()
         self.cart= CartManager()
+        self.cart.clear()
         self.selected_seats = set()
         self.theater = None
         self.showtime = None
