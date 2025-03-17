@@ -26,7 +26,7 @@ color: rgb(255, 255, 255);
     border: none</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButtonShwtm">
+   <widget class="QPushButton" name="pushButtonShowTime">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -203,9 +203,9 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-2192</y>
+       <y>-1954</y>
        <width>988</width>
-       <height>3012</height>
+       <height>2612</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -1513,7 +1513,8 @@ color: rgb(255, 255, 255);
          </property>
          <property name="styleSheet">
           <string notr="true">QTableWidget {
-    background-color: black;  /* Nền trắng */
+
+    background-color: white;  /* Nền trắng */
     color: white;  /* Chữ đen */
     border-radius: 12px; /* Bo góc mềm */
     padding: 5px; /* Khoảng cách lề trong */

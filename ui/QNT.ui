@@ -24,7 +24,7 @@
    <string>Quỷ Nhập Tràng</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(15, 23, 42);
+   <string notr="true">background-color: rgb(0, 0, 0);
 color: rgb(255, 255, 255);
     border: none</string>
   </property>
@@ -143,7 +143,7 @@ color: rgb(255, 255, 255);
    <widget class="QPushButton" name="pushButtonDiscounts">
     <property name="geometry">
      <rect>
-      <x>630</x>
+      <x>820</x>
       <y>70</y>
       <width>81</width>
       <height>31</height>
@@ -164,32 +164,6 @@ color: rgb(255, 255, 255);
     </property>
     <property name="text">
      <string>Discounts</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButtonEnterOp">
-    <property name="geometry">
-     <rect>
-      <x>730</x>
-      <y>70</y>
-      <width>181</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bahnschrift Condensed</family>
-      <pointsize>15</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: transparent;
-color: rgb(255, 255, 255);
-    border: none</string>
-    </property>
-    <property name="text">
-     <string>Entertainment Options</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButtonAboutUs">
@@ -1473,7 +1447,7 @@ color: rgb(255, 255, 255);
       <x>10</x>
       <y>70</y>
       <width>81</width>
-      <height>16</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="font">

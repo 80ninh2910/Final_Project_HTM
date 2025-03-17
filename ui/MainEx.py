@@ -2,6 +2,9 @@
 from PyQt6.QtGui import QDesktopServices
 from PyQt6.QtWidgets import QMainWindow
 from PyQt6.QtCore import QUrl
+
+from ui.AboutUs.AboutUsEx import AboutUsEx
+from ui.Discount.DiscountEx import DiscountEx
 from ui.Main import Ui_MainWindow
 from ui.BuyPopcornEx import BuyPopcornEx
 from ui.NGTEx import NGTEx
@@ -14,6 +17,8 @@ class MainEx(QMainWindow, Ui_MainWindow):
 
         # Biến lưu trữ cửa sổ BuyPopcornEx
         self.buyPopcornWindow = None
+        self.AboutUsWindow = None
+        self.DiscountWindow = None
         # Kết nối nút bấm để mở cửa sổ popcorn
         self.pushButtonBuyPop.clicked.connect(self.open_BuyPopcorn_Window)
         self.pushButtonTrlQNT.clicked.connect(self.open_youtube_videoQNT)
@@ -22,6 +27,9 @@ class MainEx(QMainWindow, Ui_MainWindow):
         self.pushButtonfb.clicked.connect(self.openfb)
         self.pushButtonQNT.clicked.connect(self.openQNT)
         self.pushButtonNGT.clicked.connect(self.openNGT)
+        self.pushButtonDiscounts.clicked.connect(self.open_discount)
+        self.pushButtonAboutUs.clicked.connect(self.open_aboutus)
+
     def showWindow(self):
         self.show()
 
@@ -30,6 +38,18 @@ class MainEx(QMainWindow, Ui_MainWindow):
         self.buyPopcornWindow = BuyPopcornEx()  # Luôn tạo cửa sổ mới
         self.buyPopcornWindow.show()
         self.close() # Đóng cửa sổ MainEx
+
+    def open_discount(self):
+        if self.DiscountWindow is None:
+            self.DiscountWindow = DiscountEx()
+        self.DiscountWindow.show()
+        self.hide()
+
+    def open_aboutus(self):
+        if self.AboutUsWindow is None:
+            self.AboutUsWindow = AboutUsEx()
+        self.AboutUsWindow.show()
+        self.hide()
     #HÀM MỞ TRAILER TRÊN WEB
     def open_youtube_videoNGT(self):
         video_url = "https://www.youtube.com/watch?v=hXGozmNBwt4"
