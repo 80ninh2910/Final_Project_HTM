@@ -1,0 +1,1325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1009</width>
+    <height>605</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>12</pointsize>
+    <weight>50</weight>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>HOME</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+    border: none</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+
+    border: none</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../images/logoreal.png</normaloff>../images/logoreal.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonShowtimes">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>70</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift Condensed</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+color: rgb(255, 255, 255);
+    border: none</string>
+    </property>
+    <property name="text">
+     <string>Showtimes</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonDiscounts">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>70</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift Condensed</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+color: rgb(255, 255, 0);
+    border: none</string>
+    </property>
+    <property name="text">
+     <string>Discounts</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonAboutUs">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>70</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift Condensed</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+color: rgb(255, 255, 255);
+    border: none</string>
+    </property>
+    <property name="text">
+     <string>About Us</string>
+    </property>
+   </widget>
+   <widget class="QScrollArea" name="scrollArea">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>100</y>
+      <width>1001</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <italic>true</italic>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QScrollBar::sub-line:vertical {
+	border:none;
+	background-color:rgb(59,59,90);
+	height: 15px;
+	border-top-left-radius:7px;
+	border-top-right-radius:7px;
+	subcontrol-position:top;
+	subcontrol-origin:margin;
+}
+QScrollBar::sub-line:vertical:hover {
+	background-color:rgb(255,0,127);
+}
+QScrollBar::sub-line:vertical:pressed {
+	background-color:rgb(185,0,92);
+}
+QScrollBar::add-line:vertical {
+	border:none;
+	background-color:rgb(59,59,90);
+	height: 15px;
+	border-top-left-radius:7px;
+	border-top-right-radius:7px;
+	subcontrol-position:bottom;
+	subcontrol-origin:margin;
+}
+QScrollBar::sub-line:vertical:hover {
+	background-color:rgb(255,0,127);
+}
+QScrollBar::sub-line:vertical:pressed {
+	background-color:rgb(185,0,92);
+}
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical{
+	background: none;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
+	background: none;
+}
+QScrollBar::sub-line:horizontal {
+	border:none;
+	background-color:rgb(59,59,90);
+	height: 15px;
+	border-top-left-radius:7px;
+	border-top-right-radius:7px;
+	subcontrol-position:top;
+	subcontrol-origin:margin;
+}
+QScrollBar::sub-line:horizontal:hover {
+	background-color:rgb(255,0,127);
+}
+QScrollBar::sub-line:horizontal:pressed {
+	background-color:rgb(185,0,92);
+}
+QScrollBar::add-line:horizontal {
+	border:none;
+	background-color:rgb(59,59,90);
+	height: 15px;
+	border-top-left-radius:7px;
+	border-top-right-radius:7px;
+	subcontrol-position:bottom;
+	subcontrol-origin:margin;
+}
+QScrollBar::sub-line:horizontal:hover {
+	background-color:rgb(255,0,127);
+}
+QScrollBar::sub-line:horizontal:pressed {
+	background-color:rgb(185,0,92);
+}
+QScrollBar::up-arrow:horizontal, QScrollBar::down-arrow:horizontal{
+	background: none;
+}
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
+	background: none;
+}
+
+
+</string>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>988</width>
+       <height>3012</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QFrame" name="frame">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>3000</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">    border: none</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>10</y>
+           <width>981</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bahnschrift Condensed</family>
+           <pointsize>30</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;
+    border: none</string>
+         </property>
+         <property name="text">
+          <string>Amazing Ticket Savings</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_4">
+         <property name="geometry">
+          <rect>
+           <x>530</x>
+           <y>930</y>
+           <width>411</width>
+           <height>231</height>
+          </rect>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Sunken</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::AutoText</enum>
+         </property>
+         <property name="pixmap">
+          <pixmap>../../images/discount1.jpg</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+         <property name="wordWrap">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_5">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>670</y>
+           <width>411</width>
+           <height>231</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>../../images/discount2.jpg</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_6">
+         <property name="geometry">
+          <rect>
+           <x>530</x>
+           <y>410</y>
+           <width>411</width>
+           <height>221</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>../../images/discount4.jpg</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtonGetTK1">
+         <property name="geometry">
+          <rect>
+           <x>530</x>
+           <y>280</y>
+           <width>121</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>-1</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(229, 0, 28); /* Red background */
+    color: white; /* White text */
+    border-radius: 20px; /* Rounded corners */
+    padding: 10px 20px; /* Padding */
+    border: none; /* No border */
+	font-size: 14px;
+    cursor: pointer; /* Change cursor to pointer */
+ background-color: rgb(200, 0, 25); /* Slightly darker red on hover */</string>
+         </property>
+         <property name="text">
+          <string>Get Tickets</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtonPlanYourVisit">
+         <property name="geometry">
+          <rect>
+           <x>610</x>
+           <y>820</y>
+           <width>231</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>-1</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: white; /* White background */
+    color: black; /* Black text */
+    border-radius: 20px; /* Rounded corners */
+    padding: 10px 30px; /* Padding */
+    border: none; /* No border */
+    font-size: 14px; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Change cursor to pointer */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Slight shadow */
+</string>
+         </property>
+         <property name="text">
+          <string>Plan Your Visit</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>160</y>
+           <width>411</width>
+           <height>221</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>../../images/discount3.jpg</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_2">
+         <property name="geometry">
+          <rect>
+           <x>-90</x>
+           <y>0</y>
+           <width>1161</width>
+           <height>141</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+background-color: rgb(123, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_12">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>60</y>
+           <width>741</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;
+font: 14pt &quot;MS Shell Dlg 2&quot;;
+    border: none</string>
+         </property>
+         <property name="text">
+          <string>Take advantage of amazing savings at participating GFLIX, GFLIX-DINE-IN™, and GFLIX CLASSIC™ theaters. Discover               more                       about our discounted movie tickets for matinee showtimes, Discount Tuesdays, and much more!</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_11">
+         <property name="geometry">
+          <rect>
+           <x>530</x>
+           <y>210</y>
+           <width>341</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Every day before 4pm, movie tickets are 25% off the evening ticket prices </string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_13">
+         <property name="geometry">
+          <rect>
+           <x>530</x>
+           <y>230</y>
+           <width>301</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+         </property>
+         <property name="text">
+          <string>GFLIX  theatre. It’s always perfect day to see a movie and save!</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_10">
+         <property name="geometry">
+          <rect>
+           <x>530</x>
+           <y>160</y>
+           <width>251</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Enjoy Discount Matinees Any Day</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_14">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>420</y>
+           <width>251</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Tuesdays Are for Ticket Savings</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_16">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>480</y>
+           <width>401</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Tuesdays Mean Big Savings at GFLIX: GFLIX Stubs A-List™, Premiere, and Insider members enjoy discounted tickets to the latest big-screen movies every Tuesday, all year round. Not a member yet? Sign up for free as an Insider today and start saving on Tuesdays and more!</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_17">
+         <property name="geometry">
+          <rect>
+           <x>530</x>
+           <y>690</y>
+           <width>251</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Students Always Save at GFLIX</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_18">
+         <property name="geometry">
+          <rect>
+           <x>530</x>
+           <y>750</y>
+           <width>391</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Enjoy special student pricing every day at GFLIX Theaters! Just bring your student ID to the box office and get great discounts on tickets for the latest movies!</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_19">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>970</y>
+           <width>171</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Seniors Save on Tickets</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_20">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>1030</y>
+           <width>451</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+         </property>
+         <property name="text">
+          <string>At GFLIX, we strive to bring you the movies you love at prices you'll enjoy. Guests aged 60+ can save on tickets all day, every day. Simply choose senior pricing when checking out online.</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_7">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>1190</y>
+           <width>981</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
+         </property>
+         <property name="text">
+          <string>See More Offers &amp; Promotions</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="Line" name="line_2">
+         <property name="geometry">
+          <rect>
+           <x>580</x>
+           <y>1510</y>
+           <width>118</width>
+           <height>3</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_15">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>90</y>
+           <width>651</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;
+font: 14pt &quot;MS Shell Dlg 2&quot;;
+    border: none</string>
+         </property>
+         <property name="text">
+          <string> more about our discounted movie tickets for matinee showtimes, Discount Tuesdays, and much more!</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtonSeeShowtimes">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>1100</y>
+           <width>211</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>-1</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: white; /* White background */
+    color: black; /* Black text */
+    border-radius: 20px; /* Rounded corners */
+    padding: 10px 30px; /* Padding */
+    border: none; /* No border */
+    font-size: 14px; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Change cursor to pointer */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Slight shadow */
+</string>
+         </property>
+         <property name="text">
+          <string>See Showtimes</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_8">
+         <property name="geometry">
+          <rect>
+           <x>630</x>
+           <y>430</y>
+           <width>121</width>
+           <height>71</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>../../images/logoreal.png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_21">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>520</y>
+           <width>401</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+         </property>
+         <property name="text">
+          <string> member yet? Sign up for free as an Insider today and start saving on Tuesdays and more!</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_24">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>500</y>
+           <width>411</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+         </property>
+         <property name="text">
+          <string>enjoy discounted tickets to the latest big-screen movies every Tuesday, all year round. Not a member yet? Sign up for free as an Insider today and start saving on Tuesdays and more!</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtonGetTK2">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>570</y>
+           <width>121</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>-1</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(229, 0, 28); /* Red background */
+    color: white; /* White text */
+    border-radius: 20px; /* Rounded corners */
+    padding: 10px 20px; /* Padding */
+    border: none; /* No border */
+	font-size: 14px;
+    cursor: pointer; /* Change cursor to pointer */
+ background-color: rgb(200, 0, 25); /* Slightly darker red on hover */</string>
+         </property>
+         <property name="text">
+          <string>Get Tickets</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtonJoinInsider">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>570</y>
+           <width>121</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>-1</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"> background-color: transparent; /* Transparent background */
+    color: white;                  /* White text */
+    border: 2px solid white;       /* White border */
+    border-radius: 20px;           /* Rounded corners */
+    padding: 10px 20px;            /* Padding inside the button */
+    font-size: 12px;               /* Font size */
+    font-weight: bold; 
+  background-color: rgba(0, 0, 0,0.1);</string>
+         </property>
+         <property name="text">
+          <string>Join Insider</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_22">
+         <property name="geometry">
+          <rect>
+           <x>530</x>
+           <y>770</y>
+           <width>371</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+         </property>
+         <property name="text">
+          <string> the box office and get great discounts on tickets for the latest movies!</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_9">
+         <property name="geometry">
+          <rect>
+           <x>670</x>
+           <y>440</y>
+           <width>31</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_23">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>1050</y>
+           <width>451</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+         </property>
+         <property name="text">
+          <string>on tickets all day, every day. Simply choose senior pricing when checking out online.</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_25">
+         <property name="geometry">
+          <rect>
+           <x>-100</x>
+           <y>1270</y>
+           <width>1161</width>
+           <height>421</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+background-color: rgb(123, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>../../images/AboutUs7.jpg</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtonSeeMorePromotions">
+         <property name="geometry">
+          <rect>
+           <x>-20</x>
+           <y>1200</y>
+           <width>1001</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bahnschrift Condensed</family>
+           <pointsize>15</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;
+color: rgb(255, 255, 255);
+   </string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_44">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>1740</y>
+           <width>981</width>
+           <height>71</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bahnschrift Condensed</family>
+           <pointsize>20</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;
+    border: none</string>
+         </property>
+         <property name="text">
+          <string>CONTACT US</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtonfb">
+         <property name="geometry">
+          <rect>
+           <x>430</x>
+           <y>1790</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bahnschrift Condensed</family>
+           <pointsize>13</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:  rgb(255, 255, 255);
+color:rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 5px</string>
+         </property>
+         <property name="text">
+          <string>Facebook</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../images/fb.png</normaloff>../../images/fb.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="autoRepeatDelay">
+          <number>305</number>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_4">
+         <property name="geometry">
+          <rect>
+           <x>420</x>
+           <y>1820</y>
+           <width>141</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;
+
+    border: none</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../images/logoreal.png</normaloff>../../images/logoreal.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>100</width>
+           <height>100</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_42">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>1870</y>
+           <width>981</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bahnschrift Condensed</family>
+           <pointsize>20</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;
+    border: none</string>
+         </property>
+         <property name="text">
+          <string>WE MAKE MOVIES BETTER</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_43">
+         <property name="geometry">
+          <rect>
+           <x>-10</x>
+           <y>1900</y>
+           <width>991</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bahnschrift Condensed</family>
+           <pointsize>15</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;
+    border: none</string>
+         </property>
+         <property name="text">
+          <string>© Copyright 2025 GFlix Theatres</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <zorder>label_2</zorder>
+        <zorder>label_3</zorder>
+        <zorder>label_4</zorder>
+        <zorder>label_5</zorder>
+        <zorder>label_6</zorder>
+        <zorder>pushButtonGetTK1</zorder>
+        <zorder>pushButtonPlanYourVisit</zorder>
+        <zorder>label</zorder>
+        <zorder>label_12</zorder>
+        <zorder>label_13</zorder>
+        <zorder>label_10</zorder>
+        <zorder>label_11</zorder>
+        <zorder>label_14</zorder>
+        <zorder>label_16</zorder>
+        <zorder>label_17</zorder>
+        <zorder>label_18</zorder>
+        <zorder>label_19</zorder>
+        <zorder>label_20</zorder>
+        <zorder>label_7</zorder>
+        <zorder>line_2</zorder>
+        <zorder>label_15</zorder>
+        <zorder>pushButtonSeeShowtimes</zorder>
+        <zorder>label_21</zorder>
+        <zorder>label_24</zorder>
+        <zorder>pushButtonGetTK2</zorder>
+        <zorder>pushButtonJoinInsider</zorder>
+        <zorder>label_22</zorder>
+        <zorder>label_9</zorder>
+        <zorder>label_8</zorder>
+        <zorder>label_23</zorder>
+        <zorder>label_25</zorder>
+        <zorder>pushButtonSeeMorePromotions</zorder>
+        <zorder>label_44</zorder>
+        <zorder>pushButtonfb</zorder>
+        <zorder>pushButton_4</zorder>
+        <zorder>label_42</zorder>
+        <zorder>label_43</zorder>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>60</y>
+      <width>1001</width>
+      <height>1</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>1</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>75</y>
+      <width>86</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift Condensed</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:none
+</string>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QComboBox::AdjustToContents</enum>
+    </property>
+    <item>
+     <property name="text">
+      <string>SELECT THEATER   </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>New Item</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>HAI BÀ TRƯNG</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>QUỐC THANH</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>New Item</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>New Item</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="pushButtonTicket_2">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>10</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift Condensed</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 0);
+color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 5px</string>
+    </property>
+    <property name="text">
+     <string>BUY TICKETS</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../images/ic_ticket.png</normaloff>../../images/ic_ticket.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonBuyPop">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>10</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift Condensed</family>
+      <pointsize>13</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(111, 56, 193);
+color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 5px</string>
+    </property>
+    <property name="text">
+     <string>BUY POPCORN</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../images/ic_popcorn.png</normaloff>../../images/ic_popcorn.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="autoRepeatDelay">
+     <number>305</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+
+    border: none</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../images/logoreal.png</normaloff>../../images/logoreal.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1009</width>
+     <height>18</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

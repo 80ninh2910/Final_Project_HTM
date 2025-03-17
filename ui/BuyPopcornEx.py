@@ -26,6 +26,8 @@ class BuyPopcornEx(QMainWindow, Ui_MainWindow):
         self.show()
     def setupSignalAndSlots(self):
         self.pushButtonHome.clicked.connect(self.home)
+        self.pushButtonAboutUs.clicked.connect(self.open_aboutus)
+        self.pushButtonDiscounts.clicked.connect(self.open_discount)
 
         #tang
         self.pushButton_7.clicked.connect(lambda: self.updateQuantity("Coca Cola", 1))
@@ -60,6 +62,21 @@ class BuyPopcornEx(QMainWindow, Ui_MainWindow):
         self.mainwindow = MainEx()
         self.mainwindow.show()
         self.close()  # ✅ Đóng chính cửa sổ này
+
+    def open_aboutus(self):
+        from ui.AboutUs.AboutUsEx import AboutUsEx
+        if self.mainwindow is None:
+            self.mainwindow = AboutUsEx()
+
+        self.mainwindow.show()
+        self.close()\
+
+    def open_discount(self):
+        from ui.Discount.DiscountEx import DiscountEx
+        if self.mainwindow is None:
+            self.mainwindow = DiscountEx()
+        self.mainwindow.show()
+        self.close()
 
     def setup_cart(self):
 
