@@ -10,92 +10,79 @@ from ui.SignUp import Ui_MainWindow
 class SignUpEx(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
+        self.login_window = None
         self.setupUi(self)
+        self.jff = JsonFileFactory()
+        self.customer_file = "../database/Customers.json"
 
         # Kết nối sự kiện cho các nút
         self.pushButtonSignUp.clicked.connect(self.save_user)  # Nút "SIGN UP"
         self.pushButtonSignIn.clicked.connect(self.switch_to_signin)  # Nút "Sign In Now!!!"
 
-        # Khởi tạo JsonFileFactory để quản lý dữ liệu người dùng
-        self.jff = JsonFileFactory()
-        self.customer_file = "../database/Customers.json"
-
-    def show_message(self, title, text):
-        """Hiển thị hộp thoại cảnh báo"""
-        msg = QtWidgets.QMessageBox(self)
-        msg.setIcon(QtWidgets.QMessageBox.Icon.Warning)
-        msg.setWindowTitle(title)
-        msg.setText(text)
-        msg.setStyleSheet("QLabel{ color: black; } QWidget{ background-color: white; }")
-        msg.exec()
-
     def save_user(self):
+        """Lưu thông tin đăng ký người dùng"""
         email = self.lineEditGmail.text().strip()
         username = self.lineEditUsername.text().strip()
         password = self.lineEditPw.text().strip()
         confirm_password = self.lineEditRePw.text().strip()
         is_agreed = self.radioButtonAgree.isChecked()  # Kiểm tra checkbox đồng ý
 
-        # Kiểm tra nếu chưa đồng ý với điều khoản
         if not is_agreed:
-            self.show_message("Lỗi", "Bạn phải đồng ý với điều khoản để tiếp tục đăng ký!")
+            self.show_message("Lỗi", "Bạn phải đồng ý với điều khoản để tiếp tục đăng ký!", QtWidgets.QMessageBox.Icon.Warning)
             return
 
-        # Kiểm tra nhập đầy đủ thông tin
         if not email or not username or not password or not confirm_password:
-            self.show_message("Lỗi", "Vui lòng nhập đầy đủ thông tin!")
+            self.show_message("Lỗi", "Vui lòng nhập đầy đủ thông tin!", QtWidgets.QMessageBox.Icon.Warning)
             return
 
-        # Kiểm tra mật khẩu nhập lại
         if password != confirm_password:
-            self.show_message("Lỗi", "Mật khẩu xác nhận không khớp!")
+            self.show_message("Lỗi", "Mật khẩu xác nhận không khớp!", QtWidgets.QMessageBox.Icon.Warning)
             return
 
-        # Đọc dữ liệu khách hàng hiện có từ file JSON
-        customers = []
+        customers = self.load_customers()
+        if any(user.email == email for user in customers):
+            self.show_message("Lỗi", "Email đã được đăng ký!", QtWidgets.QMessageBox.Icon.Warning)
+            return
+
+        new_customer = Customer(email=email, username=username, password=password)
+        customers.append(vars(new_customer))
+
+        if self.save_customers(customers):
+            self.show_message("Thành công", "Đăng ký thành công!", QtWidgets.QMessageBox.Icon.Information)
+            self.switch_to_signin()
+
+    def load_customers(self):
+        """Tải danh sách khách hàng từ file JSON"""
         if os.path.exists(self.customer_file):
             try:
-                customers = self.jff.read_data(self.customer_file, Customer) or []
-                customers = [Customer(**cus) if isinstance(cus, dict) else cus for cus in customers]
-            except json.JSONDecodeError as e:
-                self.show_message("Lỗi JSON", f"File JSON bị lỗi định dạng: {str(e)}")
-                return
-            except Exception as e:
-                self.show_message("Lỗi", f"Lỗi khi đọc dữ liệu: {str(e)}")
-                return
+                return self.jff.read_data(self.customer_file, Customer) or []
+            except (json.JSONDecodeError, Exception):
+                return []
+        return []
 
-        # Kiểm tra email đã tồn tại chưa
-        if any(user.email == email for user in customers):
-            self.show_message("Lỗi", "Email đã được đăng ký!")
-            return
-
-        # Lưu tài khoản mới
-        new_customer = Customer(email=email, username=username, password=password)  # Sử dụng Customer object
-        customers.append(vars(new_customer))  # Chuyển thành dict trước khi lưu
-
-        # Ghi dữ liệu xuống file JSON
+    def save_customers(self, customers):
+        """Lưu danh sách khách hàng vào file JSON"""
         try:
             self.jff.write_data(customers, self.customer_file)
-        except Exception as e:
-            self.show_message("Lỗi", f"Lỗi khi lưu dữ liệu: {str(e)}")
-            return
+            return True
+        except Exception:
+            return False
 
-        # Hiển thị thông báo đăng ký thành công
-        msg = QtWidgets.QMessageBox(self)
-        msg.setIcon(QtWidgets.QMessageBox.Icon.Information)
-        msg.setWindowTitle("Thành công")
-        msg.setText("Đăng ký thành công!")
-        msg.setStyleSheet("QLabel{ color: black; } QWidget{ background-color: white; }")
-        msg.exec()
-
-        # Chuyển về màn hình đăng nhập
-        self.switch_to_signin()
-
-    def switch_to_signin(self, event=None):
+    def switch_to_signin(self):
         """Chuyển sang màn hình đăng nhập"""
         self.login_window = SignInEx()
         self.login_window.show()
         self.close()
+
+    @staticmethod
+    def show_message(title, text, icon):
+        """Hiển thị thông báo"""
+        msg = QtWidgets.QMessageBox()
+        msg.setIcon(icon)
+        msg.setWindowTitle(title)
+        msg.setText(text)
+        msg.setStyleSheet("QLabel{ color: black; } QWidget{ background-color: white; }")
+        msg.exec()
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)

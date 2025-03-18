@@ -1,40 +1,40 @@
-from PyQt6 import QtWidgets, uic
+from PyQt6 import QtWidgets
 from PyQt6.QtCore import QUrl
 from PyQt6.QtGui import QDesktopServices
-
 from librarys.CartManager import CartManager
 from librarys.DataConnector import DataConnector
 from ui.NGT import Ui_MainWindow
 
-
 class SeatSelectionWindow(QtWidgets.QDialog):
-
     def __init__(self, theater, showtime, parent=None):
         super().__init__(parent)
+        self.seat_buttons = None
+        self.ok_button = None
+        self.grid_layout = None
+        self.widgetseat = None
         self.setWindowTitle(f"Chọn Ghế - {theater} ({showtime})")
         self.theater = theater
         self.showtime = showtime
         self.selected_seats = set()
 
-        # Layout chính
-        layout = QtWidgets.QVBoxLayout(self)
+        self.initUI()
 
-        # Widget ghế ngồi
+    def initUI(self):
+        """Khởi tạo giao diện chọn ghế"""
+        layout = QtWidgets.QVBoxLayout(self)
         self.widgetseat = QtWidgets.QWidget(self)
         self.grid_layout = QtWidgets.QGridLayout(self.widgetseat)
         self.create_seat_buttons()
         layout.addWidget(self.widgetseat)
 
-        # Nút xác nhận
         self.ok_button = QtWidgets.QPushButton("OK", self)
         self.ok_button.clicked.connect(self.accept)
         layout.addWidget(self.ok_button)
 
     def create_seat_buttons(self):
-
+        """Tạo các nút chọn ghế"""
         rows, cols = 4, 5
         self.seat_buttons = {}
-
         for row in range(rows):
             for col in range(cols):
                 seat_number = f"{chr(65+row)}{col+1}"
@@ -47,7 +47,7 @@ class SeatSelectionWindow(QtWidgets.QDialog):
                 self.seat_buttons[seat_number] = btn
 
     def toggle_seat(self, btn):
-
+        """Xử lý chọn/bỏ chọn ghế"""
         seat_number = btn.text()
         if btn.isChecked():
             self.selected_seats.add(seat_number)
@@ -57,79 +57,58 @@ class SeatSelectionWindow(QtWidgets.QDialog):
             btn.setStyleSheet("background-color: white; color: purple; border-radius: 10px;")
 
     def get_selected_seats(self):
-
+        """Trả về danh sách ghế đã chọn"""
         return self.selected_seats
 
 class NGTEx(QtWidgets.QMainWindow, Ui_MainWindow):
-
     def __init__(self):
         super().__init__()
+        self.popcorn_window = None
         self.setupUi(self)
         self.dc = DataConnector()
-        self.cart= CartManager()
+        self.cart = CartManager()
         self.selected_seats = set()
         self.theater = None
         self.showtime = None
-        self.film="NHÀ GIA TIÊN"
+        self.film = "NHÀ GIA TIÊN"
 
-        # Kết nối sự kiện chọn suất chiếu
-        self.pushButtonhcm_9.clicked.connect(lambda: self.select_showtime("HCM", "9:00"))
-        self.pushButtonhcm_12.clicked.connect(lambda: self.select_showtime("HCM", "12:15"))
-        self.pushButtonhcm_14.clicked.connect(lambda: self.select_showtime("HCM", "14:20"))
-        self.pushButtonhcm_19.clicked.connect(lambda: self.select_showtime("HCM", "19:00"))
-        self.pushButtonhcm_23.clicked.connect(lambda: self.select_showtime("HCM", "23:00"))
+        self.setup_connections()
+        self.display_movie_details()
 
-        self.pushButtonUel_9.clicked.connect(lambda: self.select_showtime("UEL", "9:00"))
-        self.pushButtonUel_12.clicked.connect(lambda: self.select_showtime("UEL", "12:15"))
-        self.pushButtonUel_14.clicked.connect(lambda: self.select_showtime("UEL", "14:20"))
-        self.pushButtonUel_19.clicked.connect(lambda: self.select_showtime("UEL", "19:00"))
-        self.pushButtonUel_23.clicked.connect(lambda: self.select_showtime("UEL", "23:00"))
-
-        self.comboBoxSelect2.currentTextChanged.connect(self.show_theater)
-        self.comboBoxSelect1.currentTextChanged.connect(self.show_theater)
-
-        self.pushButtonfb.clicked.connect(self.openfb)
-
-
-        self.labelTotal.setVisible(False)
-        self.pushButtoncf.setVisible(False)
+    def setup_connections(self):
+        """Kết nối các nút với sự kiện tương ứng"""
+        self.pushButtonfb.clicked.connect(self.open_facebook)
         self.pushButtoncf.clicked.connect(self.confirm_seats)
+        self.pushButtoncf.setVisible(False)
+        self.labelTotal.setVisible(False)
 
-        self.displaymovie()
+        # Kết nối nút chọn suất chiếu
+        showtime_buttons = {
+            "HCM": [self.pushButtonhcm_9, self.pushButtonhcm_12, self.pushButtonhcm_14, self.pushButtonhcm_19, self.pushButtonhcm_23],
+            "UEL": [self.pushButtonUel_9, self.pushButtonUel_12, self.pushButtonUel_14, self.pushButtonUel_19, self.pushButtonUel_23]
+        }
 
-    def show_theater(self, text):
-
-        self.comboBoxSelect2.setCurrentText(text)
-        self.comboBoxSelect1.setCurrentText(text)
-
-        if text == "ALL THEATER":
-            self.widgethcm.setVisible(True)
-            self.widgetuel.setVisible(True)
-        elif text == "UEL":
-            self.widgethcm.setVisible(False)
-            self.widgetuel.setVisible(True)
-        elif text == "HỒ CHÍ MINH":
-            self.widgethcm.setVisible(True)
-            self.widgetuel.setVisible(False)
-
-
+        showtime_hours = ["9:00", "12:15", "14:20", "19:00", "23:00"]
+        for theater, buttons in showtime_buttons.items():
+            for button, hour in zip(buttons, showtime_hours):
+                button.clicked.connect(lambda _, t=theater, h=hour: self.select_showtime(t, h))
 
     def select_showtime(self, theater, showtime):
-
+        """Xử lý chọn suất chiếu và chọn ghế"""
         seat_window = SeatSelectionWindow(theater, showtime, self)
-        if seat_window.exec():  # Nếu người dùng bấm OK
+        if seat_window.exec():
             self.selected_seats = seat_window.get_selected_seats()
             self.theater = theater
             self.showtime = showtime
             for seat in self.selected_seats:
                 row, col = seat[0], seat[1:]
-                self.cart.add_seat(row, col,self.theater,self.showtime)
-            self.labelTotal.setText(f"Phim: {self.film} | Rạp: {self.theater} | Giờ: {self.showtime} | Ghế đã chọn: {len(self.selected_seats)} | Ghế: {', '.join(self.selected_seats)}")
+                self.cart.add_seat(row, col, self.theater, self.showtime)
+            self.labelTotal.setText(f"Phim: {self.film} | Rạp: {self.theater} | Giờ: {self.showtime} | Ghế: {', '.join(self.selected_seats)}")
             self.labelTotal.setVisible(True)
             self.pushButtoncf.setVisible(True)
 
     def confirm_seats(self):
-
+        """Xác nhận ghế đã chọn và chuyển sang màn hình mua bắp rang"""
         if self.selected_seats:
             QtWidgets.QMessageBox.information(self, "Thành công", f"Rạp: {self.theater}\nGiờ: {self.showtime}\nBạn đã chọn: {', '.join(self.selected_seats)}")
             self.pushButtoncf.setVisible(False)
@@ -140,21 +119,15 @@ class NGTEx(QtWidgets.QMainWindow, Ui_MainWindow):
         else:
             QtWidgets.QMessageBox.warning(self, "Lỗi", "Vui lòng chọn ít nhất một ghế!")
 
-    def displaymovie(self):
-        for i in self.dc.movie:
-            if i.MTitle == self.film:
-                movie = i
-        self.labelType.setText(movie.MType)
-        self.labelDu.setText(movie.dur)
-        self.labelDes.setText(movie.des)
+    def display_movie_details(self):
+        """Hiển thị thông tin phim"""
+        movie = next((m for m in self.dc.movies if m.MTitle == self.film), None)
+        if movie:
+            self.labelType.setText(movie.MType)
+            self.labelDu.setText(movie.dur)
+            self.labelDes.setText(movie.des)
 
-    def openfb(self):
-        contact="https://www.facebook.com/profile.php?id=61573908070943"
-        QDesktopServices.openUrl(QUrl(contact))
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    window = NGTEx()
-    window.show()
-    sys.exit(app.exec())
+    @staticmethod
+    def open_facebook():
+        """Mở trang Facebook"""
+        QDesktopServices.openUrl(QUrl("https://www.facebook.com/profile.php?id=61573908070943"))
