@@ -3,6 +3,7 @@ from PyQt6.QtCore import QUrl
 from PyQt6.QtGui import QDesktopServices
 from librarys.CartManager import CartManager
 from librarys.DataConnector import DataConnector
+from librarys.UserSession import UserSession
 from ui.Payment import Ui_MainWindow
 
 class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -15,6 +16,9 @@ class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.beverages = self.dc.bev
         self.popcorns = self.dc.pop
         self.combos = self.dc.com
+
+        self.us=UserSession()
+
 
         self.load_data()
         self.setup_connections()
@@ -51,6 +55,9 @@ class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
             self.labelTheater.setText(info["theater"])
             self.labelTime.setText(info["showtime"])
 
+        info=self.us.get_user()
+        self.labelusname.setText(str(info["username"]))
+        self.labelMail.setText(str(info["email"]))
     def setup_connections(self):
         """Kết nối các sự kiện với nút bấm"""
         self.pushButtonfb.clicked.connect(self.open_facebook)

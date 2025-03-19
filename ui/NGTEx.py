@@ -3,6 +3,7 @@ from PyQt6.QtCore import QUrl
 from PyQt6.QtGui import QDesktopServices
 from librarys.CartManager import CartManager
 from librarys.DataConnector import DataConnector
+from librarys.UserSession import UserSession
 from ui.NGT import Ui_MainWindow
 
 class SeatSelectionWindow(QtWidgets.QDialog):
@@ -75,6 +76,9 @@ class NGTEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setup_connections()
         self.display_movie_details()
 
+        self.us=UserSession()
+        self.display_user()
+
     def setup_connections(self):
         """Kết nối các nút với sự kiện tương ứng"""
         self.pushButtonfb.clicked.connect(self.open_facebook)
@@ -125,6 +129,11 @@ class NGTEx(QtWidgets.QMainWindow, Ui_MainWindow):
             self.labelType.setText(movie.MType)
             self.labelDu.setText(movie.dur)
             self.labelDes.setText(movie.des)
+
+    def display_user(self):
+        info=self.us.get_user()
+        self.lineEditUsn.setText(str(info["username"]))
+        self.lineEditPhone.setText(str(info["email"]))
 
     @staticmethod
     def open_facebook():

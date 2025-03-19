@@ -4,6 +4,7 @@ from PyQt6.QtCore import QUrl
 from PyQt6.QtGui import QDesktopServices
 from librarys.CartManager import CartManager
 from librarys.DataConnector import DataConnector
+from librarys.UserSession import UserSession
 from ui.QNT import Ui_MainWindow
 
 class SeatSelectionWindow(QtWidgets.QDialog):
@@ -68,6 +69,8 @@ class QNTEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.film = "QUỶ NHẬP TRÀNG"
         self.setup_connections()
         self.display_movie_details()
+        self.us=UserSession()
+        self.display_user()
 
     def setup_connections(self):
         """Kết nối các nút với sự kiện tương ứng"""
@@ -124,6 +127,10 @@ class QNTEx(QtWidgets.QMainWindow, Ui_MainWindow):
         """Mở trang Facebook"""
         QDesktopServices.openUrl(QUrl("https://www.facebook.com/profile.php?id=61573908070943"))
 
+    def display_user(self):
+        info=self.us.get_user()
+        self.lineEditUsn.setText(str(info["username"]))
+        self.lineEditPhone.setText(str(info["email"]))
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     signup_window = QNTEx()

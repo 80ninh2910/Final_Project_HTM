@@ -1,6 +1,7 @@
 from PyQt6 import QtWidgets
 import sys
 from librarys.DataConnector import DataConnector
+from librarys.UserSession import UserSession
 from ui.Signin import Ui_MainWindow  # Import giao diện từ Qt Designer
 
 class SignInEx(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -11,7 +12,7 @@ class SignInEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.dc = DataConnector()
         self.pushButton.clicked.connect(self.login)  # Nút "Sign In"
-
+        self.us=UserSession()
     def login(self):
         """Xử lý đăng nhập"""
         username_or_email = self.lineEdit_2.text().strip()
@@ -19,6 +20,7 @@ class SignInEx(QtWidgets.QMainWindow, Ui_MainWindow):
 
         valid_user = self.dc.login(username_or_email, password)
         if valid_user:
+            self.us.set_user(username_or_email)
             self.show_message("Thành công", "Đăng nhập thành công!", QtWidgets.QMessageBox.Icon.Information)
             self.home()
         else:
