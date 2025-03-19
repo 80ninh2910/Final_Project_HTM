@@ -121,8 +121,7 @@ class NGTEx(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def display_movie_details(self):
         """Hiển thị thông tin phim"""
-        movie = next((m for m in self.dc.movies if m.MTitle == self.film), None)
-        if movie:
+        for movie in self.dc.movie:
             self.labelType.setText(movie.MType)
             self.labelDu.setText(movie.dur)
             self.labelDes.setText(movie.des)

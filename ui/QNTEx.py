@@ -1,3 +1,4 @@
+import sys
 from PyQt6 import QtWidgets
 from PyQt6.QtCore import QUrl
 from PyQt6.QtGui import QDesktopServices
@@ -8,15 +9,10 @@ from ui.QNT import Ui_MainWindow
 class SeatSelectionWindow(QtWidgets.QDialog):
     def __init__(self, theater, showtime, parent=None):
         super().__init__(parent)
-        self.seat_buttons = None
-        self.ok_button = None
-        self.grid_layout = None
-        self.widgetseat = None
         self.setWindowTitle(f"Chọn Ghế - {theater} ({showtime})")
         self.theater = theater
         self.showtime = showtime
         self.selected_seats = set()
-
         self.initUI()
 
     def initUI(self):
@@ -63,7 +59,6 @@ class SeatSelectionWindow(QtWidgets.QDialog):
 class QNTEx(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        self.popcorn_window = None
         self.setupUi(self)
         self.dc = DataConnector()
         self.cart = CartManager()
@@ -71,7 +66,6 @@ class QNTEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.theater = None
         self.showtime = None
         self.film = "QUỶ NHẬP TRÀNG"
-
         self.setup_connections()
         self.display_movie_details()
 
@@ -82,13 +76,12 @@ class QNTEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.pushButtoncf.setVisible(False)
         self.labelTotal.setVisible(False)
 
-        # Kết nối nút chọn suất chiếu
         showtime_buttons = {
             "HCM": [self.pushButtonhcm_9, self.pushButtonhcm_12, self.pushButtonhcm_14, self.pushButtonhcm_19, self.pushButtonhcm_23],
             "UEL": [self.pushButtonUel_9, self.pushButtonUel_12, self.pushButtonUel_14, self.pushButtonUel_19, self.pushButtonUel_23]
         }
-
         showtime_hours = ["9:00", "12:15", "14:20", "19:00", "23:00"]
+
         for theater, buttons in showtime_buttons.items():
             for button, hour in zip(buttons, showtime_hours):
                 button.clicked.connect(lambda _, t=theater, h=hour: self.select_showtime(t, h))
@@ -121,8 +114,7 @@ class QNTEx(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def display_movie_details(self):
         """Hiển thị thông tin phim"""
-        movie = next((m for m in self.dc.movies if m.MTitle == self.film), None)
-        if movie:
+        for movie in self.dc.movie:
             self.labelType.setText(movie.MType)
             self.labelDu.setText(movie.dur)
             self.labelDes.setText(movie.des)
@@ -131,3 +123,9 @@ class QNTEx(QtWidgets.QMainWindow, Ui_MainWindow):
     def open_facebook():
         """Mở trang Facebook"""
         QDesktopServices.openUrl(QUrl("https://www.facebook.com/profile.php?id=61573908070943"))
+
+if __name__ == "__main__":
+    app = QtWidgets.QApplication(sys.argv)
+    signup_window = QNTEx()
+    signup_window.show()
+    sys.exit(app.exec())
