@@ -203,9 +203,9 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-180</y>
-       <width>980</width>
-       <height>1322</height>
+       <y>0</y>
+       <width>988</width>
+       <height>1312</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -357,7 +357,7 @@ color: rgb(75, 60, 41);</string>
           <rect>
            <x>40</x>
            <y>350</y>
-           <width>161</width>
+           <width>211</width>
            <height>31</height>
           </rect>
          </property>
@@ -377,12 +377,12 @@ color: rgb(75, 60, 41);</string>
           <string>Username:</string>
          </property>
         </widget>
-        <widget class="QLabel" name="labelusname">
+        <widget class="QLabel" name="labelUsername">
          <property name="geometry">
           <rect>
            <x>40</x>
            <y>390</y>
-           <width>161</width>
+           <width>221</width>
            <height>31</height>
           </rect>
          </property>
@@ -407,7 +407,7 @@ color: rgb(75, 60, 41);</string>
           <rect>
            <x>40</x>
            <y>450</y>
-           <width>71</width>
+           <width>221</width>
            <height>31</height>
           </rect>
          </property>
@@ -432,7 +432,7 @@ color: rgb(75, 60, 41);</string>
           <rect>
            <x>40</x>
            <y>490</y>
-           <width>161</width>
+           <width>221</width>
            <height>31</height>
           </rect>
          </property>
@@ -455,9 +455,9 @@ color: rgb(75, 60, 41);</string>
         <widget class="QLabel" name="labelTheater">
          <property name="geometry">
           <rect>
-           <x>420</x>
+           <x>370</x>
            <y>390</y>
-           <width>161</width>
+           <width>241</width>
            <height>31</height>
           </rect>
          </property>
@@ -480,9 +480,9 @@ color: rgb(75, 60, 41);</string>
         <widget class="QLabel" name="label_10">
          <property name="geometry">
           <rect>
-           <x>290</x>
+           <x>280</x>
            <y>390</y>
-           <width>131</width>
+           <width>81</width>
            <height>31</height>
           </rect>
          </property>
@@ -505,8 +505,8 @@ color: rgb(75, 60, 41);</string>
         <widget class="QLabel" name="label_11">
          <property name="geometry">
           <rect>
-           <x>290</x>
-           <y>460</y>
+           <x>280</x>
+           <y>430</y>
            <width>91</width>
            <height>31</height>
           </rect>
@@ -530,9 +530,9 @@ color: rgb(75, 60, 41);</string>
         <widget class="QLabel" name="labelTime">
          <property name="geometry">
           <rect>
-           <x>380</x>
-           <y>460</y>
-           <width>141</width>
+           <x>370</x>
+           <y>430</y>
+           <width>241</width>
            <height>31</height>
           </rect>
          </property>
@@ -555,8 +555,8 @@ color: rgb(75, 60, 41);</string>
         <widget class="QLabel" name="label_13">
          <property name="geometry">
           <rect>
-           <x>300</x>
-           <y>530</y>
+           <x>280</x>
+           <y>470</y>
            <width>71</width>
            <height>31</height>
           </rect>
@@ -580,9 +580,9 @@ color: rgb(75, 60, 41);</string>
         <widget class="QLabel" name="labelSeat">
          <property name="geometry">
           <rect>
-           <x>380</x>
-           <y>530</y>
-           <width>151</width>
+           <x>370</x>
+           <y>470</y>
+           <width>241</width>
            <height>31</height>
           </rect>
          </property>
@@ -697,7 +697,7 @@ QTableWidget::item {
          <property name="geometry">
           <rect>
            <x>660</x>
-           <y>700</y>
+           <y>800</y>
            <width>211</width>
            <height>91</height>
           </rect>
@@ -982,6 +982,112 @@ color: rgb(148, 0, 0);</string>
           <string>PAYMENT</string>
          </property>
         </widget>
+        <widget class="QCheckBox" name="checkBoxUsePoint">
+         <property name="geometry">
+          <rect>
+           <x>650</x>
+           <y>690</y>
+           <width>161</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+         </property>
+         <property name="text">
+          <string>use point</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEditShowPoint">
+         <property name="geometry">
+          <rect>
+           <x>630</x>
+           <y>640</y>
+           <width>291</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(212, 229, 255,150);
+border:rgb(0, 0, 255);
+color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 5px</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEditFinalPayment">
+         <property name="geometry">
+          <rect>
+           <x>630</x>
+           <y>730</y>
+           <width>291</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(212, 229, 255,150);
+border:rgb(0, 0, 255);
+color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 5px</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_14">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>510</y>
+           <width>91</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Cambria</family>
+           <pointsize>20</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:transparent;
+color: rgb(75, 60, 41);</string>
+         </property>
+         <property name="text">
+          <string>Ticket:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="labelTicket">
+         <property name="geometry">
+          <rect>
+           <x>370</x>
+           <y>510</y>
+           <width>241</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Cambria</family>
+           <pointsize>20</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:transparent;
+color: rgb(75, 60, 41);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
         <zorder>label_2</zorder>
         <zorder>label</zorder>
         <zorder>label_29</zorder>
@@ -989,7 +1095,7 @@ color: rgb(148, 0, 0);</string>
         <zorder>label_3</zorder>
         <zorder>label_4</zorder>
         <zorder>label_5</zorder>
-        <zorder>labelusname</zorder>
+        <zorder>labelUsername</zorder>
         <zorder>label_7</zorder>
         <zorder>labelMail</zorder>
         <zorder>labelTheater</zorder>
@@ -1009,6 +1115,11 @@ color: rgb(148, 0, 0);</string>
         <zorder>label_42</zorder>
         <zorder>label_16</zorder>
         <zorder>label_6</zorder>
+        <zorder>checkBoxUsePoint</zorder>
+        <zorder>lineEditShowPoint</zorder>
+        <zorder>lineEditFinalPayment</zorder>
+        <zorder>label_14</zorder>
+        <zorder>labelTicket</zorder>
        </widget>
       </item>
      </layout>
@@ -1083,7 +1194,7 @@ color: rgb(255, 255, 255);
      <x>0</x>
      <y>0</y>
      <width>1017</width>
-     <height>26</height>
+     <height>18</height>
     </rect>
    </property>
   </widget>

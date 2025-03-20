@@ -1,3 +1,5 @@
+import json
+
 class CartManager:
     """
     CartManager sử dụng Singleton Pattern để đảm bảo chỉ có một giỏ hàng
@@ -65,3 +67,39 @@ class CartManager:
     def clear(self):
         """Làm mới giỏ hàng khi chạy màn hình đặt vé mới."""
         self.cart = {"seats": {}, "products": {}}
+
+    def clear_cart(self):
+        self.cart = {"products": {}, "seats": {}}  # Reset giỏ hàng
+
+class PricingManager:
+    def __init__(self):
+        self.price_list = {}
+        self.load_data_json()
+
+    def load_data_json(self):
+        """Load dữ liệu từ các tệp JSON và lưu vào price_list."""
+        try:
+            # Đọc dữ liệu từ combo.json
+            with open('../database/Combo.json', 'r', encoding='utf-8') as file:
+                combos = json.load(file)
+                for combo in combos:
+                    self.price_list[combo["Name"]] = combo["Price"]
+
+            # Đọc dữ liệu từ baverage.json
+            with open('../database/Baverage.json', 'r', encoding='utf-8') as file:
+                beverages = json.load(file)
+                for beverage in beverages:
+                    self.price_list[beverage["Name"]] = beverage["Price"]
+
+            # Đọc dữ liệu từ popcorn.json
+            with open('../database/Popcorn.json', 'r', encoding='utf-8') as file:
+                popcorns = json.load(file)
+                for popcorn in popcorns:
+                    self.price_list[popcorn["Name"]] = popcorn["Price"]
+
+        except FileNotFoundError as e:
+            print(f"Error loading JSON files: {e}")
+
+    def get_price(self, product_name):
+        """Trả về giá của sản phẩm dựa vào tên sản phẩm."""
+        return self.price_list.get(product_name, 0)  # Trả về 0 nếu sản phẩm không có trong danh sách
