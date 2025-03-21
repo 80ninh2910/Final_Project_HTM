@@ -23,10 +23,10 @@ class PointManager:
         key = f"{username}|{email}"
         return self.points_data.get(key, 0)
 
-    def add_points(self, username, email, amount):
+    def add_points(self, username, email, final_payment):
         """Cộng điểm dựa trên tổng tiền thanh toán"""
         key = f"{username}|{email}"
-        new_points = amount // 10000  # 1 điểm cho mỗi 10,000 VND
+        new_points = final_payment // 10000  # 1 điểm cho mỗi 10,000 VND
         self.points_data[key] = self.get_points(username, email) + new_points
         self.save_points()
 

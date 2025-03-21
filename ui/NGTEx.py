@@ -90,6 +90,7 @@ class NGTEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.labelTotal.setVisible(False)
         self.pushButtonDiscounts.clicked.connect(self.open_discount)
         self.pushButtonAboutUs.clicked.connect(self.open_aboutus)
+        self.pushButtonHome.clicked.connect(self.home)
 
         # Kết nối nút chọn suất chiếu
         showtime_buttons = {

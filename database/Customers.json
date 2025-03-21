@@ -523,5 +523,10 @@
         "email": "viet12@gmail.com",
         "username": "viet123",
         "password": "123"
+    },
+    {
+        "email": "cuccu@gmail.com",
+        "username": "cuccu",
+        "password": "123"
     }
 ]

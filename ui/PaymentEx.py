@@ -34,9 +34,20 @@ class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setup_connections()
 
         self.setWindowTitle("Xác nhận Thanh Toán")
+    def setup_connections(self):
+        self.pushButtonfb.clicked.connect(self.open_facebook)
+        self.pushButtonHome.clicked.connect(self.home)
+        self.pushButtonPay.clicked.connect(self.pay)
 
+    def home(self):
+        from ui.MainEx import MainEx
+        self.mainwindow = MainEx()
+        self.mainwindow.show()
+        self.close()
 
-
+    @staticmethod
+    def open_facebook():
+        QDesktopServices.openUrl(QUrl("https://www.facebook.com/profile.php?id=61573908070943"))
     def load_data(self):
         products = self.cart.cart.get("products", {})
         self.tableWidget.clearContents()
@@ -78,25 +89,18 @@ class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
             self.labelTime.setText(info.get("showtime", "N/A"))
 
         info = self.us.get_user() or {}
-        self.labelUsername.setText(info.get("username", "N/A"))
-        self.labelMail.setText(info.get("email", "N/A"))
+        username = info.get("username", "N/A")
+        email = info.get("email", "N/A")
 
-    def setup_connections(self):
-        self.pushButtonfb.clicked.connect(self.open_facebook)
-        self.pushButtonHome.clicked.connect(self.home)
-        self.pushButtonPay.clicked.connect(self.pay)
+        self.labelUsername.setText(username)
+        self.labelMail.setText(email)
 
-    def home(self):
-        from ui.MainEx import MainEx
-        self.mainwindow = MainEx()
-        self.mainwindow.show()
-        self.close()
-
-    @staticmethod
-    def open_facebook():
-        QDesktopServices.openUrl(QUrl("https://www.facebook.com/profile.php?id=61573908070943"))
+        # Hiển thị số điểm hiện có
+        current_points = self.point_manager.get_points(username, email)
+        self.lineEditShowPoint.setText(f"{current_points} điểm")
 
     def pay(self):
+
         seats = self.cart.get_seats() or {}
         products = self.cart.cart.get("products", {})
 
@@ -106,9 +110,21 @@ class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
             if self.tableWidget.item(row, 3)
         )
 
+
+        username = self.labelUsername.text()
+        email = self.labelMail.text()
+        current_points = self.point_manager.get_points(username, email)
+        # Cho phép chọn số điểm sử dụng
+        points_to_use, ok = QtWidgets.QInputDialog.getInt(self, "Dùng điểm", "Nhập số điểm muốn dùng:", 0, 0,
+                                                          current_points)
+        if not ok:
+            return
         num_tickets = int(self.labelTicket.text().strip() or "0")
         total_tickets = num_tickets * 45000
         final_total = total_products + total_tickets
+
+        discount = self.point_manager.use_points(username, email, points_to_use)
+        final_payment = max(0, final_total - discount)
 
         seat_text = ", ".join(seats.keys()) if seats else "Chưa đặt ghế nào"
         info = next(iter(seats.values()), {})
@@ -130,7 +146,7 @@ class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
             seats=seat_text,
             num_tickets=num_tickets,
             order_items=order_items,
-            price=final_total
+            price=final_payment
         )
 
         try:
@@ -153,9 +169,11 @@ class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
                - Số vé: {num_tickets} (Tổng tiền vé: {total_tickets:,} VND)
                - Sản phẩm đã đặt:
                {order_items}
+               
+               
                - Tổng tiền sản phẩm: {total_products:,} VND
                --------------------------------
-               Tổng tiền cuối cùng: {final_total:,} VND
+               Tổng tiền cuối cùng: {final_payment:,} VND
            """)
 
         # Load hình ảnh QR Code
@@ -182,7 +200,18 @@ class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
         dialog.exec()
 
         if msg_box.clickedButton() == btn_yes:
+            self.finalize_payment(final_payment)
             self.process_payment()
+
+    def finalize_payment(self, final_payment):
+        username = self.labelUsername.text()
+        email = self.labelMail.text()
+        self.point_manager.add_points(username, email, final_payment)  # Cộng điểm mới
+
+        QtWidgets.QMessageBox.information(self, "Thanh Toán Thành Công", "Cảm ơn bạn đã mua vé!",
+                                          QtWidgets.QMessageBox.StandardButton.Ok)
+        self.cart.clear_cart()
+        self.load_data()
 
     def process_payment(self):
         QtWidgets.QMessageBox.information(self, "Thanh Toán Thành Công", "Cảm ơn bạn đã mua vé!",
@@ -197,6 +226,9 @@ class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.labelSeat.setText("")
         self.labelTheater.setText("")
         self.labelTime.setText("")
+        self.lineEditShowPoint.setText("")
+        self.labelUsername.setText("")
+        self.labelMail.setText("")
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)

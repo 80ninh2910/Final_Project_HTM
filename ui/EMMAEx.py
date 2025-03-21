@@ -82,6 +82,7 @@ class EMMAEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.labelTotal.setVisible(False)
         self.pushButtonDiscounts.clicked.connect(self.open_discount)
         self.pushButtonAboutUs.clicked.connect(self.open_aboutus)
+        self.pushButtonHome.clicked.connect(self.home)
 
         showtime_buttons = {
             "HCM": [self.pushButtonhcm_9, self.pushButtonhcm_12, self.pushButtonhcm_14, self.pushButtonhcm_19, self.pushButtonhcm_23],
