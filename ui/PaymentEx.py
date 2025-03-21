@@ -6,6 +6,7 @@ from PyQt6.QtGui import QDesktopServices
 
 from librarys.CartManager import CartManager
 from librarys.DataConnector import DataConnector
+from librarys.PointManager import PointManager
 from librarys.TransactionManager import TransactionManager
 from librarys.UserSession import UserSession
 from models.Transaction import Transaction
@@ -23,6 +24,7 @@ class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.dc = DataConnector()
         self.transaction_manager = TransactionManager()
         self.us = UserSession()
+        self.point_manager = PointManager()  # Khởi tạo PointManager
 
         self.beverages = self.dc.bev
         self.popcorns = self.dc.pop

@@ -143,7 +143,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, -391, 988, 1312))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, -413, 988, 1312))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout.setObjectName("verticalLayout")
@@ -502,7 +502,8 @@ class Ui_MainWindow(object):
         self.checkBoxUsePoint.setObjectName("checkBoxUsePoint")
         self.lineEditShowPoint = QtWidgets.QLineEdit(parent=self.frame)
         self.lineEditShowPoint.setGeometry(QtCore.QRect(630, 640, 291, 41))
-        self.lineEditShowPoint.setStyleSheet("background-color: rgb(255, 255, 0);\n"
+        self.lineEditShowPoint.setStyleSheet("\n"
+"background-color: #DCCBA4;\n"
 "color: rgb(0, 0, 0);\n"
 "    border-radius: 10px;\n"
 "    padding: 5px")
@@ -510,7 +511,8 @@ class Ui_MainWindow(object):
         self.lineEditShowPoint.setObjectName("lineEditShowPoint")
         self.lineEditFinalPayment = QtWidgets.QLineEdit(parent=self.frame)
         self.lineEditFinalPayment.setGeometry(QtCore.QRect(630, 730, 291, 41))
-        self.lineEditFinalPayment.setStyleSheet("background-color: rgb(255, 255, 0);\n"
+        self.lineEditFinalPayment.setStyleSheet("\n"
+"background-color: #DCCBA4;\n"
 "color: rgb(0, 0, 0);\n"
 "    border-radius: 10px;\n"
 "    padding: 5px")

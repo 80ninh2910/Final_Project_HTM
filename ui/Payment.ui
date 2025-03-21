@@ -203,7 +203,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-391</y>
+       <y>-413</y>
        <width>988</width>
        <height>1312</height>
       </rect>
@@ -1009,7 +1009,8 @@ color: rgb(148, 0, 0);</string>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 0);
+          <string notr="true">
+background-color: #DCCBA4;
 color: rgb(0, 0, 0);
     border-radius: 10px;
     padding: 5px</string>
@@ -1028,7 +1029,8 @@ color: rgb(0, 0, 0);
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 0);
+          <string notr="true">
+background-color: #DCCBA4;
 color: rgb(0, 0, 0);
     border-radius: 10px;
     padding: 5px</string>
