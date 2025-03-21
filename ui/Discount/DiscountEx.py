@@ -26,6 +26,7 @@ class DiscountEx(QMainWindow, Ui_MainWindow):
         self.pushButtonSeeShowtimes.clicked.connect(self.home)
         self.pushButtonJoinInsider.clicked.connect(self.JoinInsider)
         self.pushButtonSeeMorePromotions.clicked.connect(self.openfb)
+        self.pushButtonTicket_2.clicked.connect(self.home)
     def home(self):
         from ui.MainEx import MainEx
 

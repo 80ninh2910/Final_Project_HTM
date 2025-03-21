@@ -1,14 +1,16 @@
-import json
+import sys
 
-from PyQt6 import QtWidgets
-from PyQt6.QtCore import QUrl
+from PyQt6 import QtWidgets, QtGui
+from PyQt6.QtCore import QUrl, Qt
 from PyQt6.QtGui import QDesktopServices
-from librarys.CartManager import CartManager, PricingManager
+
+from librarys.CartManager import CartManager
 from librarys.DataConnector import DataConnector
 from librarys.TransactionManager import TransactionManager
 from librarys.UserSession import UserSession
 from models.Transaction import Transaction
 from ui.Payment import Ui_MainWindow
+
 
 class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
@@ -20,18 +22,20 @@ class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.cart = CartManager()
         self.dc = DataConnector()
         self.transaction_manager = TransactionManager()
+        self.us = UserSession()
 
         self.beverages = self.dc.bev
         self.popcorns = self.dc.pop
         self.combos = self.dc.com
 
-        self.us=UserSession()
-
         self.load_data()
         self.setup_connections()
 
+        self.setWindowTitle("Xác nhận Thanh Toán")
+
+
+
     def load_data(self):
-        """Tải dữ liệu sản phẩm từ giỏ hàng và hiển thị trong bảng"""
         products = self.cart.cart.get("products", {})
         self.tableWidget.clearContents()
         if not products:
@@ -54,47 +58,33 @@ class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
             self.tableWidget.setItem(row, 3, QtWidgets.QTableWidgetItem(f"{price * quantity} VND"))
             row += 1
 
-        # Thêm dòng tổng cộng
         self.tableWidget.setRowCount(row + 1)
         self.tableWidget.setItem(row, 0, QtWidgets.QTableWidgetItem("Tổng cộng"))
         self.tableWidget.setItem(row, 3, QtWidgets.QTableWidgetItem(f"{total} VND"))
 
-        # Lấy thông tin ghế đặt
         seats = self.cart.get_seats()
-        num_tickets = len(seats)  # Mỗi ghế tương ứng với một vé
-
-        # Hiển thị số vé trên labelTicket
+        num_tickets = len(seats)
         self.labelTicket.setText(str(num_tickets))
 
-        # Tính tổng tiền cuối cùng (bao gồm vé)
         final_total = total + (num_tickets * 45000)
         self.lineEditFinalPayment.setText(f"{final_total} VND")
 
-        # Cập nhật thông tin điểm tích lũy vào lineEditShowPoint
-        #self.lineEditShowPoint.setText(str(self.current_customer.points))
-
-
-        # Hiển thị thông tin ghế và suất chiếu
-        seats = self.cart.get_seats()
         if seats:
             info = next(iter(seats.values()))
             self.labelSeat.setText(", ".join(seats.keys()))
-            self.labelTheater.setText(info["theater"])
-            self.labelTime.setText(info["showtime"])
+            self.labelTheater.setText(info.get("theater", "N/A"))
+            self.labelTime.setText(info.get("showtime", "N/A"))
 
-        info=self.us.get_user()
-        self.labelUsername.setText(str(info["username"]))
-        self.labelMail.setText(str(info["email"]))
+        info = self.us.get_user() or {}
+        self.labelUsername.setText(info.get("username", "N/A"))
+        self.labelMail.setText(info.get("email", "N/A"))
 
     def setup_connections(self):
-        """Kết nối các sự kiện với nút bấm"""
         self.pushButtonfb.clicked.connect(self.open_facebook)
         self.pushButtonHome.clicked.connect(self.home)
         self.pushButtonPay.clicked.connect(self.pay)
 
-
     def home(self):
-        """Quay lại màn hình chính"""
         from ui.MainEx import MainEx
         self.mainwindow = MainEx()
         self.mainwindow.show()
@@ -102,56 +92,33 @@ class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
 
     @staticmethod
     def open_facebook():
-        """Mở trang Facebook"""
         QDesktopServices.openUrl(QUrl("https://www.facebook.com/profile.php?id=61573908070943"))
 
     def pay(self):
-        seats = self.cart.get_seats()
+        seats = self.cart.get_seats() or {}
         products = self.cart.cart.get("products", {})
 
-        # Lấy thông tin về tổng tiền sản phẩm từ bảng (cột cuối cùng)
-        total_products = 0
-        row_count = self.tableWidget.rowCount()
-        for row in range(row_count - 1):  # Không tính dòng "Tổng cộng"
-            total_value_item = self.tableWidget.item(row, 3)
-            if total_value_item:
-                total_value = total_value_item.text().replace(" VND", "").replace(",", "")
-                total_products += int(total_value)
+        total_products = sum(
+            int(self.tableWidget.item(row, 3).text().replace(" VND", "").replace(",", ""))
+            for row in range(self.tableWidget.rowCount() - 1)
+            if self.tableWidget.item(row, 3)
+        )
 
-        # Lấy thông tin tổng số ghế và tính tiền vé (đã tính trong hàm load_data)
-        num_tickets = int(self.labelTicket.text())
-        ticket_price = 45000
-        total_tickets = num_tickets * ticket_price
-
-        # Tính tổng tiền cuối cùng
+        num_tickets = int(self.labelTicket.text().strip() or "0")
+        total_tickets = num_tickets * 45000
         final_total = total_products + total_tickets
 
-        # Lấy thông tin ghế
-        if seats:
-            seat_text = ", ".join(seats.keys())
-            infor = next(iter(seats.values()))
-            num_tickets = len(seats)  # Mỗi ghế = 1 vé
-            theater = infor.get("theater", "N/A")
-            showtime = infor.get("showtime", "N/A")
-        else:
-            seat_text = "Chưa đặt ghế nào"
-            num_tickets = 0
-            theater = "N/A"
-            showtime = "N/A"
+        seat_text = ", ".join(seats.keys()) if seats else "Chưa đặt ghế nào"
+        info = next(iter(seats.values()), {})
+        theater = info.get("theater", "N/A")
+        showtime = info.get("showtime", "N/A")
 
-        # Lấy thông tin người dùng
-        info = self.us.get_user()
-        if info:  # Kiểm tra nếu info không phải là None
-            username = info.get("username", "N/A")
-            email = info.get("email", "N/A")
-        else:
-            username = "N/A"
-            email = "N/A"
+        user_info = self.us.get_user() or {}
+        username = user_info.get("username", "N/A")
+        email = user_info.get("email", "N/A")
 
-        # Lấy thông tin bắp nước (chỉ lấy sản phẩm có số lượng > 0)
-        order_items = "\n".join([f"- {name}: {quantity}x" for name, quantity in products.items() if quantity > 0])
-        if not order_items:
-            order_items = "Chưa đặt hàng"
+        order_items = "\n".join(
+            [f"- {name}: {quantity}x" for name, quantity in products.items() if quantity > 0]) or "Chưa đặt hàng"
 
         transaction = Transaction(
             user_name=username,
@@ -164,66 +131,72 @@ class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
             price=final_total
         )
 
-        # Lưu lịch sử giao dịch
-        self.transaction_manager.save_transaction(transaction.to_dict())
+        try:
+            self.transaction_manager.save_transaction(transaction.to_dict())
+        except Exception as e:
+            print(f"Lỗi khi lưu giao dịch: {e}")
+            return
 
-        # Hiển thị QMessageBox với 2 nút Thanh Toán / Từ Chối
-        msg = QtWidgets.QMessageBox(self)
-        msg.setWindowTitle("Xác nhận Thanh Toán")
-        msg.setIcon(QtWidgets.QMessageBox.Icon.Information)
-        msg.setText(json.dumps(transaction.to_dict(), indent=4, ensure_ascii=False))
-
-        msg.setText(f"""
-           Xác nhận Thanh Toán:
-           - Người dùng: {username}
-           - Email: {email}
-           - Rạp chiếu: {theater}
-           - Suất chiếu: {showtime}
-           - Ghế: {seat_text}
-           - Số vé: {num_tickets} (Tổng tiền vé: {total_tickets:,} VND)
-           - Sản phẩm đã đặt:
-           {order_items}
-           - Tổng tiền sản phẩm: {total_products:,} VND
-           --------------------------------
-           Tổng tiền cuối cùng: {final_total:,} VND
+         # Tạo QMessageBox
+        msg_box = QtWidgets.QMessageBox(self)
+        msg_box.setWindowTitle("Xác nhận Thanh Toán")
+        msg_box.setIcon(QtWidgets.QMessageBox.Icon.Question)
+        msg_box.setText(f"""
+               Xác nhận Thanh Toán:
+               - Người dùng: {username}
+               - Email: {email}
+               - Rạp chiếu: {theater}
+               - Suất chiếu: {showtime}
+               - Ghế: {seat_text}
+               - Số vé: {num_tickets} (Tổng tiền vé: {total_tickets:,} VND)
+               - Sản phẩm đã đặt:
+               {order_items}
+               - Tổng tiền sản phẩm: {total_products:,} VND
+               --------------------------------
+               Tổng tiền cuối cùng: {final_total:,} VND
            """)
 
-        msg.setStandardButtons(QtWidgets.QMessageBox.StandardButton.Yes | QtWidgets.QMessageBox.StandardButton.No)
+        # Load hình ảnh QR Code
+        pixmap = QtGui.QPixmap("../images/qrcode.jpg").scaled(200, 200, Qt.AspectRatioMode.KeepAspectRatio)
+        label_image = QtWidgets.QLabel()
+        label_image.setPixmap(pixmap)
+        label_image.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        # Kiểm tra nút có tồn tại không trước khi đặt tên
-        yes_button = msg.button(QtWidgets.QMessageBox.StandardButton.Yes)
-        no_button = msg.button(QtWidgets.QMessageBox.StandardButton.No)
+        # Layout chính chứa nội dung và hình ảnh
+        layout = QtWidgets.QVBoxLayout()
+        layout.addWidget(msg_box,alignment=Qt.AlignmentFlag.AlignCenter)  # Thêm nội dung tin nhắn
+        layout.addWidget(label_image, alignment=Qt.AlignmentFlag.AlignCenter)  # Hình ảnh QR căn giữa
 
-        if yes_button:
-            yes_button.setText("Thanh Toán")
-        if no_button:
-            no_button.setText("Từ Chối")
+        # Tạo QDialog để chứa layout
+        dialog = QtWidgets.QDialog(self)
+        dialog.setWindowTitle("QR Code Thanh Toán")
+        dialog.setLayout(layout)
 
-        response = msg.exec()
+        # Thêm nút xác nhận và hủy
+        btn_yes = msg_box.addButton("Yes", QtWidgets.QMessageBox.ButtonRole.AcceptRole)
+        msg_box.addButton("No", QtWidgets.QMessageBox.ButtonRole.RejectRole)
 
-        if response == QtWidgets.QMessageBox.StandardButton.Yes:
+        dialog.resize(400, 400)
+        dialog.exec()
+
+        if msg_box.clickedButton() == btn_yes:
             self.process_payment()
 
     def process_payment(self):
-        """Xử lý thanh toán: chỉ xóa giỏ hàng và xác nhận thanh toán."""
         QtWidgets.QMessageBox.information(self, "Thanh Toán Thành Công", "Cảm ơn bạn đã mua vé!",
                                           QtWidgets.QMessageBox.StandardButton.Ok)
-
-        self.cart.clear_cart()  # Xóa giỏ hàng sau khi thanh toán
-        self.load_data()  # Cập nhật lại giao diện giỏ hàng (hiển thị giỏ hàng trống)
+        self.cart.clear_cart()
+        self.load_data()
         self.reset_fields()
 
     def reset_fields(self):
         self.labelTicket.setText("")
         self.lineEditFinalPayment.setText("")
-        self.lineEditShowPoint.setText("")
         self.labelSeat.setText("")
         self.labelTheater.setText("")
         self.labelTime.setText("")
 
-
 if __name__ == "__main__":
-    import sys
     app = QtWidgets.QApplication(sys.argv)
     window = PaymentEx()
     window.show()

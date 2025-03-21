@@ -203,7 +203,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>0</y>
+       <y>-391</y>
        <width>988</width>
        <height>1312</height>
       </rect>
@@ -336,8 +336,8 @@ color: rgb(75, 60, 41);</string>
         <widget class="QLabel" name="label">
          <property name="geometry">
           <rect>
-           <x>10</x>
-           <y>250</y>
+           <x>-30</x>
+           <y>240</y>
            <width>959</width>
            <height>361</height>
           </rect>
@@ -737,7 +737,7 @@ color: rgb(255, 255, 255);
          <property name="geometry">
           <rect>
            <x>-10</x>
-           <y>880</y>
+           <y>900</y>
            <width>991</width>
            <height>151</height>
           </rect>
@@ -992,10 +992,11 @@ color: rgb(148, 0, 0);</string>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+          <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+</string>
          </property>
          <property name="text">
-          <string>use point</string>
+          <string>Use Point</string>
          </property>
         </widget>
         <widget class="QLineEdit" name="lineEditShowPoint">
@@ -1008,10 +1009,9 @@ color: rgb(148, 0, 0);</string>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(212, 229, 255,150);
-border:rgb(0, 0, 255);
-color: rgb(255, 255, 255);
-    border-radius: 5px;
+          <string notr="true">background-color: rgb(255, 255, 0);
+color: rgb(0, 0, 0);
+    border-radius: 10px;
     padding: 5px</string>
          </property>
          <property name="text">
@@ -1028,10 +1028,9 @@ color: rgb(255, 255, 255);
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(212, 229, 255,150);
-border:rgb(0, 0, 255);
-color: rgb(255, 255, 255);
-    border-radius: 5px;
+          <string notr="true">background-color: rgb(255, 255, 0);
+color: rgb(0, 0, 0);
+    border-radius: 10px;
     padding: 5px</string>
          </property>
          <property name="text">
@@ -1175,7 +1174,7 @@ color: rgb(255, 255, 255);
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../images/ic_popcorn.png</normaloff>../images/ic_popcorn.png</iconset>
+      <normaloff>../images/home.ico</normaloff>../images/home.ico</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -1183,8 +1182,17 @@ color: rgb(255, 255, 255);
       <height>30</height>
      </size>
     </property>
+    <property name="autoRepeat">
+     <bool>false</bool>
+    </property>
+    <property name="autoExclusive">
+     <bool>false</bool>
+    </property>
     <property name="autoRepeatDelay">
-     <number>305</number>
+     <number>250</number>
+    </property>
+    <property name="autoRepeatInterval">
+     <number>250</number>
     </property>
    </widget>
   </widget>

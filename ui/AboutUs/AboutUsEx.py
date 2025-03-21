@@ -24,6 +24,7 @@ class AboutUsEx(QMainWindow, Ui_MainWindow):
         self.pushButtonLearnMore2.clicked.connect(self.openfb)
         self.pushButtonLearnMore3.clicked.connect(self.openfb)
         self.pushButtonLearnMore4.clicked.connect(self.openfb)
+        self.pushButtonTicket.clicked.connect(self.home)
 
 
     def home(self):

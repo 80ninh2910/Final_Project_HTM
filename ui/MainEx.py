@@ -1,6 +1,8 @@
 from PyQt6.QtGui import QDesktopServices
 from PyQt6.QtWidgets import QMainWindow
 from PyQt6.QtCore import QUrl
+
+from ui.EMMAEx import EMMAEx
 from ui.Main import Ui_MainWindow
 from ui.NGTEx import NGTEx
 from ui.QNTEx import QNTEx
@@ -24,6 +26,9 @@ class MainEx(QMainWindow, Ui_MainWindow):
         self.pushButtonfb.clicked.connect(lambda: self.open_youtube_video("https://www.facebook.com/profile.php?id=61573908070943"))
         self.pushButtonQNT.clicked.connect(self.openQNT)
         self.pushButtonNGT.clicked.connect(self.openNGT)
+        self.pushButtonEMMA.clicked.connect(self.openEMMA)
+        self.pushButtonDiscounts.clicked.connect(self.open_discount)
+        self.pushButtonAboutUs.clicked.connect(self.open_aboutus)
 
     @staticmethod
     def open_youtube_video(url):
@@ -40,4 +45,22 @@ class MainEx(QMainWindow, Ui_MainWindow):
         """Mở cửa sổ phim Nhà Gia Tiên"""
         self.ngt_window = NGTEx()
         self.ngt_window.show()
+        self.close()
+
+    def openEMMA(self):
+        self.ngt_window = EMMAEx()
+        self.ngt_window.show()
+        self.close()
+    def open_discount(self):
+        from ui.Discount.DiscountEx import DiscountEx
+        if self.mainwindow is None:
+            self.mainwindow = DiscountEx()
+        self.mainwindow.show()
+        self.close()
+
+    def open_aboutus(self):
+        from ui.AboutUs.AboutUsEx import AboutUsEx
+        if self.mainwindow is None:
+            self.mainwindow = AboutUsEx()
+        self.mainwindow.show()
         self.close()

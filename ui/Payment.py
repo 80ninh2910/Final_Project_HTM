@@ -143,7 +143,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 988, 1312))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, -391, 988, 1312))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout.setObjectName("verticalLayout")
@@ -199,7 +199,7 @@ class Ui_MainWindow(object):
 "color: rgb(75, 60, 41);")
         self.label_4.setObjectName("label_4")
         self.label = QtWidgets.QLabel(parent=self.frame)
-        self.label.setGeometry(QtCore.QRect(10, 250, 959, 361))
+        self.label.setGeometry(QtCore.QRect(-30, 240, 959, 361))
         self.label.setText("")
         self.label.setPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN1\\ui\\../images/Blue Modern Cinema Ticket.png"))
         self.label.setScaledContents(True)
@@ -392,7 +392,7 @@ class Ui_MainWindow(object):
         self.pushButtonPay.setAutoRepeatDelay(305)
         self.pushButtonPay.setObjectName("pushButtonPay")
         self.label_2 = QtWidgets.QLabel(parent=self.frame)
-        self.label_2.setGeometry(QtCore.QRect(-10, 880, 991, 151))
+        self.label_2.setGeometry(QtCore.QRect(-10, 900, 991, 151))
         self.label_2.setText("")
         self.label_2.setPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN1\\ui\\../images/Screenshot 2025-03-17 023822.png"))
         self.label_2.setScaledContents(True)
@@ -497,23 +497,22 @@ class Ui_MainWindow(object):
         self.label_6.setObjectName("label_6")
         self.checkBoxUsePoint = QtWidgets.QCheckBox(parent=self.frame)
         self.checkBoxUsePoint.setGeometry(QtCore.QRect(650, 690, 161, 31))
-        self.checkBoxUsePoint.setStyleSheet("font: 12pt \"MS Shell Dlg 2\";")
+        self.checkBoxUsePoint.setStyleSheet("font: 12pt \"MS Shell Dlg 2\";\n"
+"")
         self.checkBoxUsePoint.setObjectName("checkBoxUsePoint")
         self.lineEditShowPoint = QtWidgets.QLineEdit(parent=self.frame)
         self.lineEditShowPoint.setGeometry(QtCore.QRect(630, 640, 291, 41))
-        self.lineEditShowPoint.setStyleSheet("background-color: rgb(212, 229, 255,150);\n"
-"border:rgb(0, 0, 255);\n"
-"color: rgb(255, 255, 255);\n"
-"    border-radius: 5px;\n"
+        self.lineEditShowPoint.setStyleSheet("background-color: rgb(255, 255, 0);\n"
+"color: rgb(0, 0, 0);\n"
+"    border-radius: 10px;\n"
 "    padding: 5px")
         self.lineEditShowPoint.setText("")
         self.lineEditShowPoint.setObjectName("lineEditShowPoint")
         self.lineEditFinalPayment = QtWidgets.QLineEdit(parent=self.frame)
         self.lineEditFinalPayment.setGeometry(QtCore.QRect(630, 730, 291, 41))
-        self.lineEditFinalPayment.setStyleSheet("background-color: rgb(212, 229, 255,150);\n"
-"border:rgb(0, 0, 255);\n"
-"color: rgb(255, 255, 255);\n"
-"    border-radius: 5px;\n"
+        self.lineEditFinalPayment.setStyleSheet("background-color: rgb(255, 255, 0);\n"
+"color: rgb(0, 0, 0);\n"
+"    border-radius: 10px;\n"
 "    padding: 5px")
         self.lineEditFinalPayment.setText("")
         self.lineEditFinalPayment.setObjectName("lineEditFinalPayment")
@@ -593,9 +592,14 @@ class Ui_MainWindow(object):
 "color: rgb(255, 255, 255);\n"
 "    border-radius: 10px;\n"
 "    padding: 5px")
-        self.pushButtonHome.setIcon(icon)
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN1\\ui\\../images/home.ico"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButtonHome.setIcon(icon3)
         self.pushButtonHome.setIconSize(QtCore.QSize(30, 30))
-        self.pushButtonHome.setAutoRepeatDelay(305)
+        self.pushButtonHome.setAutoRepeat(False)
+        self.pushButtonHome.setAutoExclusive(False)
+        self.pushButtonHome.setAutoRepeatDelay(250)
+        self.pushButtonHome.setAutoRepeatInterval(250)
         self.pushButtonHome.setObjectName("pushButtonHome")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
@@ -638,6 +642,6 @@ class Ui_MainWindow(object):
         self.label_42.setText(_translate("MainWindow", "WE MAKE MOVIES BETTER"))
         self.label_16.setText(_translate("MainWindow", "CHECK OUT"))
         self.label_6.setText(_translate("MainWindow", "PAYMENT"))
-        self.checkBoxUsePoint.setText(_translate("MainWindow", "use point"))
+        self.checkBoxUsePoint.setText(_translate("MainWindow", "Use Point"))
         self.label_14.setText(_translate("MainWindow", "Ticket:"))
         self.pushButtonHome.setText(_translate("MainWindow", "HOME"))

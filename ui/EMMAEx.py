@@ -5,7 +5,7 @@ from PyQt6.QtGui import QDesktopServices
 from librarys.CartManager import CartManager
 from librarys.DataConnector import DataConnector
 from librarys.UserSession import UserSession
-from ui.QNT import Ui_MainWindow
+from ui.EMMA import Ui_MainWindow
 
 class SeatSelectionWindow(QtWidgets.QDialog):
     def __init__(self, theater, showtime, parent=None):
@@ -57,7 +57,7 @@ class SeatSelectionWindow(QtWidgets.QDialog):
         """Trả về danh sách ghế đã chọn"""
         return self.selected_seats
 
-class QNTEx(QtWidgets.QMainWindow, Ui_MainWindow):
+class EMMAEx(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
@@ -68,7 +68,7 @@ class QNTEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.showtime = None
         self.mainwindow = None
         self.popcorn_window = None
-        self.film = "QUỶ NHẬP TRÀNG"
+        self.film = "EMMA"
         self.setup_connections()
         self.display_movie_details()
         self.us=UserSession()
@@ -82,7 +82,6 @@ class QNTEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.labelTotal.setVisible(False)
         self.pushButtonDiscounts.clicked.connect(self.open_discount)
         self.pushButtonAboutUs.clicked.connect(self.open_aboutus)
-        self.pushButtonHome.clicked.connect(self.home)
 
         showtime_buttons = {
             "HCM": [self.pushButtonhcm_9, self.pushButtonhcm_12, self.pushButtonhcm_14, self.pushButtonhcm_19, self.pushButtonhcm_23],
@@ -132,11 +131,6 @@ class QNTEx(QtWidgets.QMainWindow, Ui_MainWindow):
         """Mở trang Facebook"""
         QDesktopServices.openUrl(QUrl("https://www.facebook.com/profile.php?id=61573908070943"))
 
-    def display_user(self):
-        info=self.us.get_user()
-        self.lineEditUsn.setText(str(info["username"]))
-        self.lineEditPhone.setText(str(info["email"]))
-
     def open_discount(self):
         from ui.Discount.DiscountEx import DiscountEx
         if self.mainwindow is None:
@@ -158,8 +152,13 @@ class QNTEx(QtWidgets.QMainWindow, Ui_MainWindow):
 
         self.mainwindow.show()
         self.close()
+
+    def display_user(self):
+        info=self.us.get_user()
+        self.lineEditUsn.setText(str(info["username"]))
+        self.lineEditPhone.setText(str(info["email"]))
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
-    signup_window = QNTEx()
+    signup_window = EMMAEx()
     signup_window.show()
     sys.exit(app.exec())

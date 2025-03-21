@@ -1,3 +1,5 @@
+import sys
+
 from PyQt6 import QtWidgets
 from PyQt6.QtCore import QUrl
 from PyQt6.QtGui import QDesktopServices
@@ -64,6 +66,7 @@ class SeatSelectionWindow(QtWidgets.QDialog):
 class NGTEx(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
+        self.mainwindow = None
         self.popcorn_window = None
         self.setupUi(self)
         self.dc = DataConnector()
@@ -85,6 +88,8 @@ class NGTEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.pushButtoncf.clicked.connect(self.confirm_seats)
         self.pushButtoncf.setVisible(False)
         self.labelTotal.setVisible(False)
+        self.pushButtonDiscounts.clicked.connect(self.open_discount)
+        self.pushButtonAboutUs.clicked.connect(self.open_aboutus)
 
         # Kết nối nút chọn suất chiếu
         showtime_buttons = {
@@ -139,3 +144,30 @@ class NGTEx(QtWidgets.QMainWindow, Ui_MainWindow):
     def open_facebook():
         """Mở trang Facebook"""
         QDesktopServices.openUrl(QUrl("https://www.facebook.com/profile.php?id=61573908070943"))
+
+    def open_discount(self):
+        from ui.Discount.DiscountEx import DiscountEx
+        if self.mainwindow is None:
+            self.mainwindow = DiscountEx()
+        self.mainwindow.show()
+        self.close()
+
+    def open_aboutus(self):
+        from ui.AboutUs.AboutUsEx import AboutUsEx
+        if self.mainwindow is None:
+            self.mainwindow = AboutUsEx()
+        self.mainwindow.show()
+        self.close()
+    def home(self):
+        from ui.MainEx import MainEx
+
+        if self.mainwindow is None:
+            self.mainwindow = MainEx()
+
+        self.mainwindow.show()
+        self.close()
+if __name__ == "__main__":
+    app = QtWidgets.QApplication(sys.argv)
+    signup_window = NGTEx()
+    signup_window.show()
+    sys.exit(app.exec())

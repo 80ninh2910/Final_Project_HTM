@@ -29,9 +29,9 @@ color: rgb(255, 255, 255);
    <widget class="QPushButton" name="pushButtonShwtm">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>120</x>
       <y>70</y>
-      <width>81</width>
+      <width>91</width>
       <height>31</height>
      </rect>
     </property>
@@ -55,9 +55,9 @@ color: rgb(255, 255, 255);
    <widget class="QPushButton" name="pushButtonDiscounts">
     <property name="geometry">
      <rect>
-      <x>820</x>
+      <x>750</x>
       <y>70</y>
-      <width>81</width>
+      <width>121</width>
       <height>31</height>
      </rect>
     </property>
@@ -81,9 +81,9 @@ color: rgb(255, 255, 255);
    <widget class="QPushButton" name="pushButtonAboutUs">
     <property name="geometry">
      <rect>
-      <x>910</x>
+      <x>890</x>
       <y>70</y>
-      <width>81</width>
+      <width>101</width>
       <height>31</height>
      </rect>
     </property>
@@ -203,9 +203,9 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-1920</y>
-       <width>980</width>
-       <height>2622</height>
+       <y>0</y>
+       <width>988</width>
+       <height>2612</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -1888,6 +1888,61 @@ color: rgb(255, 255, 255);
      <number>305</number>
     </property>
    </widget>
+   <widget class="QComboBox" name="comboBoxSelect1">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift Condensed</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:none
+</string>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QComboBox::AdjustToContents</enum>
+    </property>
+    <item>
+     <property name="text">
+      <string>ALL THEATER</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>UEL</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>HỒ CHÍ MINH</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Comming...soom</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -1895,7 +1950,7 @@ color: rgb(255, 255, 255);
      <x>0</x>
      <y>0</y>
      <width>1000</width>
-     <height>26</height>
+     <height>18</height>
     </rect>
    </property>
   </widget>

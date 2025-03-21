@@ -66,7 +66,7 @@ color: rgb(255, 255, 255);
    <widget class="QPushButton" name="pushButtonShowtimes">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>120</x>
       <y>70</y>
       <width>121</width>
       <height>31</height>
@@ -240,7 +240,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>0</y>
+       <y>-1348</y>
        <width>988</width>
        <height>3012</height>
       </rect>
@@ -1191,7 +1191,7 @@ color:rgb(0, 0, 0);
    <widget class="QComboBox" name="comboBox">
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>20</x>
       <y>75</y>
       <width>86</width>
       <height>16</height>
