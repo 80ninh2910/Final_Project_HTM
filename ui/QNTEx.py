@@ -122,10 +122,12 @@ class QNTEx(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def display_movie_details(self):
         """Hiển thị thông tin phim"""
-        for movie in self.dc.movie:
-            self.labelType.setText(movie.MType)
-            self.labelDu.setText(movie.dur)
-            self.labelDes.setText(movie.des)
+        for i in self.dc.movie:
+            if i.MTitle =="QUỶ NHẬP TRÀNG":
+                movie=i
+                self.labelType.setText(movie.MType)
+                self.labelDu.setText(movie.dur)
+                self.labelDes.setText(movie.des)
 
     @staticmethod
     def open_facebook():
