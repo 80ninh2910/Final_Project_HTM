@@ -134,9 +134,9 @@ class NGTEx(QtWidgets.QMainWindow, Ui_MainWindow):
         for i in self.dc.movie:
             if i.MTitle =="NHÀ GIA TIÊN":
                 movie=i
-            self.labelType.setText(movie.MType)
-            self.labelDu.setText(movie.dur)
-            self.labelDes.setText(movie.des)
+                self.labelType.setText(movie.MType)
+                self.labelDu.setText(movie.dur)
+                self.labelDes.setText(movie.des)
 
     def display_user(self):
         info=self.us.get_user()

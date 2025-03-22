@@ -78,24 +78,13 @@ class PricingManager:
 
     def load_data_json(self):
         """Load dữ liệu từ các tệp JSON và lưu vào price_list."""
+        files = ["Combo.json", "Baverage.json", "Popcorn.json"]
         try:
-            # Đọc dữ liệu từ combo.json
-            with open('../database/Combo.json', 'r', encoding='utf-8') as file:
-                combos = json.load(file)
-                for combo in combos:
-                    self.price_list[combo["Name"]] = combo["Price"]
-
-            # Đọc dữ liệu từ baverage.json
-            with open('../database/Baverage.json', 'r', encoding='utf-8') as file:
-                beverages = json.load(file)
-                for beverage in beverages:
-                    self.price_list[beverage["Name"]] = beverage["Price"]
-
-            # Đọc dữ liệu từ popcorn.json
-            with open('../database/Popcorn.json', 'r', encoding='utf-8') as file:
-                popcorns = json.load(file)
-                for popcorn in popcorns:
-                    self.price_list[popcorn["Name"]] = popcorn["Price"]
+            for file_name in files:
+                with open(f'../database/{file_name}', 'r', encoding='utf-8') as file:
+                    data = json.load(file)
+                    for item in data:
+                        self.price_list[item["Name"]] = item["Price"]
 
         except FileNotFoundError as e:
             print(f"Error loading JSON files: {e}")

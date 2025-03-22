@@ -2414,5 +2414,27 @@
         "seats": "D3, C3, D2, C1, C4, D4",
         "order_items": "- Cheese: 2x\n- Caramel: 1x\n- Combo Solo: 2x\n- Combo Couple: 1x",
         "price": 740000
+    },
+    {
+        "transaction_id": "TXN-20250322234352",
+        "timestamp": "2025-03-22 23:43:52",
+        "user_name": "",
+        "mail": "",
+        "theater": "UEL",
+        "showtime": "23:00",
+        "seats": "C5, B5",
+        "order_items": "- Sprite: 1x\n- Combo Solo: 1x",
+        "price": 217000
+    },
+    {
+        "transaction_id": "TXN-20250322234728",
+        "timestamp": "2025-03-22 23:47:28",
+        "user_name": "",
+        "mail": "",
+        "theater": "HCM",
+        "showtime": "14:20",
+        "seats": "D4, C4",
+        "order_items": "- Cheese: 2x\n- Combo Solo: 2x",
+        "price": 390000
     }
 ]

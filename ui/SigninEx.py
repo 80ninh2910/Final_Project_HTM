@@ -2,7 +2,7 @@ from PyQt6 import QtWidgets
 import sys
 from librarys.DataConnector import DataConnector
 from librarys.UserSession import UserSession
-from ui.Signin import Ui_MainWindow  # Import giao diện từ Qt Designer
+from ui.Signin import Ui_MainWindow
 
 class SignInEx(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
