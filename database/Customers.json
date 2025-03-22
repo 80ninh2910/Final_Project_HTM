@@ -528,5 +528,10 @@
         "email": "cuccu@gmail.com",
         "username": "cuccu",
         "password": "123"
+    },
+    {
+        "email": "huhuhu@gmail.com",
+        "username": "huhu",
+        "password": "123"
     }
 ]

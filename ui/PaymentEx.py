@@ -1,7 +1,7 @@
 import sys
 
-from PyQt6 import QtWidgets, QtGui
-from PyQt6.QtCore import QUrl, Qt
+from PyQt6 import QtWidgets
+from PyQt6.QtCore import QUrl
 from PyQt6.QtGui import QDesktopServices
 
 from librarys.CartManager import CartManager
@@ -9,7 +9,6 @@ from librarys.DataConnector import DataConnector
 from librarys.PointManager import PointManager
 from librarys.TransactionManager import TransactionManager
 from librarys.UserSession import UserSession
-from models.Transaction import Transaction
 from ui.BillEx import BillEx
 from ui.Payment import Ui_MainWindow
 
@@ -34,11 +33,11 @@ class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.load_data()
         self.setup_connections()
 
-        self.setWindowTitle("Xác nhận Thanh Toán")
+        self.setWindowTitle("Check Transaction")
     def setup_connections(self):
         self.pushButtonfb.clicked.connect(self.open_facebook)
         self.pushButtonHome.clicked.connect(self.home)
-        self.pushButtonPay.clicked.connect(self.pay)
+        self.pushButtonConfirm.clicked.connect(self.confirm)
 
     def home(self):
         from ui.MainEx import MainEx
@@ -98,9 +97,9 @@ class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
 
         # Hiển thị số điểm hiện có
         current_points = self.point_manager.get_points(username, email)
-        self.lineEditShowPoint.setText(f"{current_points} điểm")
+        self.lineEditShowPoint.setText(f"{current_points} Point")
 
-    def pay(self):
+    def confirm(self):
 
         seats = self.cart.get_seats() or {}
         products = self.cart.cart.get("products", {})
@@ -111,23 +110,24 @@ class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
             if self.tableWidget.item(row, 3)
         )
 
-
+        # Get username and email from UI
         username = self.labelUsername.text()
         email = self.labelMail.text()
+        # Get current points for the user
         current_points = self.point_manager.get_points(username, email)
         # Cho phép chọn số điểm sử dụng
-        points_to_use, ok = QtWidgets.QInputDialog.getInt(self, "Dùng điểm", "Nhập số điểm muốn dùng:", 0, 0,
+        points_to_use, ok = QtWidgets.QInputDialog.getInt(self, "Use your point", "Enter Point", 0, 0,
                                                           current_points)
         if not ok:
             return
+        # Calculate ticket and total price
         num_tickets = int(self.labelTicket.text().strip() or "0")
         total_tickets = num_tickets * 45000
         final_total = total_products + total_tickets
-
+        # Calculate discount based on points used
         discount = self.point_manager.use_points(username, email, points_to_use)
         final_payment = max(0, final_total - discount)
 
-        seat_text = ", ".join(seats.keys()) if seats else "Chưa đặt ghế nào"
         info = next(iter(seats.values()), {})
         theater = info.get("theater", "N/A")
         showtime = info.get("showtime", "N/A")
@@ -135,60 +135,23 @@ class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
         user_info = self.us.get_user() or {}
         username = user_info.get("username", "N/A")
         email = user_info.get("email", "N/A")
+        self.open_bill(username,theater,showtime, email, seats, products, final_payment)
 
-        order_items = "\n".join(
-            [f"- {name}: {quantity}x" for name, quantity in products.items() if quantity > 0]) or "Chưa đặt hàng"
-
-        transaction = Transaction(
-            user_name=username,
-            mail=email,
-            theater=theater,
-            showtime=showtime,
-            seats=seat_text,
-            num_tickets=num_tickets,
-            order_items=order_items,
-            price=final_payment
-        )
-
-        try:
-            self.transaction_manager.save_transaction(transaction.to_dict())
-        except Exception as e:
-            print(f"Lỗi khi lưu giao dịch: {e}")
-            return
-
-        self.open_bill(username, email, seats, products, final_payment)
-
-
-        #self.finalize_payment(final_payment)
-        #self.process_payment()
-    def open_bill(self, username, email, seats,products, total_price):
+    def open_bill(self, username, theater, showtime, email, seats, products, final_payment):
         seat_text = ", ".join(seats.keys()) if seats else "Chưa đặt ghế nào"
         order_items = "\n".join(
             [f"- {name}: {quantity}x" for name, quantity in products.items() if quantity>0]
         ) or "Không có sản phẩm"
 
-        self.bill_window = BillEx(username, email, self.labelTheater.text(), self.labelTime.text(), seat_text, order_items, total_price)
+        self.bill_window = BillEx(self, username, email, theater, showtime, seat_text, order_items, final_payment)
         self.bill_window.show()
         self.close()
-
-    def finalize_payment(self, final_payment):
-        username = self.labelUsername.text()
-        email = self.labelMail.text()
-        self.point_manager.add_points(username, email, final_payment)  # Cộng điểm mới
-
-        QtWidgets.QMessageBox.information(self, "Thanh Toán Thành Công", "Cảm ơn bạn đã mua vé!",
-                                          QtWidgets.QMessageBox.StandardButton.Ok)
+    def clear_data(self):
         self.cart.clear_cart()
         self.load_data()
+        self.reset_fields_payment()
 
-    def process_payment(self):
-        QtWidgets.QMessageBox.information(self, "Thanh Toán Thành Công", "Cảm ơn bạn đã mua vé!",
-                                          QtWidgets.QMessageBox.StandardButton.Ok)
-        self.cart.clear_cart()
-        self.load_data()
-        self.reset_fields()
-
-    def reset_fields(self):
+    def reset_fields_payment(self):
         self.labelTicket.setText("")
         self.lineEditFinalPayment.setText("")
         self.labelSeat.setText("")

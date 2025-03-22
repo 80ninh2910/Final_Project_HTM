@@ -203,7 +203,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-457</y>
+       <y>-506</y>
        <width>988</width>
        <height>1312</height>
       </rect>
@@ -693,7 +693,7 @@ QTableWidget::item {
           </property>
          </column>
         </widget>
-        <widget class="QPushButton" name="pushButtonPay">
+        <widget class="QPushButton" name="pushButtonConfirm">
          <property name="geometry">
           <rect>
            <x>660</x>
@@ -717,7 +717,7 @@ color: rgb(255, 255, 255);
     padding: 5px</string>
          </property>
          <property name="text">
-          <string>PAY</string>
+          <string>Confirm</string>
          </property>
          <property name="icon">
           <iconset>
@@ -1107,7 +1107,7 @@ color: rgb(75, 60, 41);</string>
         <zorder>labelSeat</zorder>
         <zorder>label_15</zorder>
         <zorder>tableWidget</zorder>
-        <zorder>pushButtonPay</zorder>
+        <zorder>pushButtonConfirm</zorder>
         <zorder>line_2</zorder>
         <zorder>label_44</zorder>
         <zorder>label_43</zorder>
