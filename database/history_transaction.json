@@ -1904,5 +1904,113 @@
         "num_tickets": 4,
         "order_items": "- Sprite: 4x\n- Cheese: 3x",
         "price": 508000
+    },
+    {
+        "transaction_id": "TXN-20250322080705",
+        "timestamp": "2025-03-22 08:07:05",
+        "user_name": "",
+        "mail": "",
+        "theater": "N/A",
+        "showtime": "N/A",
+        "seats": "Chưa đặt ghế nào",
+        "num_tickets": 0,
+        "order_items": "Chưa đặt hàng",
+        "price": 0
+    },
+    {
+        "transaction_id": "TXN-20250322094108",
+        "timestamp": "2025-03-22 09:41:08",
+        "user_name": "viet123",
+        "mail": "viet12@gmail.com",
+        "theater": "UEL",
+        "showtime": "23:00",
+        "seats": "D5, D4",
+        "num_tickets": 2,
+        "order_items": "- Sprite: 3x\n- Cheese: 2x\n- Combo Solo: 2x",
+        "price": 456600
+    },
+    {
+        "transaction_id": "TXN-20250322094231",
+        "timestamp": "2025-03-22 09:42:31",
+        "user_name": "viet123",
+        "mail": "viet12@gmail.com",
+        "theater": "N/A",
+        "showtime": "N/A",
+        "seats": "Chưa đặt ghế nào",
+        "num_tickets": 0,
+        "order_items": "Chưa đặt hàng",
+        "price": 0
+    },
+    {
+        "transaction_id": "TXN-20250322094541",
+        "timestamp": "2025-03-22 09:45:41",
+        "user_name": "viet123",
+        "mail": "viet12@gmail.com",
+        "theater": "UEL",
+        "showtime": "19:00",
+        "seats": "B4, B3",
+        "num_tickets": 2,
+        "order_items": "- Sprite: 3x",
+        "price": 200900
+    },
+    {
+        "transaction_id": "TXN-20250322110334",
+        "timestamp": "2025-03-22 11:03:34",
+        "user_name": "",
+        "mail": "",
+        "theater": "N/A",
+        "showtime": "N/A",
+        "seats": "Chưa đặt ghế nào",
+        "num_tickets": 0,
+        "order_items": "Chưa đặt hàng",
+        "price": 0
+    },
+    {
+        "transaction_id": "TXN-20250322113828",
+        "timestamp": "2025-03-22 11:38:28",
+        "user_name": "",
+        "mail": "",
+        "theater": "N/A",
+        "showtime": "N/A",
+        "seats": "Chưa đặt ghế nào",
+        "num_tickets": 0,
+        "order_items": "Chưa đặt hàng",
+        "price": 0
+    },
+    {
+        "transaction_id": "TXN-20250322114046",
+        "timestamp": "2025-03-22 11:40:46",
+        "user_name": "viet123",
+        "mail": "viet12@gmail.com",
+        "theater": "UEL",
+        "showtime": "23:00",
+        "seats": "B5, B4",
+        "num_tickets": 2,
+        "order_items": "- Sprite: 1x\n- Combo Solo: 1x\n- Combo Couple: 1x",
+        "price": 327000
+    },
+    {
+        "transaction_id": "TXN-20250322114331",
+        "timestamp": "2025-03-22 11:43:31",
+        "user_name": "viet123",
+        "mail": "viet12@gmail.com",
+        "theater": "UEL",
+        "showtime": "23:00",
+        "seats": "C4, C5",
+        "num_tickets": 2,
+        "order_items": "- Coca Cola: 2x\n- Combo Solo: 1x",
+        "price": 254000
+    },
+    {
+        "transaction_id": "TXN-20250322114849",
+        "timestamp": "2025-03-22 11:48:49",
+        "user_name": "viet123",
+        "mail": "viet12@gmail.com",
+        "theater": "UEL",
+        "showtime": "23:00",
+        "seats": "D4, D5",
+        "num_tickets": 2,
+        "order_items": "- Cheese: 1x\n- Combo Solo: 2x",
+        "price": 330000
     }
 ]

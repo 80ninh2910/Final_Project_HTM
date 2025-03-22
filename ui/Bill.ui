@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>496</width>
-    <height>583</height>
+    <width>480</width>
+    <height>584</height>
    </rect>
   </property>
   <property name="baseSize">
@@ -54,10 +54,10 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>40</y>
+      <x>40</x>
+      <y>30</y>
       <width>371</width>
-      <height>501</height>
+      <height>511</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -70,10 +70,10 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>60</y>
-      <width>141</width>
-      <height>41</height>
+      <x>40</x>
+      <y>40</y>
+      <width>371</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
@@ -90,15 +90,18 @@ color: rgb(255, 255, 255);
     border: none</string>
     </property>
     <property name="text">
-     <string>bill:</string>
+     <string>GFlix Cinema</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>210</y>
-      <width>181</width>
+      <x>80</x>
+      <y>180</y>
+      <width>81</width>
       <height>31</height>
      </rect>
     </property>
@@ -116,15 +119,15 @@ color: rgb(255, 255, 255);
     border: none</string>
     </property>
     <property name="text">
-     <string>Enter your Gmail:</string>
+     <string>Theater :</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="pushButtonPay">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>260</x>
       <y>440</y>
-      <width>211</width>
+      <width>121</width>
       <height>31</height>
      </rect>
     </property>
@@ -141,15 +144,15 @@ color: rgb(255, 255, 255);
     padding: 5px</string>
     </property>
     <property name="text">
-     <string>Check</string>
+     <string>Pay</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_7">
+   <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
       <x>80</x>
       <y>100</y>
-      <width>181</width>
+      <width>91</width>
       <height>31</height>
      </rect>
     </property>
@@ -167,15 +170,15 @@ color: rgb(255, 255, 255);
     border: none</string>
     </property>
     <property name="text">
-     <string>Enter your Gmail:</string>
+     <string>User Name :</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>160</y>
-      <width>181</width>
+      <x>80</x>
+      <y>140</y>
+      <width>81</width>
       <height>31</height>
      </rect>
     </property>
@@ -193,15 +196,15 @@ color: rgb(255, 255, 255);
     border: none</string>
     </property>
     <property name="text">
-     <string>Enter your Gmail:</string>
+     <string>Email :</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>350</y>
-      <width>181</width>
+      <x>80</x>
+      <y>300</y>
+      <width>81</width>
       <height>31</height>
      </rect>
     </property>
@@ -219,15 +222,15 @@ color: rgb(255, 255, 255);
     border: none</string>
     </property>
     <property name="text">
-     <string>Enter your Gmail:</string>
+     <string>Order :</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_10">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>290</y>
-      <width>181</width>
+      <x>80</x>
+      <y>260</y>
+      <width>81</width>
       <height>31</height>
      </rect>
     </property>
@@ -245,15 +248,15 @@ color: rgb(255, 255, 255);
     border: none</string>
     </property>
     <property name="text">
-     <string>Enter your Gmail:</string>
+     <string>Seat :</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_11">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>260</y>
-      <width>181</width>
+      <x>80</x>
+      <y>220</y>
+      <width>91</width>
       <height>31</height>
      </rect>
     </property>
@@ -271,19 +274,242 @@ color: rgb(255, 255, 255);
     border: none</string>
     </property>
     <property name="text">
-     <string>Enter your Gmail:</string>
+     <string>Showtime :</string>
     </property>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>496</width>
-     <height>18</height>
-    </rect>
-   </property>
+   <widget class="QPushButton" name="pushButtonBack">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>440</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift Condensed</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(173, 0, 0);
+color: rgb(255, 255, 255);
+  border-radius: 5px;
+    padding: 5px</string>
+    </property>
+    <property name="text">
+     <string>Back</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTheater">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>180</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift Condensed</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+color: rgb(255, 255, 255);
+    border: none</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelMail">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>140</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift Condensed</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+color: rgb(255, 255, 255);
+    border: none</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelUsername">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>100</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift Condensed</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+color: rgb(255, 255, 255);
+    border: none</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTime">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>220</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift Condensed</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+color: rgb(255, 255, 255);
+    border: none</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelSeat">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>260</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift Condensed</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+color: rgb(255, 255, 255);
+    border: none</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_17">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>380</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift Condensed</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+color: rgb(255, 255, 255);
+    border: none</string>
+    </property>
+    <property name="text">
+     <string>Total:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelOrder">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>300</y>
+      <width>221</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift Condensed</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+color: rgb(255, 255, 255);
+    border: none</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTotal">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>380</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift Condensed</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+color: rgb(255, 255, 255);
+    border: none</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

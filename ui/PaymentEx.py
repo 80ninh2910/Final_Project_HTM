@@ -10,6 +10,7 @@ from librarys.PointManager import PointManager
 from librarys.TransactionManager import TransactionManager
 from librarys.UserSession import UserSession
 from models.Transaction import Transaction
+from ui.BillEx import BillEx
 from ui.Payment import Ui_MainWindow
 
 
@@ -155,53 +156,20 @@ class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
             print(f"Lỗi khi lưu giao dịch: {e}")
             return
 
-         # Tạo QMessageBox
-        msg_box = QtWidgets.QMessageBox(self)
-        msg_box.setWindowTitle("Xác nhận Thanh Toán")
-        msg_box.setIcon(QtWidgets.QMessageBox.Icon.Question)
-        msg_box.setText(f"""
-               Xác nhận Thanh Toán:
-               - Người dùng: {username}
-               - Email: {email}
-               - Rạp chiếu: {theater}
-               - Suất chiếu: {showtime}
-               - Ghế: {seat_text}
-               - Số vé: {num_tickets} (Tổng tiền vé: {total_tickets:,} VND)
-               - Sản phẩm đã đặt:
-               {order_items}
-               
-               
-               - Tổng tiền sản phẩm: {total_products:,} VND
-               --------------------------------
-               Tổng tiền cuối cùng: {final_payment:,} VND
-           """)
+        self.open_bill(username, email, seats, products, final_payment)
 
-        # Load hình ảnh QR Code
-        pixmap = QtGui.QPixmap("../images/qrcode.jpg").scaled(200, 200, Qt.AspectRatioMode.KeepAspectRatio)
-        label_image = QtWidgets.QLabel()
-        label_image.setPixmap(pixmap)
-        label_image.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        # Layout chính chứa nội dung và hình ảnh
-        layout = QtWidgets.QVBoxLayout()
-        layout.addWidget(msg_box,alignment=Qt.AlignmentFlag.AlignCenter)  # Thêm nội dung tin nhắn
-        layout.addWidget(label_image, alignment=Qt.AlignmentFlag.AlignCenter)  # Hình ảnh QR căn giữa
+        #self.finalize_payment(final_payment)
+        #self.process_payment()
+    def open_bill(self, username, email, seats,products, total_price):
+        seat_text = ", ".join(seats.keys()) if seats else "Chưa đặt ghế nào"
+        order_items = "\n".join(
+            [f"- {name}: {quantity}x" for name, quantity in products.items() if quantity>0]
+        ) or "Không có sản phẩm"
 
-        # Tạo QDialog để chứa layout
-        dialog = QtWidgets.QDialog(self)
-        dialog.setWindowTitle("QR Code Thanh Toán")
-        dialog.setLayout(layout)
-
-        # Thêm nút xác nhận và hủy
-        btn_yes = msg_box.addButton("Yes", QtWidgets.QMessageBox.ButtonRole.AcceptRole)
-        msg_box.addButton("No", QtWidgets.QMessageBox.ButtonRole.RejectRole)
-
-        dialog.resize(400, 400)
-        dialog.exec()
-
-        if msg_box.clickedButton() == btn_yes:
-            self.finalize_payment(final_payment)
-            self.process_payment()
+        self.bill_window = BillEx(username, email, self.labelTheater.text(), self.labelTime.text(), seat_text, order_items, total_price)
+        self.bill_window.show()
+        self.close()
 
     def finalize_payment(self, final_payment):
         username = self.labelUsername.text()

@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'E:\Personal Projects\___Pycharm___\FN1\ui\Bill.ui'
+# Form implementation generated from reading ui file 'D:\Final_Project_HTM\ui\Bill.ui'
 #
 # Created by: PyQt6 UI code generator 6.8.0
 #
@@ -12,34 +12,26 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(858, 637)
+        MainWindow.resize(480, 584)
         MainWindow.setBaseSize(QtCore.QSize(800, 600))
         MainWindow.setStyleSheet("background-color: transparent")
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(-40, -10, 1000, 600))
+        self.label.setGeometry(QtCore.QRect(-180, -20, 1000, 600))
         self.label.setMaximumSize(QtCore.QSize(1000, 600))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN1\\ui\\../../images/1.png"))
+        self.label.setPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../images/1.png"))
         self.label.setScaledContents(True)
+        self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label.setObjectName("label")
         self.label_3 = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(230, 50, 391, 501))
+        self.label_3.setGeometry(QtCore.QRect(40, 30, 371, 511))
         self.label_3.setStyleSheet("background-color: rgb(0, 0, 0,200);")
         self.label_3.setText("")
         self.label_3.setObjectName("label_3")
-        self.lineEdit_2 = QtWidgets.QLineEdit(parent=self.centralwidget)
-        self.lineEdit_2.setGeometry(QtCore.QRect(280, 220, 291, 41))
-        self.lineEdit_2.setStyleSheet("background-color: rgb(212, 229, 255,150);\n"
-"border:rgb(0, 0, 255);\n"
-"color: rgb(255, 255, 255);\n"
-"    border-radius: 5px;\n"
-"    padding: 5px")
-        self.lineEdit_2.setText("")
-        self.lineEdit_2.setObjectName("lineEdit_2")
         self.label_4 = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_4.setGeometry(QtCore.QRect(280, 120, 141, 41))
+        self.label_4.setGeometry(QtCore.QRect(40, 40, 371, 51))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift Condensed")
         font.setPointSize(30)
@@ -49,9 +41,10 @@ class Ui_MainWindow(object):
         self.label_4.setStyleSheet("background-color: transparent;\n"
 "color: rgb(255, 255, 255);\n"
 "    border: none")
+        self.label_4.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_4.setObjectName("label_4")
         self.label_6 = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_6.setGeometry(QtCore.QRect(290, 180, 181, 31))
+        self.label_6.setGeometry(QtCore.QRect(80, 180, 81, 31))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift Condensed")
         font.setPointSize(15)
@@ -62,43 +55,192 @@ class Ui_MainWindow(object):
 "color: rgb(255, 255, 255);\n"
 "    border: none")
         self.label_6.setObjectName("label_6")
-        self.pushButton = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(320, 380, 211, 31))
+        self.pushButtonPay = QtWidgets.QPushButton(parent=self.centralwidget)
+        self.pushButtonPay.setGeometry(QtCore.QRect(260, 440, 121, 31))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift Condensed")
         font.setPointSize(20)
-        self.pushButton.setFont(font)
-        self.pushButton.setStyleSheet("background-color: rgb(173, 0, 0);\n"
+        self.pushButtonPay.setFont(font)
+        self.pushButtonPay.setStyleSheet("background-color: rgb(173, 0, 0);\n"
 "color: rgb(255, 255, 255);\n"
 "  border-radius: 5px;\n"
 "    padding: 5px")
-        self.pushButton.setObjectName("pushButton")
-        self.lineEdit_4 = QtWidgets.QLineEdit(parent=self.centralwidget)
-        self.lineEdit_4.setGeometry(QtCore.QRect(280, 310, 291, 41))
-        self.lineEdit_4.setStyleSheet("background-color: rgb(212, 229, 255,150);\n"
-"border:rgb(0, 0, 255);\n"
-"color: rgb(255, 255, 255);\n"
-"    border-radius: 5px;\n"
-"    padding: 5px")
-        self.lineEdit_4.setText("")
-        self.lineEdit_4.setObjectName("lineEdit_4")
-        self.label_7 = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_7.setGeometry(QtCore.QRect(290, 270, 181, 31))
+        self.pushButtonPay.setObjectName("pushButtonPay")
+        self.label_2 = QtWidgets.QLabel(parent=self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(80, 100, 91, 31))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift Condensed")
         font.setPointSize(15)
         font.setBold(True)
         font.setWeight(75)
-        self.label_7.setFont(font)
-        self.label_7.setStyleSheet("background-color: transparent;\n"
+        self.label_2.setFont(font)
+        self.label_2.setStyleSheet("background-color: transparent;\n"
 "color: rgb(255, 255, 255);\n"
 "    border: none")
-        self.label_7.setObjectName("label_7")
+        self.label_2.setObjectName("label_2")
+        self.label_8 = QtWidgets.QLabel(parent=self.centralwidget)
+        self.label_8.setGeometry(QtCore.QRect(80, 140, 81, 31))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Condensed")
+        font.setPointSize(15)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_8.setFont(font)
+        self.label_8.setStyleSheet("background-color: transparent;\n"
+"color: rgb(255, 255, 255);\n"
+"    border: none")
+        self.label_8.setObjectName("label_8")
+        self.label_9 = QtWidgets.QLabel(parent=self.centralwidget)
+        self.label_9.setGeometry(QtCore.QRect(80, 300, 81, 31))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Condensed")
+        font.setPointSize(15)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_9.setFont(font)
+        self.label_9.setStyleSheet("background-color: transparent;\n"
+"color: rgb(255, 255, 255);\n"
+"    border: none")
+        self.label_9.setObjectName("label_9")
+        self.label_10 = QtWidgets.QLabel(parent=self.centralwidget)
+        self.label_10.setGeometry(QtCore.QRect(80, 260, 81, 31))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Condensed")
+        font.setPointSize(15)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_10.setFont(font)
+        self.label_10.setStyleSheet("background-color: transparent;\n"
+"color: rgb(255, 255, 255);\n"
+"    border: none")
+        self.label_10.setObjectName("label_10")
+        self.label_11 = QtWidgets.QLabel(parent=self.centralwidget)
+        self.label_11.setGeometry(QtCore.QRect(80, 220, 91, 31))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Condensed")
+        font.setPointSize(15)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_11.setFont(font)
+        self.label_11.setStyleSheet("background-color: transparent;\n"
+"color: rgb(255, 255, 255);\n"
+"    border: none")
+        self.label_11.setObjectName("label_11")
+        self.pushButtonBack = QtWidgets.QPushButton(parent=self.centralwidget)
+        self.pushButtonBack.setGeometry(QtCore.QRect(100, 440, 121, 31))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Condensed")
+        font.setPointSize(20)
+        self.pushButtonBack.setFont(font)
+        self.pushButtonBack.setStyleSheet("background-color: rgb(173, 0, 0);\n"
+"color: rgb(255, 255, 255);\n"
+"  border-radius: 5px;\n"
+"    padding: 5px")
+        self.pushButtonBack.setObjectName("pushButtonBack")
+        self.labelTheater = QtWidgets.QLabel(parent=self.centralwidget)
+        self.labelTheater.setGeometry(QtCore.QRect(160, 180, 221, 31))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Condensed")
+        font.setPointSize(15)
+        font.setBold(True)
+        font.setWeight(75)
+        self.labelTheater.setFont(font)
+        self.labelTheater.setStyleSheet("background-color: transparent;\n"
+"color: rgb(255, 255, 255);\n"
+"    border: none")
+        self.labelTheater.setText("")
+        self.labelTheater.setObjectName("labelTheater")
+        self.labelMail = QtWidgets.QLabel(parent=self.centralwidget)
+        self.labelMail.setGeometry(QtCore.QRect(160, 140, 221, 31))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Condensed")
+        font.setPointSize(15)
+        font.setBold(True)
+        font.setWeight(75)
+        self.labelMail.setFont(font)
+        self.labelMail.setStyleSheet("background-color: transparent;\n"
+"color: rgb(255, 255, 255);\n"
+"    border: none")
+        self.labelMail.setText("")
+        self.labelMail.setObjectName("labelMail")
+        self.labelUsername = QtWidgets.QLabel(parent=self.centralwidget)
+        self.labelUsername.setGeometry(QtCore.QRect(180, 100, 201, 31))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Condensed")
+        font.setPointSize(15)
+        font.setBold(True)
+        font.setWeight(75)
+        self.labelUsername.setFont(font)
+        self.labelUsername.setStyleSheet("background-color: transparent;\n"
+"color: rgb(255, 255, 255);\n"
+"    border: none")
+        self.labelUsername.setText("")
+        self.labelUsername.setObjectName("labelUsername")
+        self.labelTime = QtWidgets.QLabel(parent=self.centralwidget)
+        self.labelTime.setGeometry(QtCore.QRect(180, 220, 201, 31))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Condensed")
+        font.setPointSize(15)
+        font.setBold(True)
+        font.setWeight(75)
+        self.labelTime.setFont(font)
+        self.labelTime.setStyleSheet("background-color: transparent;\n"
+"color: rgb(255, 255, 255);\n"
+"    border: none")
+        self.labelTime.setText("")
+        self.labelTime.setObjectName("labelTime")
+        self.labelSeat = QtWidgets.QLabel(parent=self.centralwidget)
+        self.labelSeat.setGeometry(QtCore.QRect(160, 260, 221, 31))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Condensed")
+        font.setPointSize(15)
+        font.setBold(True)
+        font.setWeight(75)
+        self.labelSeat.setFont(font)
+        self.labelSeat.setStyleSheet("background-color: transparent;\n"
+"color: rgb(255, 255, 255);\n"
+"    border: none")
+        self.labelSeat.setText("")
+        self.labelSeat.setObjectName("labelSeat")
+        self.label_17 = QtWidgets.QLabel(parent=self.centralwidget)
+        self.label_17.setGeometry(QtCore.QRect(80, 380, 81, 31))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Condensed")
+        font.setPointSize(15)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_17.setFont(font)
+        self.label_17.setStyleSheet("background-color: transparent;\n"
+"color: rgb(255, 255, 255);\n"
+"    border: none")
+        self.label_17.setObjectName("label_17")
+        self.labelOrder = QtWidgets.QLabel(parent=self.centralwidget)
+        self.labelOrder.setGeometry(QtCore.QRect(160, 300, 221, 71))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Condensed")
+        font.setPointSize(15)
+        font.setBold(True)
+        font.setWeight(75)
+        self.labelOrder.setFont(font)
+        self.labelOrder.setStyleSheet("background-color: transparent;\n"
+"color: rgb(255, 255, 255);\n"
+"    border: none")
+        self.labelOrder.setText("")
+        self.labelOrder.setObjectName("labelOrder")
+        self.labelTotal = QtWidgets.QLabel(parent=self.centralwidget)
+        self.labelTotal.setGeometry(QtCore.QRect(150, 380, 221, 31))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Condensed")
+        font.setPointSize(15)
+        font.setBold(True)
+        font.setWeight(75)
+        self.labelTotal.setFont(font)
+        self.labelTotal.setStyleSheet("background-color: transparent;\n"
+"color: rgb(255, 255, 255);\n"
+"    border: none")
+        self.labelTotal.setText("")
+        self.labelTotal.setObjectName("labelTotal")
         MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 858, 18))
-        self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
@@ -109,7 +251,13 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label_4.setText(_translate("MainWindow", "Invoce:"))
-        self.label_6.setText(_translate("MainWindow", "Enter your Gmail:"))
-        self.pushButton.setText(_translate("MainWindow", "Check"))
-        self.label_7.setText(_translate("MainWindow", "Your Point:"))
+        self.label_4.setText(_translate("MainWindow", "GFlix Cinema"))
+        self.label_6.setText(_translate("MainWindow", "Theater :"))
+        self.pushButtonPay.setText(_translate("MainWindow", "Pay"))
+        self.label_2.setText(_translate("MainWindow", "User Name :"))
+        self.label_8.setText(_translate("MainWindow", "Email :"))
+        self.label_9.setText(_translate("MainWindow", "Order :"))
+        self.label_10.setText(_translate("MainWindow", "Seat :"))
+        self.label_11.setText(_translate("MainWindow", "Showtime :"))
+        self.pushButtonBack.setText(_translate("MainWindow", "Back"))
+        self.label_17.setText(_translate("MainWindow", "Total:"))
