@@ -2436,5 +2436,27 @@
         "seats": "D4, C4",
         "order_items": "- Cheese: 2x\n- Combo Solo: 2x",
         "price": 390000
+    },
+    {
+        "transaction_id": "TXN-20250323002914",
+        "timestamp": "2025-03-23 00:29:14",
+        "user_name": "",
+        "mail": "",
+        "theater": "N/A",
+        "showtime": "N/A",
+        "seats": "Chưa đặt ghế nào",
+        "order_items": "Không có sản phẩm",
+        "price": 0
+    },
+    {
+        "transaction_id": "TXN-20250323003416",
+        "timestamp": "2025-03-23 00:34:16",
+        "user_name": "",
+        "mail": "",
+        "theater": "N/A",
+        "showtime": "N/A",
+        "seats": "Chưa đặt ghế nào",
+        "order_items": "Không có sản phẩm",
+        "price": 0
     }
 ]
