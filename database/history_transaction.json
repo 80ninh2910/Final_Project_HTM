@@ -2403,5 +2403,16 @@
         "seats": "C4, C3, D3, D4",
         "order_items": "- Sprite: 5x",
         "price": 365000
+    },
+    {
+        "transaction_id": "TXN-20250322194140",
+        "timestamp": "2025-03-22 19:41:40",
+        "user_name": "viet123",
+        "mail": "viet12@gmail.com",
+        "theater": "UEL",
+        "showtime": "9:00",
+        "seats": "D3, C3, D2, C1, C4, D4",
+        "order_items": "- Cheese: 2x\n- Caramel: 1x\n- Combo Solo: 2x\n- Combo Couple: 1x",
+        "price": 740000
     }
 ]

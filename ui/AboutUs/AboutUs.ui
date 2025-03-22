@@ -240,7 +240,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-1348</y>
+       <y>0</y>
        <width>988</width>
        <height>3012</height>
       </rect>
@@ -251,7 +251,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
         <property name="minimumSize">
          <size>
           <width>100</width>
-          <height>3000</height>
+          <height>2300</height>
          </size>
         </property>
         <property name="font">
