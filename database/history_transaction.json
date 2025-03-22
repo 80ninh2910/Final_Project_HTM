@@ -2458,5 +2458,60 @@
         "seats": "Chưa đặt ghế nào",
         "order_items": "Không có sản phẩm",
         "price": 0
+    },
+    {
+        "transaction_id": "TXN-20250323004915",
+        "timestamp": "2025-03-23 00:49:15",
+        "user_name": "haha",
+        "mail": "hahahaha@gmail.com",
+        "theater": "UEL",
+        "showtime": "14:20",
+        "seats": "C2, B2, B3, C3",
+        "order_items": "- Sprite: 3x\n- Combo Solo: 4x",
+        "price": 1122000
+    },
+    {
+        "transaction_id": "TXN-20250323004944",
+        "timestamp": "2025-03-23 00:49:44",
+        "user_name": "haha",
+        "mail": "hahahaha@gmail.com",
+        "theater": "UEL",
+        "showtime": "14:20",
+        "seats": "C2, B2, B3, C3",
+        "order_items": "- Sprite: 5x\n- Combo Solo: 6x",
+        "price": 1618800
+    },
+    {
+        "transaction_id": "TXN-20250323005028",
+        "timestamp": "2025-03-23 00:50:28",
+        "user_name": "haha",
+        "mail": "hahahaha@gmail.com",
+        "theater": "UEL",
+        "showtime": "14:20",
+        "seats": "C2, B2, B3, C3, D2, D3",
+        "order_items": "- Sprite: 5x\n- Combo Solo: 2x",
+        "price": 983900
+    },
+    {
+        "transaction_id": "TXN-20250323005545",
+        "timestamp": "2025-03-23 00:55:45",
+        "user_name": "haha",
+        "mail": "hahahaha@gmail.com",
+        "theater": "UEL",
+        "showtime": "14:20",
+        "seats": "C2, C3, D3, D2",
+        "order_items": "- Sprite: 2x\n- Cheese: 2x\n- Combo Solo: 4x",
+        "price": 1278200
+    },
+    {
+        "transaction_id": "TXN-20250323010610",
+        "timestamp": "2025-03-23 01:06:10",
+        "user_name": "",
+        "mail": "",
+        "theater": "UEL",
+        "showtime": "19:00",
+        "seats": "B2, B3, C3, C2",
+        "order_items": "- Combo Solo: 2x",
+        "price": 515300
     }
 ]
