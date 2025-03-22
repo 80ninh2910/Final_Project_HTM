@@ -2513,5 +2513,49 @@
         "seats": "B2, B3, C3, C2",
         "order_items": "- Combo Solo: 2x",
         "price": 515300
+    },
+    {
+        "transaction_id": "TXN-20250323011934",
+        "timestamp": "2025-03-23 01:19:34",
+        "user_name": "viet123",
+        "mail": "viet12@gmail.com",
+        "theater": "UEL",
+        "showtime": "23:00",
+        "seats": "C5, D5",
+        "order_items": "- Sprite: 2x\n- Combo Solo: 2x",
+        "price": 331700
+    },
+    {
+        "transaction_id": "TXN-20250323012047",
+        "timestamp": "2025-03-23 01:20:47",
+        "user_name": "",
+        "mail": "",
+        "theater": "N/A",
+        "showtime": "N/A",
+        "seats": "Chưa đặt ghế nào",
+        "order_items": "Không có sản phẩm",
+        "price": 0
+    },
+    {
+        "transaction_id": "TXN-20250323012123",
+        "timestamp": "2025-03-23 01:21:23",
+        "user_name": "",
+        "mail": "",
+        "theater": "N/A",
+        "showtime": "N/A",
+        "seats": "Chưa đặt ghế nào",
+        "order_items": "Không có sản phẩm",
+        "price": 0
+    },
+    {
+        "transaction_id": "TXN-20250323012215",
+        "timestamp": "2025-03-23 01:22:15",
+        "user_name": "",
+        "mail": "",
+        "theater": "N/A",
+        "showtime": "N/A",
+        "seats": "Chưa đặt ghế nào",
+        "order_items": "Không có sản phẩm",
+        "price": 0
     }
 ]

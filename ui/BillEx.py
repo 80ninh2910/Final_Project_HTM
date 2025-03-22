@@ -102,8 +102,6 @@ class BillEx(QtWidgets.QMainWindow, Ui_MainWindow):
         username = self.labelUsername.text()
         email = self.labelMail.text()
         self.point_manager.add_points(username, email, final_payment)  # Cộng điểm mới
-        self.payment_window.clear_data()
-        self.payment_window.load_data()
     def process_payment(self):
         QtWidgets.QMessageBox.information(self, "Payment Successful", "Thank you for purchasing your ticket!",
                                           QtWidgets.QMessageBox.StandardButton.Ok)

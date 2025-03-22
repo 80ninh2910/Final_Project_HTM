@@ -203,9 +203,9 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>0</y>
-       <width>988</width>
-       <height>1312</height>
+       <y>-120</y>
+       <width>980</width>
+       <height>1322</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -355,7 +355,7 @@ color: rgb(75, 60, 41);</string>
         <widget class="QLabel" name="label_5">
          <property name="geometry">
           <rect>
-           <x>40</x>
+           <x>10</x>
            <y>350</y>
            <width>211</width>
            <height>31</height>
@@ -380,9 +380,9 @@ color: rgb(75, 60, 41);</string>
         <widget class="QLabel" name="labelUsername">
          <property name="geometry">
           <rect>
-           <x>40</x>
+           <x>10</x>
            <y>390</y>
-           <width>221</width>
+           <width>201</width>
            <height>31</height>
           </rect>
          </property>
@@ -405,7 +405,7 @@ color: rgb(75, 60, 41);</string>
         <widget class="QLabel" name="label_7">
          <property name="geometry">
           <rect>
-           <x>40</x>
+           <x>10</x>
            <y>450</y>
            <width>221</width>
            <height>31</height>
@@ -430,9 +430,9 @@ color: rgb(75, 60, 41);</string>
         <widget class="QLabel" name="labelMail">
          <property name="geometry">
           <rect>
-           <x>40</x>
-           <y>490</y>
-           <width>221</width>
+           <x>10</x>
+           <y>500</y>
+           <width>201</width>
            <height>31</height>
           </rect>
          </property>
@@ -1204,7 +1204,7 @@ color: rgb(255, 255, 255);
      <x>0</x>
      <y>0</y>
      <width>1017</width>
-     <height>18</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
