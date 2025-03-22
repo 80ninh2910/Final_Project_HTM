@@ -2392,5 +2392,16 @@
         "seats": "C3, B3",
         "order_items": "- Combo Solo: 2x",
         "price": 259900
+    },
+    {
+        "transaction_id": "TXN-20250322181721",
+        "timestamp": "2025-03-22 18:17:21",
+        "user_name": "viet123",
+        "mail": "viet12@gmail.com",
+        "theater": "UEL",
+        "showtime": "14:20",
+        "seats": "C4, C3, D3, D4",
+        "order_items": "- Sprite: 5x",
+        "price": 365000
     }
 ]

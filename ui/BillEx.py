@@ -93,14 +93,8 @@ class BillEx(QtWidgets.QMainWindow, Ui_MainWindow):
         dialog.setLayout(layout)
         dialog.resize(300, 300)
         dialog.exec()
-
-    def handle_success(self, dialog, final_payment):
-        QtWidgets.QMessageBox.information(self, "Successful Transaction", "Thanh toán thành công!")
-        self.finalize_payment(final_payment)
-        self.process_payment()
-        dialog.accept()  # Close the dialog
     def handle_success(self, dialog,final_payment):
-        QtWidgets.QMessageBox.information(self, "Successful Transaction", "Thanh toán thành công!")
+        QtWidgets.QMessageBox.information(self, "Payment Successful", "Payment Successful!")
         self.finalize_payment(final_payment)
         self.process_payment()
         dialog.accept()  # Close the dialog
@@ -111,7 +105,7 @@ class BillEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.payment_window.clear_data()
         self.payment_window.load_data()
     def process_payment(self):
-        QtWidgets.QMessageBox.information(self, "Thanh Toán Thành Công", "Cảm ơn bạn đã mua vé!",
+        QtWidgets.QMessageBox.information(self, "Payment Successful", "Thank you for purchasing your ticket!",
                                           QtWidgets.QMessageBox.StandardButton.Ok)
         self.reset_fields_bill()
         self.payment_window.clear_data()

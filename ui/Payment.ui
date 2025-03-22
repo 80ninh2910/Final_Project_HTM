@@ -203,7 +203,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-506</y>
+       <y>0</y>
        <width>988</width>
        <height>1312</height>
       </rect>
@@ -605,7 +605,7 @@ color: rgb(75, 60, 41);</string>
         <widget class="QLabel" name="label_15">
          <property name="geometry">
           <rect>
-           <x>50</x>
+           <x>10</x>
            <y>260</y>
            <width>191</width>
            <height>71</height>
@@ -614,7 +614,7 @@ color: rgb(75, 60, 41);</string>
          <property name="font">
           <font>
            <family>Cooper Black</family>
-           <pointsize>14</pointsize>
+           <pointsize>16</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -622,7 +622,7 @@ color: rgb(75, 60, 41);</string>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color:transparent;
-font: 14pt &quot;Cooper Black&quot;;
+font: 16pt &quot;Cooper Black&quot;;
 
 
 color: rgb(148, 0, 0);</string>

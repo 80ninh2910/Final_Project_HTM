@@ -108,7 +108,7 @@ class BuyPopcornEx(QMainWindow, Ui_MainWindow):
         self.tableWidget.clear()
         self.tableWidget.setRowCount(len(self.cm.cart["products"]) + 1)
         self.tableWidget.setColumnCount(4)
-        self.tableWidget.setHorizontalHeaderLabels(["Sản phẩm", "Số lượng", "Đơn giá", "Thành tiền"])
+        self.tableWidget.setHorizontalHeaderLabels( ["Name", "Quantity", "Price", "Total"])
         total_price = 0
         row = 0
 

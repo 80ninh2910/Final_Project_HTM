@@ -3,6 +3,7 @@ import sys
 from PyQt6 import QtWidgets
 from PyQt6.QtCore import QUrl
 from PyQt6.QtGui import QDesktopServices
+from PyQt6.QtWidgets import QHeaderView
 
 from librarys.CartManager import CartManager
 from librarys.DataConnector import DataConnector
@@ -50,10 +51,14 @@ class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
         QDesktopServices.openUrl(QUrl("https://www.facebook.com/profile.php?id=61573908070943"))
     def load_data(self):
         products = self.cart.cart.get("products", {})
-        self.tableWidget.clearContents()
+        # Set up column headers and rows
+        self.tableWidget.setColumnCount(4)
+        self.tableWidget.setHorizontalHeaderLabels(
+            ["Name", "Quantity", "Price", "Total"]
+        )
         if not products:
             self.tableWidget.setRowCount(1)
-            self.tableWidget.setItem(0, 0, QtWidgets.QTableWidgetItem("Giỏ hàng trống"))
+            self.tableWidget.setItem(0, 0, QtWidgets.QTableWidgetItem("Cart is empty"))
             self.lineEditFinalPayment.setText("0 VND")
             return
 
@@ -71,9 +76,13 @@ class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
             self.tableWidget.setItem(row, 3, QtWidgets.QTableWidgetItem(f"{price * quantity} VND"))
             row += 1
 
+        # Hiển thị tổng cộng
         self.tableWidget.setRowCount(row + 1)
-        self.tableWidget.setItem(row, 0, QtWidgets.QTableWidgetItem("Tổng cộng"))
+        self.tableWidget.setItem(row, 0, QtWidgets.QTableWidgetItem("Total"))
         self.tableWidget.setItem(row, 3, QtWidgets.QTableWidgetItem(f"{total} VND"))
+
+        # Căn chỉnh kích thước cột để vừa với nội dung
+        self.tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
 
         seats = self.cart.get_seats()
         num_tickets = len(seats)

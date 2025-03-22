@@ -143,7 +143,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, -506, 988, 1312))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 988, 1312))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout.setObjectName("verticalLayout")
@@ -320,16 +320,16 @@ class Ui_MainWindow(object):
         self.labelSeat.setText("")
         self.labelSeat.setObjectName("labelSeat")
         self.label_15 = QtWidgets.QLabel(parent=self.frame)
-        self.label_15.setGeometry(QtCore.QRect(50, 260, 191, 71))
+        self.label_15.setGeometry(QtCore.QRect(10, 260, 191, 71))
         font = QtGui.QFont()
         font.setFamily("Cooper Black")
-        font.setPointSize(14)
+        font.setPointSize(16)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(50)
         self.label_15.setFont(font)
         self.label_15.setStyleSheet("background-color:transparent;\n"
-"font: 14pt \"Cooper Black\";\n"
+"font: 16pt \"Cooper Black\";\n"
 "\n"
 "\n"
 "color: rgb(148, 0, 0);")
