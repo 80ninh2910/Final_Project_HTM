@@ -15,7 +15,7 @@ class CartManager:
         if cls._instance is None:
             cls._instance = super(CartManager, cls).__new__(cls)
             # Khởi tạo cart là một dict với 2 keys: seats và products
-            cls._instance.cart = {"seats": {}, "products": {}}
+            cls._instance.cart = {"seats": {}, "products": {},"movie":[]}
         return cls._instance
 
     def add_seat(self, row: int, col: int, theater: str, showtime: str):
@@ -70,6 +70,9 @@ class CartManager:
 
     def clear_cart(self):
         self.cart = {"products": {}, "seats": {}}  # Reset giỏ hàng
+
+    def add_move(self,movie):
+        self.cart["movie"]=movie
 
 class PricingManager:
     def __init__(self):

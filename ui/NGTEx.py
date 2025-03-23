@@ -133,6 +133,7 @@ class NGTEx(QtWidgets.QMainWindow, Ui_MainWindow):
         """Hiển thị thông tin phim"""
         for i in self.dc.movie:
             if i.MTitle =="NHÀ GIA TIÊN":
+                self.cart.add_move("NHÀ GIA TIÊN")
                 movie=i
                 self.labelType.setText(movie.MType)
                 self.labelDu.setText(movie.dur)

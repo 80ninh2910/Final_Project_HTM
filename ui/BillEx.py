@@ -10,7 +10,7 @@ from models.Transaction import Transaction
 from ui.Bill import Ui_MainWindow
 
 class BillEx(QtWidgets.QMainWindow, Ui_MainWindow):
-    def __init__(self,payment_window, username, email, theater, showtime, seat_text, order_items, final_payment):
+    def __init__(self,payment_window, username, email,movie, theater, showtime, seat_text, order_items, final_payment):
         super().__init__()
         self.setupUi(self)
         self.payment_window = payment_window
@@ -18,13 +18,14 @@ class BillEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.point_manager = PointManager()
         self.final_payment = final_payment
 
-        self.set_data(username, email, theater, showtime, seat_text, order_items, final_payment)
+        self.set_data(username, email,movie, theater, showtime, seat_text, order_items, final_payment)
         self.pushButtonPay.clicked.connect(self.pay)
         self.pushButtonBack.clicked.connect(self.back)
 
-    def set_data(self, username, email, theater, showtime, seat_text, order_items, final_payment):
+    def set_data(self, username, email,movie, theater, showtime, seat_text, order_items, final_payment):
         self.labelUsername.setText(username)
         self.labelMail.setText(email)
+        self.labelMovie.setText(movie)
         self.labelTheater.setText(theater)
         self.labelTime.setText(showtime)
         self.labelSeat.setText(seat_text)

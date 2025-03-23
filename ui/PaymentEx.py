@@ -144,15 +144,18 @@ class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
         user_info = self.us.get_user() or {}
         username = user_info.get("username", "N/A")
         email = user_info.get("email", "N/A")
-        self.open_bill(username,theater,showtime, email, seats, products, final_payment)
 
-    def open_bill(self, username, theater, showtime, email, seats, products, final_payment):
+        movie=self.cart.cart["movie"]
+
+        self.open_bill(username,movie, theater,showtime, email, seats, products, final_payment)
+
+    def open_bill(self, username,movie, theater, showtime, email, seats, products, final_payment):
         seat_text = ", ".join(seats.keys()) if seats else "Chưa đặt ghế nào"
         order_items = "\n".join(
             [f"- {name}: {quantity}x" for name, quantity in products.items() if quantity>0]
         ) or "Không có sản phẩm"
 
-        self.bill_window = BillEx(self, username, email, theater, showtime, seat_text, order_items, final_payment)
+        self.bill_window = BillEx(self, username, email,movie, theater, showtime, seat_text, order_items, final_payment)
         self.bill_window.show()
         self.close()
     def clear_data(self):

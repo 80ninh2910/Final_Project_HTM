@@ -124,6 +124,7 @@ class QNTEx(QtWidgets.QMainWindow, Ui_MainWindow):
         """Hiển thị thông tin phim"""
         for i in self.dc.movie:
             if i.MTitle =="QUỶ NHẬP TRÀNG":
+                self.cart.add_move("QUỶ NHẬP TRÀNG")
                 movie=i
                 self.labelType.setText(movie.MType)
                 self.labelDu.setText(movie.dur)

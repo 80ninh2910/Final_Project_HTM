@@ -2557,5 +2557,16 @@
         "seats": "Chưa đặt ghế nào",
         "order_items": "Không có sản phẩm",
         "price": 0
+    },
+    {
+        "transaction_id": "TXN-20250323203624",
+        "timestamp": "2025-03-23 20:36:24",
+        "user_name": "viet123",
+        "mail": "viet12@gmail.com",
+        "theater": "HCM",
+        "showtime": "23:00",
+        "seats": "C5, C4",
+        "order_items": "- Sprite: 2x\n- Combo Solo: 2x",
+        "price": 344000
     }
 ]
