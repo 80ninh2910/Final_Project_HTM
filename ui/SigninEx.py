@@ -2,6 +2,7 @@ from PyQt6 import QtWidgets
 import sys
 from librarys.DataConnector import DataConnector
 from librarys.UserSession import UserSession
+
 from ui.Signin import Ui_MainWindow
 
 class SignInEx(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -11,8 +12,14 @@ class SignInEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.register_window = None
         self.setupUi(self)
         self.dc = DataConnector()
-        self.pushButton.clicked.connect(self.login)  # Nút "Sign In"
+        self.pushButton.clicked.connect(self.login)# Nút "Sign In"
+        self.pushButtonSignUp.clicked.connect(self.signup)
         self.us=UserSession()
+    def signup(self):
+        from ui.SignUpEx import SignUpEx
+        self.signip_win=SignUpEx()
+        self.signip_win.show()
+        self.close()
     def login(self):
         """Xử lý đăng nhập"""
         username_or_email = self.lineEdit_2.text().strip()

@@ -7,6 +7,8 @@ from ui.Main import Ui_MainWindow
 from ui.NGTEx import NGTEx
 from ui.QNTEx import QNTEx
 
+
+
 class MainEx(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
@@ -29,7 +31,12 @@ class MainEx(QMainWindow, Ui_MainWindow):
         self.pushButtonEMMA.clicked.connect(self.openEMMA)
         self.pushButtonDiscounts.clicked.connect(self.open_discount)
         self.pushButtonAboutUs.clicked.connect(self.open_aboutus)
-
+        self.pushButtonLogOut.clicked.connect(self.logout)
+    def logout(self):
+        from ui.SignUpEx import SignUpEx
+        self.signup_win=SignUpEx()
+        self.signup_win.show()
+        self.close()
     @staticmethod
     def open_youtube_video(url):
         """Mở video hoặc đường dẫn trên trình duyệt"""
