@@ -21,7 +21,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>HOME</string>
+   <string>Discounts</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(0, 0, 0);
@@ -61,32 +61,6 @@ color: rgb(255, 255, 255);
       <width>100</width>
       <height>100</height>
      </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButtonShowtimes">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>70</y>
-      <width>111</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bahnschrift Condensed</family>
-      <pointsize>15</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: transparent;
-color: rgb(255, 255, 255);
-    border: none</string>
-    </property>
-    <property name="text">
-     <string>Showtimes</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButtonDiscounts">
@@ -240,7 +214,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-282</y>
+       <y>0</y>
        <width>988</width>
        <height>2012</height>
       </rect>
@@ -657,7 +631,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
           <rect>
            <x>160</x>
            <y>90</y>
-           <width>651</width>
+           <width>841</width>
            <height>31</height>
           </rect>
          </property>
@@ -1106,61 +1080,6 @@ color:rgb(0, 0, 0);
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>75</y>
-      <width>86</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bahnschrift Condensed</family>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border:none
-</string>
-    </property>
-    <property name="sizeAdjustPolicy">
-     <enum>QComboBox::AdjustToContents</enum>
-    </property>
-    <item>
-     <property name="text">
-      <string>SELECT THEATER   </string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>UEL</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>HỒ CHÍ MINH</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>COMING SOON...</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string/>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string/>
-     </property>
-    </item>
-   </widget>
    <widget class="QPushButton" name="pushButtonTicket_2">
     <property name="geometry">
      <rect>
@@ -1172,15 +1091,17 @@ color:rgb(0, 0, 0);
     </property>
     <property name="font">
      <font>
-      <family>Bahnschrift Condensed</family>
-      <pointsize>14</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 255, 0);
 color: rgb(0, 0, 0);
+font: 10pt &quot;MS Shell Dlg 2&quot;;
     border-radius: 10px;
     padding: 5px</string>
     </property>
@@ -1209,15 +1130,17 @@ color: rgb(0, 0, 0);
     </property>
     <property name="font">
      <font>
-      <family>Bahnschrift Condensed</family>
-      <pointsize>13</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(111, 56, 193);
 color: rgb(255, 255, 255);
+font: 10pt &quot;MS Shell Dlg 2&quot;;
     border-radius: 10px;
     padding: 5px</string>
     </property>

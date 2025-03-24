@@ -160,9 +160,9 @@ color: rgb(255, 255, 255);
     <property name="geometry">
      <rect>
       <x>360</x>
-      <y>80</y>
-      <width>141</width>
-      <height>41</height>
+      <y>60</y>
+      <width>291</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="font">
@@ -356,7 +356,7 @@ color: rgb(170, 0, 0);
     border: none</string>
     </property>
     <property name="text">
-     <string>Sign In Now!!! -&gt;</string>
+     <string>Sign In Now!!!</string>
     </property>
    </widget>
    <widget class="QWidget" name="widget" native="true">

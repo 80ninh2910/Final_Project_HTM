@@ -16,7 +16,6 @@ class AboutUsEx(QMainWindow, Ui_MainWindow):
         self.show()  # Show this window properly
 
     def setupSignalAndSlots(self):
-        self.pushButtonShowtimes.clicked.connect(self.home)
         self.pushButtonDiscounts.clicked.connect(self.open_discount)
         self.pushButtonBuyPop.clicked.connect(self.open_BuyPopcorn_Window)
         self.pushButtonfb.clicked.connect(self.openfb)

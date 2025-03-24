@@ -15,7 +15,6 @@ class DiscountEx(QMainWindow, Ui_MainWindow):
         self.show()  # Show this window properly
 
     def setupSignalAndSlots(self):
-        self.pushButtonShowtimes.clicked.connect(self.home)
         self.pushButtonAboutUs.clicked.connect(self.open_aboutus)
         self.pushButtonBuyPop.clicked.connect(self.open_BuyPopcorn_Window)
         self.pushButtonGetTK1.clicked.connect(self.home)

@@ -132,9 +132,9 @@ border:rgb(0, 0, 255);
     <property name="geometry">
      <rect>
       <x>360</x>
-      <y>120</y>
+      <y>90</y>
       <width>291</width>
-      <height>41</height>
+      <height>81</height>
      </rect>
     </property>
     <property name="font">
@@ -234,7 +234,7 @@ color: rgb(255, 255, 255);
    <widget class="QPushButton" name="pushButtonSignUp">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>360</x>
       <y>450</y>
       <width>301</width>
       <height>41</height>
@@ -254,7 +254,7 @@ color: rgb(170, 0, 0);
     border: none</string>
     </property>
     <property name="text">
-     <string>Sign Up Now!!! -&gt;</string>
+     <string>Sign Up Now!!! </string>
     </property>
    </widget>
   </widget>
