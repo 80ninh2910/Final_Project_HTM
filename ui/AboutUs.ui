@@ -242,7 +242,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
        <x>0</x>
        <y>0</y>
        <width>988</width>
-       <height>3012</height>
+       <height>2312</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -319,7 +319,7 @@ color: rgb(255, 255, 255);
           <enum>Qt::AutoText</enum>
          </property>
          <property name="pixmap">
-          <pixmap>../../images/AboutUs5.jpg</pixmap>
+          <pixmap>../images/AboutUs5.jpg</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -341,7 +341,7 @@ color: rgb(255, 255, 255);
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../../images/AboutUs1.jpg</pixmap>
+          <pixmap>../images/AboutUs1.jpg</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -360,7 +360,7 @@ color: rgb(255, 255, 255);
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../../images/AboutUs3.jpg</pixmap>
+          <pixmap>../images/AboutUs3.jpg</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -379,7 +379,7 @@ color: rgb(255, 255, 255);
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../../images/AboutUs7.jpg</pixmap>
+          <pixmap>../images/AboutUs7.jpg</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -402,7 +402,7 @@ background-color: rgb(123, 0, 0);</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../../images/AboutUs4.jpg</pixmap>
+          <pixmap>../images/AboutUs4.jpg</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -601,7 +601,7 @@ background-color: rgb(123, 0, 0);</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../../images/AboutUs2.jpg</pixmap>
+          <pixmap>../images/AboutUs2.jpg</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -891,7 +891,7 @@ background-color: rgb(123, 0, 0);</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../../images/AboutUs8.png</pixmap>
+          <pixmap>../images/AboutUs8.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -992,7 +992,7 @@ background-color: rgb(123, 0, 0);</string>
          <property name="geometry">
           <rect>
            <x>430</x>
-           <y>2030</y>
+           <y>2050</y>
            <width>121</width>
            <height>31</height>
           </rect>
@@ -1066,7 +1066,7 @@ color:rgb(0, 0, 0);
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>2120</y>
+           <y>2090</y>
            <width>981</width>
            <height>61</height>
           </rect>
@@ -1219,27 +1219,27 @@ color:rgb(0, 0, 0);
     </item>
     <item>
      <property name="text">
-      <string>New Item</string>
+      <string>UEL</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>HAI BÀ TRƯNG</string>
+      <string>HỒ CHÍ MINH</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>QUỐC THANH</string>
+      <string>COMING SOON...</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>New Item</string>
+      <string/>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>New Item</string>
+      <string/>
      </property>
     </item>
    </widget>
@@ -1271,7 +1271,7 @@ color: rgb(0, 0, 0);
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../../images/ic_ticket.png</normaloff>../../images/ic_ticket.png</iconset>
+      <normaloff>../images/ic_ticket.png</normaloff>../images/ic_ticket.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -1308,7 +1308,7 @@ color: rgb(255, 255, 255);
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../../images/ic_popcorn.png</normaloff>../../images/ic_popcorn.png</iconset>
+      <normaloff>../images/ic_popcorn.png</normaloff>../images/ic_popcorn.png</iconset>
     </property>
     <property name="iconSize">
      <size>

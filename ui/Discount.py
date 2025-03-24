@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'D:\Final_Project_HTM\ui\Discount.ui'
+# Form implementation generated from reading ui file 'E:\Personal Projects\___Pycharm___\FN5\ui\Discount.ui'
 #
 # Created by: PyQt6 UI code generator 6.8.0
 #
@@ -35,7 +35,7 @@ class Ui_MainWindow(object):
 "    border: none")
         self.pushButton_3.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../images/logoreal.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon.addPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/logoreal.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButton_3.setIcon(icon)
         self.pushButton_3.setIconSize(QtCore.QSize(100, 100))
         self.pushButton_3.setObjectName("pushButton_3")
@@ -159,7 +159,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 988, 3012))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, -282, 988, 2012))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout.setObjectName("verticalLayout")
@@ -191,24 +191,24 @@ class Ui_MainWindow(object):
         self.label_4.setFrameShadow(QtWidgets.QFrame.Shadow.Sunken)
         self.label_4.setText("")
         self.label_4.setTextFormat(QtCore.Qt.TextFormat.AutoText)
-        self.label_4.setPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../../images/discount1.jpg"))
+        self.label_4.setPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/discount1.jpg"))
         self.label_4.setScaledContents(True)
         self.label_4.setWordWrap(False)
         self.label_4.setObjectName("label_4")
         self.label_5 = QtWidgets.QLabel(parent=self.frame)
         self.label_5.setGeometry(QtCore.QRect(30, 670, 411, 231))
         self.label_5.setText("")
-        self.label_5.setPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../../images/discount2.jpg"))
+        self.label_5.setPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/discount2.jpg"))
         self.label_5.setScaledContents(True)
         self.label_5.setObjectName("label_5")
         self.label_6 = QtWidgets.QLabel(parent=self.frame)
         self.label_6.setGeometry(QtCore.QRect(530, 410, 411, 221))
         self.label_6.setText("")
-        self.label_6.setPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../../images/discount4.jpg"))
+        self.label_6.setPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/discount4.jpg"))
         self.label_6.setScaledContents(True)
         self.label_6.setObjectName("label_6")
         self.pushButtonGetTK1 = QtWidgets.QPushButton(parent=self.frame)
-        self.pushButtonGetTK1.setGeometry(QtCore.QRect(530, 280, 121, 41))
+        self.pushButtonGetTK1.setGeometry(QtCore.QRect(630, 290, 121, 41))
         font = QtGui.QFont()
         font.setPointSize(-1)
         self.pushButtonGetTK1.setFont(font)
@@ -222,27 +222,25 @@ class Ui_MainWindow(object):
 " background-color: rgb(200, 0, 25); /* Slightly darker red on hover */")
         self.pushButtonGetTK1.setObjectName("pushButtonGetTK1")
         self.pushButtonPlanYourVisit = QtWidgets.QPushButton(parent=self.frame)
-        self.pushButtonPlanYourVisit.setGeometry(QtCore.QRect(610, 820, 231, 41))
+        self.pushButtonPlanYourVisit.setGeometry(QtCore.QRect(600, 820, 231, 41))
         font = QtGui.QFont()
         font.setPointSize(-1)
         font.setBold(True)
         font.setWeight(75)
         self.pushButtonPlanYourVisit.setFont(font)
-        self.pushButtonPlanYourVisit.setStyleSheet("background-color: white; /* White background */\n"
-"    color: black; /* Black text */\n"
-"    border-radius: 20px; /* Rounded corners */\n"
-"    padding: 10px 30px; /* Padding */\n"
-"    border: none; /* No border */\n"
-"    font-size: 14px; /* Font size */\n"
-"    font-weight: bold; /* Bold text */\n"
-"    cursor: pointer; /* Change cursor to pointer */\n"
-"    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Slight shadow */\n"
-"")
+        self.pushButtonPlanYourVisit.setStyleSheet(" background-color: transparent; /* Transparent background */\n"
+"    color: white;                  /* White text */\n"
+"    border: 2px solid white;       /* White border */\n"
+"    border-radius: 20px;           /* Rounded corners */\n"
+"    padding: 10px 20px;            /* Padding inside the button */\n"
+"    font-size: 12px;               /* Font size */\n"
+"    font-weight: bold; \n"
+"  background-color: rgba(0, 0, 0,0.1);")
         self.pushButtonPlanYourVisit.setObjectName("pushButtonPlanYourVisit")
         self.label = QtWidgets.QLabel(parent=self.frame)
         self.label.setGeometry(QtCore.QRect(30, 160, 411, 221))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../../images/discount3.jpg"))
+        self.label.setPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/discount3.jpg"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(parent=self.frame)
@@ -258,19 +256,19 @@ class Ui_MainWindow(object):
 "    border: none")
         self.label_12.setObjectName("label_12")
         self.label_11 = QtWidgets.QLabel(parent=self.frame)
-        self.label_11.setGeometry(QtCore.QRect(530, 210, 341, 20))
+        self.label_11.setGeometry(QtCore.QRect(530, 220, 341, 20))
         self.label_11.setStyleSheet("font: 10pt \"MS Shell Dlg 2\";")
         self.label_11.setObjectName("label_11")
         self.label_13 = QtWidgets.QLabel(parent=self.frame)
-        self.label_13.setGeometry(QtCore.QRect(530, 230, 301, 20))
+        self.label_13.setGeometry(QtCore.QRect(540, 240, 301, 20))
         self.label_13.setStyleSheet("font: 10pt \"MS Shell Dlg 2\";")
         self.label_13.setObjectName("label_13")
         self.label_10 = QtWidgets.QLabel(parent=self.frame)
-        self.label_10.setGeometry(QtCore.QRect(530, 160, 251, 61))
+        self.label_10.setGeometry(QtCore.QRect(570, 160, 251, 61))
         self.label_10.setStyleSheet("font: 16pt \"MS Shell Dlg 2\";")
         self.label_10.setObjectName("label_10")
         self.label_14 = QtWidgets.QLabel(parent=self.frame)
-        self.label_14.setGeometry(QtCore.QRect(50, 420, 251, 61))
+        self.label_14.setGeometry(QtCore.QRect(120, 420, 251, 61))
         self.label_14.setStyleSheet("font: 16pt \"MS Shell Dlg 2\";")
         self.label_14.setObjectName("label_14")
         self.label_16 = QtWidgets.QLabel(parent=self.frame)
@@ -278,7 +276,7 @@ class Ui_MainWindow(object):
         self.label_16.setStyleSheet("font: 10pt \"MS Shell Dlg 2\";")
         self.label_16.setObjectName("label_16")
         self.label_17 = QtWidgets.QLabel(parent=self.frame)
-        self.label_17.setGeometry(QtCore.QRect(530, 690, 251, 61))
+        self.label_17.setGeometry(QtCore.QRect(600, 690, 251, 61))
         self.label_17.setStyleSheet("font: 16pt \"MS Shell Dlg 2\";")
         self.label_17.setObjectName("label_17")
         self.label_18 = QtWidgets.QLabel(parent=self.frame)
@@ -286,7 +284,7 @@ class Ui_MainWindow(object):
         self.label_18.setStyleSheet("font: 10pt \"MS Shell Dlg 2\";")
         self.label_18.setObjectName("label_18")
         self.label_19 = QtWidgets.QLabel(parent=self.frame)
-        self.label_19.setGeometry(QtCore.QRect(40, 970, 171, 61))
+        self.label_19.setGeometry(QtCore.QRect(160, 970, 171, 61))
         self.label_19.setStyleSheet("font: 16pt \"MS Shell Dlg 2\";")
         self.label_19.setObjectName("label_19")
         self.label_20 = QtWidgets.QLabel(parent=self.frame)
@@ -316,22 +314,20 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.pushButtonSeeShowtimes.setFont(font)
-        self.pushButtonSeeShowtimes.setStyleSheet("background-color: white; /* White background */\n"
-"    color: black; /* Black text */\n"
-"    border-radius: 20px; /* Rounded corners */\n"
-"    padding: 10px 30px; /* Padding */\n"
-"    border: none; /* No border */\n"
-"    font-size: 14px; /* Font size */\n"
-"    font-weight: bold; /* Bold text */\n"
-"    cursor: pointer; /* Change cursor to pointer */\n"
-"    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Slight shadow */\n"
-"")
+        self.pushButtonSeeShowtimes.setStyleSheet(" background-color: transparent; /* Transparent background */\n"
+"    color: white;                  /* White text */\n"
+"    border: 2px solid white;       /* White border */\n"
+"    border-radius: 20px;           /* Rounded corners */\n"
+"    padding: 10px 20px;            /* Padding inside the button */\n"
+"    font-size: 12px;               /* Font size */\n"
+"    font-weight: bold; \n"
+"  background-color: rgba(0, 0, 0,0.1);")
         self.pushButtonSeeShowtimes.setObjectName("pushButtonSeeShowtimes")
         self.label_8 = QtWidgets.QLabel(parent=self.frame)
         self.label_8.setGeometry(QtCore.QRect(630, 430, 121, 71))
         self.label_8.setStyleSheet("background-color: transparent;")
         self.label_8.setText("")
-        self.label_8.setPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../../images/logoreal.png"))
+        self.label_8.setPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/logoreal.png"))
         self.label_8.setScaledContents(True)
         self.label_8.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_8.setObjectName("label_8")
@@ -344,7 +340,7 @@ class Ui_MainWindow(object):
         self.label_24.setStyleSheet("font: 10pt \"MS Shell Dlg 2\";")
         self.label_24.setObjectName("label_24")
         self.pushButtonGetTK2 = QtWidgets.QPushButton(parent=self.frame)
-        self.pushButtonGetTK2.setGeometry(QtCore.QRect(90, 570, 121, 41))
+        self.pushButtonGetTK2.setGeometry(QtCore.QRect(180, 570, 121, 41))
         font = QtGui.QFont()
         font.setPointSize(-1)
         self.pushButtonGetTK2.setFont(font)
@@ -357,24 +353,8 @@ class Ui_MainWindow(object):
 "    cursor: pointer; /* Change cursor to pointer */\n"
 " background-color: rgb(200, 0, 25); /* Slightly darker red on hover */")
         self.pushButtonGetTK2.setObjectName("pushButtonGetTK2")
-        self.pushButtonJoinInsider = QtWidgets.QPushButton(parent=self.frame)
-        self.pushButtonJoinInsider.setGeometry(QtCore.QRect(280, 570, 121, 41))
-        font = QtGui.QFont()
-        font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(75)
-        self.pushButtonJoinInsider.setFont(font)
-        self.pushButtonJoinInsider.setStyleSheet(" background-color: transparent; /* Transparent background */\n"
-"    color: white;                  /* White text */\n"
-"    border: 2px solid white;       /* White border */\n"
-"    border-radius: 20px;           /* Rounded corners */\n"
-"    padding: 10px 20px;            /* Padding inside the button */\n"
-"    font-size: 12px;               /* Font size */\n"
-"    font-weight: bold; \n"
-"  background-color: rgba(0, 0, 0,0.1);")
-        self.pushButtonJoinInsider.setObjectName("pushButtonJoinInsider")
         self.label_22 = QtWidgets.QLabel(parent=self.frame)
-        self.label_22.setGeometry(QtCore.QRect(530, 770, 371, 21))
+        self.label_22.setGeometry(QtCore.QRect(540, 770, 371, 21))
         self.label_22.setStyleSheet("font: 10pt \"MS Shell Dlg 2\";")
         self.label_22.setObjectName("label_22")
         self.label_9 = QtWidgets.QLabel(parent=self.frame)
@@ -390,7 +370,7 @@ class Ui_MainWindow(object):
         self.label_25.setStyleSheet("\n"
 "background-color: rgb(123, 0, 0);")
         self.label_25.setText("")
-        self.label_25.setPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../../images/AboutUs7.jpg"))
+        self.label_25.setPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/AboutUs7.jpg"))
         self.label_25.setScaledContents(True)
         self.label_25.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_25.setObjectName("label_25")
@@ -421,7 +401,7 @@ class Ui_MainWindow(object):
         self.label_44.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_44.setObjectName("label_44")
         self.pushButtonfb = QtWidgets.QPushButton(parent=self.frame)
-        self.pushButtonfb.setGeometry(QtCore.QRect(430, 1790, 121, 31))
+        self.pushButtonfb.setGeometry(QtCore.QRect(430, 1810, 121, 31))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift Condensed")
         font.setPointSize(13)
@@ -433,7 +413,7 @@ class Ui_MainWindow(object):
 "    border-radius: 10px;\n"
 "    padding: 5px")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../../images/fb.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon1.addPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../../images/fb.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButtonfb.setIcon(icon1)
         self.pushButtonfb.setIconSize(QtCore.QSize(30, 30))
         self.pushButtonfb.setAutoRepeatDelay(305)
@@ -449,12 +429,12 @@ class Ui_MainWindow(object):
 "    border: none")
         self.pushButton_4.setText("")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../../images/logoreal.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon2.addPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../../images/logoreal.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButton_4.setIcon(icon2)
         self.pushButton_4.setIconSize(QtCore.QSize(100, 100))
         self.pushButton_4.setObjectName("pushButton_4")
         self.label_42 = QtWidgets.QLabel(parent=self.frame)
-        self.label_42.setGeometry(QtCore.QRect(0, 1870, 981, 61))
+        self.label_42.setGeometry(QtCore.QRect(0, 1850, 981, 61))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift Condensed")
         font.setPointSize(20)
@@ -467,7 +447,7 @@ class Ui_MainWindow(object):
         self.label_42.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_42.setObjectName("label_42")
         self.label_43 = QtWidgets.QLabel(parent=self.frame)
-        self.label_43.setGeometry(QtCore.QRect(-10, 1900, 991, 61))
+        self.label_43.setGeometry(QtCore.QRect(-10, 1890, 1001, 61))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift Condensed")
         font.setPointSize(15)
@@ -504,7 +484,6 @@ class Ui_MainWindow(object):
         self.label_21.raise_()
         self.label_24.raise_()
         self.pushButtonGetTK2.raise_()
-        self.pushButtonJoinInsider.raise_()
         self.label_22.raise_()
         self.label_9.raise_()
         self.label_8.raise_()
@@ -542,7 +521,9 @@ class Ui_MainWindow(object):
         self.comboBox.addItem("")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
+        self.comboBox.setItemText(4, "")
         self.comboBox.addItem("")
+        self.comboBox.setItemText(5, "")
         self.pushButtonTicket_2 = QtWidgets.QPushButton(parent=self.centralwidget)
         self.pushButtonTicket_2.setGeometry(QtCore.QRect(730, 10, 111, 31))
         font = QtGui.QFont()
@@ -556,7 +537,7 @@ class Ui_MainWindow(object):
 "    border-radius: 10px;\n"
 "    padding: 5px")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../../images/ic_ticket.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon3.addPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/ic_ticket.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButtonTicket_2.setIcon(icon3)
         self.pushButtonTicket_2.setIconSize(QtCore.QSize(30, 30))
         self.pushButtonTicket_2.setObjectName("pushButtonTicket_2")
@@ -573,7 +554,7 @@ class Ui_MainWindow(object):
 "    border-radius: 10px;\n"
 "    padding: 5px")
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../../images/ic_popcorn.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon4.addPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/ic_popcorn.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButtonBuyPop.setIcon(icon4)
         self.pushButtonBuyPop.setIconSize(QtCore.QSize(30, 30))
         self.pushButtonBuyPop.setAutoRepeatDelay(305)
@@ -628,7 +609,6 @@ class Ui_MainWindow(object):
         self.label_21.setText(_translate("MainWindow", " member yet? Sign up for free as an Insider today and start saving on Tuesdays and more!"))
         self.label_24.setText(_translate("MainWindow", "enjoy discounted tickets to the latest big-screen movies every Tuesday, all year round. Not a member yet? Sign up for free as an Insider today and start saving on Tuesdays and more!"))
         self.pushButtonGetTK2.setText(_translate("MainWindow", "Get Tickets"))
-        self.pushButtonJoinInsider.setText(_translate("MainWindow", "Join Insider"))
         self.label_22.setText(_translate("MainWindow", " the box office and get great discounts on tickets for the latest movies!"))
         self.label_23.setText(_translate("MainWindow", "on tickets all day, every day. Simply choose senior pricing when checking out online."))
         self.label_44.setText(_translate("MainWindow", "CONTACT US"))
@@ -636,10 +616,8 @@ class Ui_MainWindow(object):
         self.label_42.setText(_translate("MainWindow", "WE MAKE MOVIES BETTER"))
         self.label_43.setText(_translate("MainWindow", "© Copyright 2025 GFlix Theatres"))
         self.comboBox.setItemText(0, _translate("MainWindow", "SELECT THEATER   "))
-        self.comboBox.setItemText(1, _translate("MainWindow", "New Item"))
-        self.comboBox.setItemText(2, _translate("MainWindow", "HAI BÀ TRƯNG"))
-        self.comboBox.setItemText(3, _translate("MainWindow", "QUỐC THANH"))
-        self.comboBox.setItemText(4, _translate("MainWindow", "New Item"))
-        self.comboBox.setItemText(5, _translate("MainWindow", "New Item"))
+        self.comboBox.setItemText(1, _translate("MainWindow", "UEL"))
+        self.comboBox.setItemText(2, _translate("MainWindow", "HỒ CHÍ MINH"))
+        self.comboBox.setItemText(3, _translate("MainWindow", "COMING SOON..."))
         self.pushButtonTicket_2.setText(_translate("MainWindow", "BUY TICKETS"))
         self.pushButtonBuyPop.setText(_translate("MainWindow", "BUY POPCORN"))

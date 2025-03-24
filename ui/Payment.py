@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'D:\Final_Project_HTM\ui\Payment.ui'
+# Form implementation generated from reading ui file 'E:\Personal Projects\___Pycharm___\FN5\ui\Payment.ui'
 #
 # Created by: PyQt6 UI code generator 6.8.0
 #
@@ -143,7 +143,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, -120, 980, 1322))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, -484, 988, 1312))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout.setObjectName("verticalLayout")
@@ -163,7 +163,7 @@ class Ui_MainWindow(object):
         self.label_29 = QtWidgets.QLabel(parent=self.frame)
         self.label_29.setGeometry(QtCore.QRect(-10, 0, 991, 251))
         self.label_29.setText("")
-        self.label_29.setPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../images/Red And Yellow Illustrated Movie Night Perfomance Invitation Outdor Banner.png"))
+        self.label_29.setPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/Red And Yellow Illustrated Movie Night Perfomance Invitation Outdor Banner.png"))
         self.label_29.setScaledContents(True)
         self.label_29.setObjectName("label_29")
         self.pushButtonDiscounts_4 = QtWidgets.QPushButton(parent=self.frame)
@@ -201,7 +201,7 @@ class Ui_MainWindow(object):
         self.label = QtWidgets.QLabel(parent=self.frame)
         self.label.setGeometry(QtCore.QRect(-30, 240, 959, 361))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../images/Blue Modern Cinema Ticket.png"))
+        self.label.setPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/Blue Modern Cinema Ticket.png"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.label_5 = QtWidgets.QLabel(parent=self.frame)
@@ -386,7 +386,7 @@ class Ui_MainWindow(object):
 "    border-radius: 10px;\n"
 "    padding: 5px")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../images/ic_popcorn.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon.addPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/ic_popcorn.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButtonConfirm.setIcon(icon)
         self.pushButtonConfirm.setIconSize(QtCore.QSize(30, 30))
         self.pushButtonConfirm.setAutoRepeatDelay(305)
@@ -394,7 +394,7 @@ class Ui_MainWindow(object):
         self.label_2 = QtWidgets.QLabel(parent=self.frame)
         self.label_2.setGeometry(QtCore.QRect(-10, 900, 991, 151))
         self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../images/Screenshot 2025-03-17 023822.png"))
+        self.label_2.setPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/Screenshot 2025-03-17 023822.png"))
         self.label_2.setScaledContents(True)
         self.label_2.setObjectName("label_2")
         self.line_2 = QtWidgets.QFrame(parent=self.frame)
@@ -443,7 +443,7 @@ class Ui_MainWindow(object):
 "    border-radius: 10px;\n"
 "    padding: 5px")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../images/fb.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon1.addPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/fb.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButtonfb.setIcon(icon1)
         self.pushButtonfb.setIconSize(QtCore.QSize(30, 30))
         self.pushButtonfb.setAutoRepeatDelay(305)
@@ -459,7 +459,7 @@ class Ui_MainWindow(object):
 "    border: none")
         self.pushButton_4.setText("")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../images/logoreal.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon2.addPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/logoreal.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButton_4.setIcon(icon2)
         self.pushButton_4.setIconSize(QtCore.QSize(100, 100))
         self.pushButton_4.setObjectName("pushButton_4")
@@ -495,11 +495,6 @@ class Ui_MainWindow(object):
         self.label_6.setFont(font)
         self.label_6.setStyleSheet("background-color:transparent")
         self.label_6.setObjectName("label_6")
-        self.checkBoxUsePoint = QtWidgets.QCheckBox(parent=self.frame)
-        self.checkBoxUsePoint.setGeometry(QtCore.QRect(650, 690, 161, 31))
-        self.checkBoxUsePoint.setStyleSheet("font: 12pt \"MS Shell Dlg 2\";\n"
-"")
-        self.checkBoxUsePoint.setObjectName("checkBoxUsePoint")
         self.lineEditShowPoint = QtWidgets.QLineEdit(parent=self.frame)
         self.lineEditShowPoint.setGeometry(QtCore.QRect(630, 640, 291, 41))
         self.lineEditShowPoint.setStyleSheet("\n"
@@ -568,7 +563,6 @@ class Ui_MainWindow(object):
         self.label_42.raise_()
         self.label_16.raise_()
         self.label_6.raise_()
-        self.checkBoxUsePoint.raise_()
         self.lineEditShowPoint.raise_()
         self.lineEditFinalPayment.raise_()
         self.label_14.raise_()
@@ -595,7 +589,7 @@ class Ui_MainWindow(object):
 "    border-radius: 10px;\n"
 "    padding: 5px")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../images/home.ico"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon3.addPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/home.ico"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButtonHome.setIcon(icon3)
         self.pushButtonHome.setIconSize(QtCore.QSize(30, 30))
         self.pushButtonHome.setAutoRepeat(False)
@@ -605,7 +599,7 @@ class Ui_MainWindow(object):
         self.pushButtonHome.setObjectName("pushButtonHome")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1017, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1017, 18))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
@@ -644,6 +638,5 @@ class Ui_MainWindow(object):
         self.label_42.setText(_translate("MainWindow", "WE MAKE MOVIES BETTER"))
         self.label_16.setText(_translate("MainWindow", "CHECK OUT"))
         self.label_6.setText(_translate("MainWindow", "PAYMENT"))
-        self.checkBoxUsePoint.setText(_translate("MainWindow", "Use Point"))
         self.label_14.setText(_translate("MainWindow", "Ticket:"))
         self.pushButtonHome.setText(_translate("MainWindow", "HOME"))

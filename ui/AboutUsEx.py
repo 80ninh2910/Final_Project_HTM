@@ -38,9 +38,8 @@ class AboutUsEx(QMainWindow, Ui_MainWindow):
 
     def open_discount(self):
         from ui.DiscountEx import DiscountEx
-        if self.mainwindow is None:
-            self.mainwindow = DiscountEx()
-        self.mainwindow.show()
+        self.discount_window = DiscountEx()
+        self.discount_window.show()
         self.close()
 
     def open_BuyPopcorn_Window(self):

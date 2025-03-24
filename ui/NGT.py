@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'D:\Final_Project_HTM\ui\NGT.ui'
+# Form implementation generated from reading ui file 'E:\Personal Projects\___Pycharm___\FN5\ui\NGT.ui'
 #
 # Created by: PyQt6 UI code generator 6.8.0
 #
@@ -132,7 +132,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, -906, 988, 1812))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 988, 1812))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout.setObjectName("verticalLayout")
@@ -151,7 +151,7 @@ class Ui_MainWindow(object):
         self.label_4.setFrameShadow(QtWidgets.QFrame.Shadow.Sunken)
         self.label_4.setText("")
         self.label_4.setTextFormat(QtCore.Qt.TextFormat.AutoText)
-        self.label_4.setPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../images/nha-gia-tien-sneak.webp"))
+        self.label_4.setPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/nha-gia-tien-sneak.webp"))
         self.label_4.setScaledContents(True)
         self.label_4.setWordWrap(False)
         self.label_4.setObjectName("label_4")
@@ -166,7 +166,7 @@ class Ui_MainWindow(object):
 "    border: none")
         self.pushButton_4.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../images/logoreal.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon.addPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/logoreal.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButton_4.setIcon(icon)
         self.pushButton_4.setIconSize(QtCore.QSize(100, 100))
         self.pushButton_4.setObjectName("pushButton_4")
@@ -229,7 +229,7 @@ class Ui_MainWindow(object):
 "    border-radius: 10px;\n"
 "    padding: 5px")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../images/fb.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon1.addPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/fb.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButtonfb.setIcon(icon1)
         self.pushButtonfb.setIconSize(QtCore.QSize(30, 30))
         self.pushButtonfb.setAutoRepeatDelay(305)
@@ -572,7 +572,7 @@ class Ui_MainWindow(object):
 "    border-radius: 10px;\n"
 "    padding: 5px")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../images/ic_ticket.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon2.addPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/ic_ticket.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButtoncf.setIcon(icon2)
         self.pushButtoncf.setIconSize(QtCore.QSize(30, 30))
         self.pushButtoncf.setObjectName("pushButtoncf")
@@ -664,7 +664,7 @@ class Ui_MainWindow(object):
 "    border-radius: 10px;\n"
 "    padding: 5px")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../images/home.ico"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon3.addPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/home.ico"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButtonHome.setIcon(icon3)
         self.pushButtonHome.setIconSize(QtCore.QSize(30, 30))
         self.pushButtonHome.setAutoRepeat(False)
@@ -673,7 +673,7 @@ class Ui_MainWindow(object):
         self.pushButtonHome.setAutoRepeatInterval(250)
         self.pushButtonHome.setObjectName("pushButtonHome")
         self.comboBoxSelect1 = QtWidgets.QComboBox(parent=self.centralwidget)
-        self.comboBoxSelect1.setGeometry(QtCore.QRect(20, 75, 81, 16))
+        self.comboBoxSelect1.setGeometry(QtCore.QRect(20, 75, 76, 16))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift Condensed")
         font.setPointSize(12)
@@ -759,5 +759,5 @@ class Ui_MainWindow(object):
         self.comboBoxSelect1.setItemText(0, _translate("MainWindow", "ALL THEATER"))
         self.comboBoxSelect1.setItemText(1, _translate("MainWindow", "UEL"))
         self.comboBoxSelect1.setItemText(2, _translate("MainWindow", "HỒ CHÍ MINH"))
-        self.comboBoxSelect1.setItemText(3, _translate("MainWindow", "Comming...soom"))
+        self.comboBoxSelect1.setItemText(3, _translate("MainWindow", "COMING SOON..."))
         self.pushButtonShowtime.setText(_translate("MainWindow", "Showtimes"))

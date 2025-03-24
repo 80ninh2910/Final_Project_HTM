@@ -3,6 +3,8 @@ from librarys.CartManager import CartManager
 from librarys.DataConnector import DataConnector
 from ui.BuyPopcorn import Ui_MainWindow
 
+
+
 class BuyPopcornEx(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
@@ -59,18 +61,16 @@ class BuyPopcornEx(QMainWindow, Ui_MainWindow):
         self.mainwindow.show()
         self.close()
 
-    def open_aboutus(self):
-        """Mở cửa sổ 'Giới thiệu'"""
-        from ui.AboutUsEx import AboutUsEx
-        self.mainwindow = AboutUsEx()
-        self.mainwindow.show()
+    def open_discount(self):
+        from ui.DiscountEx import DiscountEx
+        self.discount_window = DiscountEx()
+        self.discount_window.show()
         self.close()
 
-    def open_discount(self):
-        """Mở cửa sổ 'Khuyến mãi'"""
-        from ui.DiscountEx import DiscountEx
-        self.mainwindow = DiscountEx()
-        self.mainwindow.show()
+    def open_aboutus(self):
+        from ui.AboutUsEx import AboutUsEx
+        self.aboutus_window = AboutUsEx()
+        self.aboutus_window.show()
         self.close()
 
     def setup_cart(self):

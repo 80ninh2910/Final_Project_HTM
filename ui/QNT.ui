@@ -180,7 +180,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-824</y>
+       <y>0</y>
        <width>988</width>
        <height>1512</height>
       </rect>
@@ -1338,7 +1338,7 @@ color: rgb(0, 0, 0);
      <rect>
       <x>20</x>
       <y>80</y>
-      <width>81</width>
+      <width>76</width>
       <height>16</height>
      </rect>
     </property>
@@ -1374,7 +1374,7 @@ color: rgb(0, 0, 0);
     </item>
     <item>
      <property name="text">
-      <string>Comming...soom</string>
+      <string>COMING SOON...</string>
      </property>
     </item>
     <item>

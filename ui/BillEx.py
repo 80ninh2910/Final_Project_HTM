@@ -14,7 +14,8 @@ class PaymentSelectionDialog(QtWidgets.QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setWindowTitle("Chọn phương thức thanh toán")
-        self.setStyleSheet("background-color: white;")
+        self.setStyleSheet("background-color: black;")
+        self.setStyleSheet("color: white;")
 
         # Tạo danh sách radio button
         self.payment_methods = {
@@ -31,7 +32,7 @@ class PaymentSelectionDialog(QtWidgets.QDialog):
             radio = QtWidgets.QRadioButton(name)
             self.radio_buttons[method] = radio
             layout.addWidget(radio)
-
+        self.resize(250, 100)#trc ngang, sau cao
         # Nút Xác nhận
         self.confirm_button = QtWidgets.QPushButton("Xác nhận")
         self.confirm_button.clicked.connect(self.accept_selection)
@@ -115,7 +116,8 @@ class BillEx(QtWidgets.QMainWindow, Ui_MainWindow):
             # Hiển thị QR code trong dialog
             qr_dialog = QtWidgets.QDialog(self)
             qr_dialog.setWindowTitle("QR Code Thanh Toán")
-            qr_dialog.setStyleSheet("background-color: white;")
+            qr_dialog.setStyleSheet("background-color: black;")
+            qr_dialog.setStyleSheet("color: white;")
 
             label_image = QtWidgets.QLabel()
             label_image.setPixmap(pixmap.scaled(200, 200, Qt.AspectRatioMode.KeepAspectRatio))

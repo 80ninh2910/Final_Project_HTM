@@ -1338,7 +1338,7 @@ color: rgb(0, 0, 0);
      <rect>
       <x>20</x>
       <y>80</y>
-      <width>81</width>
+      <width>76</width>
       <height>16</height>
      </rect>
     </property>
@@ -1374,7 +1374,7 @@ color: rgb(0, 0, 0);
     </item>
     <item>
      <property name="text">
-      <string>Comming...soom</string>
+      <string>COMING SOON...</string>
      </property>
     </item>
     <item>

@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'D:\Final_Project_HTM\ui\Signin.ui'
+# Form implementation generated from reading ui file 'E:\Personal Projects\___Pycharm___\FN5\ui\Signin.ui'
 #
 # Created by: PyQt6 UI code generator 6.8.0
 #
@@ -21,13 +21,13 @@ class Ui_MainWindow(object):
         self.label.setGeometry(QtCore.QRect(6, 6, 1000, 600))
         self.label.setMaximumSize(QtCore.QSize(1000, 600))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../images/thumble-muataikhoannetflixvn.jpg"))
+        self.label.setPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/thumble-muataikhoannetflixvn.jpg"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(parent=self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(10, 0, 181, 151))
         self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../images/logoreal.png"))
+        self.label_2.setPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/logoreal.png"))
         self.label_2.setScaledContents(True)
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(parent=self.centralwidget)
@@ -42,6 +42,7 @@ class Ui_MainWindow(object):
 "font: 75 11pt \"MS Shell Dlg 2\";\n"
 "border:rgb(0, 0, 255);\n"
 "")
+        self.lineEdit_2.setText("")
         self.lineEdit_2.setObjectName("lineEdit_2")
         self.lineEdit_3 = QtWidgets.QLineEdit(parent=self.centralwidget)
         self.lineEdit_3.setGeometry(QtCore.QRect(360, 320, 291, 41))
@@ -49,11 +50,12 @@ class Ui_MainWindow(object):
 "font: 75 11pt \"MS Shell Dlg 2\";\n"
 "border:rgb(0, 0, 255);\n"
 "")
+        self.lineEdit_3.setText("")
         self.lineEdit_3.setEchoMode(QtWidgets.QLineEdit.EchoMode.Password)
         self.lineEdit_3.setReadOnly(False)
         self.lineEdit_3.setObjectName("lineEdit_3")
         self.label_4 = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_4.setGeometry(QtCore.QRect(360, 120, 141, 41))
+        self.label_4.setGeometry(QtCore.QRect(360, 120, 291, 41))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift Condensed")
         font.setPointSize(30)
@@ -65,7 +67,7 @@ class Ui_MainWindow(object):
 "    border: none")
         self.label_4.setObjectName("label_4")
         self.label_6 = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_6.setGeometry(QtCore.QRect(370, 180, 141, 31))
+        self.label_6.setGeometry(QtCore.QRect(370, 180, 281, 31))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift Condensed")
         font.setPointSize(15)
@@ -77,7 +79,7 @@ class Ui_MainWindow(object):
 "    border: none")
         self.label_6.setObjectName("label_6")
         self.label_7 = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_7.setGeometry(QtCore.QRect(370, 280, 141, 31))
+        self.label_7.setGeometry(QtCore.QRect(370, 280, 281, 31))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift Condensed")
         font.setPointSize(15)
@@ -89,7 +91,7 @@ class Ui_MainWindow(object):
 "    border: none")
         self.label_7.setObjectName("label_7")
         self.pushButton = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(410, 410, 211, 31))
+        self.pushButton.setGeometry(QtCore.QRect(400, 410, 211, 31))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift Condensed")
         font.setPointSize(20)
@@ -100,7 +102,7 @@ class Ui_MainWindow(object):
 "    padding: 5px")
         self.pushButton.setObjectName("pushButton")
         self.pushButtonSignUp = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.pushButtonSignUp.setGeometry(QtCore.QRect(360, 450, 301, 41))
+        self.pushButtonSignUp.setGeometry(QtCore.QRect(350, 450, 301, 41))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift Condensed")
         font.setPointSize(15)
@@ -113,7 +115,7 @@ class Ui_MainWindow(object):
         self.pushButtonSignUp.setObjectName("pushButtonSignUp")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1016, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1016, 18))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
@@ -126,8 +128,6 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.lineEdit_2.setText(_translate("MainWindow", "viet123"))
-        self.lineEdit_3.setText(_translate("MainWindow", "123"))
         self.label_4.setText(_translate("MainWindow", "Sign In"))
         self.label_6.setText(_translate("MainWindow", "Username or Gmail"))
         self.label_7.setText(_translate("MainWindow", "Password"))

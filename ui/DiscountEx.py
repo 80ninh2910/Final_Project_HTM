@@ -2,7 +2,7 @@ from PyQt6.QtCore import QUrl
 from PyQt6.QtGui import QDesktopServices
 from PyQt6.QtWidgets import QMainWindow
 
-from ui.Discount.Discount import Ui_MainWindow
+from ui.Discount import Ui_MainWindow
 
 
 class DiscountEx(QMainWindow, Ui_MainWindow):
@@ -24,7 +24,6 @@ class DiscountEx(QMainWindow, Ui_MainWindow):
         self.pushButtonfb.clicked.connect(self.openfb)
         self.pushButtonPlanYourVisit.clicked.connect(self.home)
         self.pushButtonSeeShowtimes.clicked.connect(self.home)
-        self.pushButtonJoinInsider.clicked.connect(self.JoinInsider)
         self.pushButtonSeeMorePromotions.clicked.connect(self.openfb)
         self.pushButtonTicket_2.clicked.connect(self.home)
     def home(self):
@@ -36,12 +35,11 @@ class DiscountEx(QMainWindow, Ui_MainWindow):
         self.mainwindow.show()
         self.close()
 
+
     def open_aboutus(self):
         from ui.AboutUsEx import AboutUsEx
-        if self.mainwindow is None:
-            self.mainwindow = AboutUsEx()
-
-        self.mainwindow.show()
+        self.aboutus_window = AboutUsEx()
+        self.aboutus_window.show()
         self.close()
 
     def open_BuyPopcorn_Window(self):
@@ -53,5 +51,3 @@ class DiscountEx(QMainWindow, Ui_MainWindow):
     def openfb(self):
         contact="https://www.facebook.com/profile.php?id=61573908070943"
         QDesktopServices.openUrl(QUrl(contact))
-    def JoinInsider(self):
-        pass

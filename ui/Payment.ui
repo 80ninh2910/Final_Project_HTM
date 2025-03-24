@@ -203,9 +203,9 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-120</y>
-       <width>980</width>
-       <height>1322</height>
+       <y>-484</y>
+       <width>988</width>
+       <height>1312</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -982,23 +982,6 @@ color: rgb(148, 0, 0);</string>
           <string>PAYMENT</string>
          </property>
         </widget>
-        <widget class="QCheckBox" name="checkBoxUsePoint">
-         <property name="geometry">
-          <rect>
-           <x>650</x>
-           <y>690</y>
-           <width>161</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
-</string>
-         </property>
-         <property name="text">
-          <string>Use Point</string>
-         </property>
-        </widget>
         <widget class="QLineEdit" name="lineEditShowPoint">
          <property name="geometry">
           <rect>
@@ -1116,7 +1099,6 @@ color: rgb(75, 60, 41);</string>
         <zorder>label_42</zorder>
         <zorder>label_16</zorder>
         <zorder>label_6</zorder>
-        <zorder>checkBoxUsePoint</zorder>
         <zorder>lineEditShowPoint</zorder>
         <zorder>lineEditFinalPayment</zorder>
         <zorder>label_14</zorder>
@@ -1204,7 +1186,7 @@ color: rgb(255, 255, 255);
      <x>0</x>
      <y>0</y>
      <width>1017</width>
-     <height>26</height>
+     <height>18</height>
     </rect>
    </property>
   </widget>

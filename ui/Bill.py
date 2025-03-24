@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'D:\Final_Project_HTM\ui\Bill.ui'
+# Form implementation generated from reading ui file 'E:\Personal Projects\___Pycharm___\FN5\ui\Bill.ui'
 #
 # Created by: PyQt6 UI code generator 6.8.0
 #
@@ -21,7 +21,7 @@ class Ui_MainWindow(object):
         self.label.setGeometry(QtCore.QRect(-180, -20, 1000, 600))
         self.label.setMaximumSize(QtCore.QSize(1000, 600))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../images/1.png"))
+        self.label.setPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/1.png"))
         self.label.setScaledContents(True)
         self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label.setObjectName("label")

@@ -11,6 +11,7 @@ from librarys.PointManager import PointManager
 from librarys.TransactionManager import TransactionManager
 from librarys.UserSession import UserSession
 from ui.BillEx import BillEx
+
 from ui.Payment import Ui_MainWindow
 
 
@@ -39,6 +40,8 @@ class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.pushButtonfb.clicked.connect(self.open_facebook)
         self.pushButtonHome.clicked.connect(self.home)
         self.pushButtonConfirm.clicked.connect(self.confirm)
+        self.pushButtonDiscounts.clicked.connect(self.open_discount)
+        self.pushButtonAboutUs.clicked.connect(self.open_aboutus)
 
     def home(self):
         from ui.MainEx import MainEx
@@ -172,6 +175,17 @@ class PaymentEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.lineEditShowPoint.setText("")
         self.labelUsername.setText("")
         self.labelMail.setText("")
+    def open_discount(self):
+        from ui.DiscountEx import DiscountEx
+        self.discount_window = DiscountEx()
+        self.discount_window.show()
+        self.close()
+
+    def open_aboutus(self):
+        from ui.AboutUsEx import AboutUsEx
+        self.aboutus_window = AboutUsEx()
+        self.aboutus_window.show()
+        self.close()
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)

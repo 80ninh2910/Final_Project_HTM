@@ -240,9 +240,9 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>0</y>
+       <y>-282</y>
        <width>988</width>
-       <height>3012</height>
+       <height>2012</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -317,7 +317,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
           <enum>Qt::AutoText</enum>
          </property>
          <property name="pixmap">
-          <pixmap>../../images/discount1.jpg</pixmap>
+          <pixmap>../images/discount1.jpg</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -339,7 +339,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../../images/discount2.jpg</pixmap>
+          <pixmap>../images/discount2.jpg</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -358,7 +358,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../../images/discount4.jpg</pixmap>
+          <pixmap>../images/discount4.jpg</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -367,8 +367,8 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
         <widget class="QPushButton" name="pushButtonGetTK1">
          <property name="geometry">
           <rect>
-           <x>530</x>
-           <y>280</y>
+           <x>630</x>
+           <y>290</y>
            <width>121</width>
            <height>41</height>
           </rect>
@@ -395,7 +395,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
         <widget class="QPushButton" name="pushButtonPlanYourVisit">
          <property name="geometry">
           <rect>
-           <x>610</x>
+           <x>600</x>
            <y>820</y>
            <width>231</width>
            <height>41</height>
@@ -409,16 +409,14 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: white; /* White background */
-    color: black; /* Black text */
-    border-radius: 20px; /* Rounded corners */
-    padding: 10px 30px; /* Padding */
-    border: none; /* No border */
-    font-size: 14px; /* Font size */
-    font-weight: bold; /* Bold text */
-    cursor: pointer; /* Change cursor to pointer */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Slight shadow */
-</string>
+          <string notr="true"> background-color: transparent; /* Transparent background */
+    color: white;                  /* White text */
+    border: 2px solid white;       /* White border */
+    border-radius: 20px;           /* Rounded corners */
+    padding: 10px 20px;            /* Padding inside the button */
+    font-size: 12px;               /* Font size */
+    font-weight: bold; 
+  background-color: rgba(0, 0, 0,0.1);</string>
          </property>
          <property name="text">
           <string>Plan Your Visit</string>
@@ -437,7 +435,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../../images/discount3.jpg</pixmap>
+          <pixmap>../images/discount3.jpg</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -482,7 +480,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
          <property name="geometry">
           <rect>
            <x>530</x>
-           <y>210</y>
+           <y>220</y>
            <width>341</width>
            <height>20</height>
           </rect>
@@ -497,8 +495,8 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
         <widget class="QLabel" name="label_13">
          <property name="geometry">
           <rect>
-           <x>530</x>
-           <y>230</y>
+           <x>540</x>
+           <y>240</y>
            <width>301</width>
            <height>20</height>
           </rect>
@@ -513,7 +511,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
         <widget class="QLabel" name="label_10">
          <property name="geometry">
           <rect>
-           <x>530</x>
+           <x>570</x>
            <y>160</y>
            <width>251</width>
            <height>61</height>
@@ -529,7 +527,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
         <widget class="QLabel" name="label_14">
          <property name="geometry">
           <rect>
-           <x>50</x>
+           <x>120</x>
            <y>420</y>
            <width>251</width>
            <height>61</height>
@@ -561,7 +559,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
         <widget class="QLabel" name="label_17">
          <property name="geometry">
           <rect>
-           <x>530</x>
+           <x>600</x>
            <y>690</y>
            <width>251</width>
            <height>61</height>
@@ -593,7 +591,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
         <widget class="QLabel" name="label_19">
          <property name="geometry">
           <rect>
-           <x>40</x>
+           <x>160</x>
            <y>970</y>
            <width>171</width>
            <height>61</height>
@@ -689,16 +687,14 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: white; /* White background */
-    color: black; /* Black text */
-    border-radius: 20px; /* Rounded corners */
-    padding: 10px 30px; /* Padding */
-    border: none; /* No border */
-    font-size: 14px; /* Font size */
-    font-weight: bold; /* Bold text */
-    cursor: pointer; /* Change cursor to pointer */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Slight shadow */
-</string>
+          <string notr="true"> background-color: transparent; /* Transparent background */
+    color: white;                  /* White text */
+    border: 2px solid white;       /* White border */
+    border-radius: 20px;           /* Rounded corners */
+    padding: 10px 20px;            /* Padding inside the button */
+    font-size: 12px;               /* Font size */
+    font-weight: bold; 
+  background-color: rgba(0, 0, 0,0.1);</string>
          </property>
          <property name="text">
           <string>See Showtimes</string>
@@ -720,7 +716,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../../images/logoreal.png</pixmap>
+          <pixmap>../images/logoreal.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -764,7 +760,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
         <widget class="QPushButton" name="pushButtonGetTK2">
          <property name="geometry">
           <rect>
-           <x>90</x>
+           <x>180</x>
            <y>570</y>
            <width>121</width>
            <height>41</height>
@@ -789,40 +785,10 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
           <string>Get Tickets</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButtonJoinInsider">
-         <property name="geometry">
-          <rect>
-           <x>280</x>
-           <y>570</y>
-           <width>121</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>-1</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"> background-color: transparent; /* Transparent background */
-    color: white;                  /* White text */
-    border: 2px solid white;       /* White border */
-    border-radius: 20px;           /* Rounded corners */
-    padding: 10px 20px;            /* Padding inside the button */
-    font-size: 12px;               /* Font size */
-    font-weight: bold; 
-  background-color: rgba(0, 0, 0,0.1);</string>
-         </property>
-         <property name="text">
-          <string>Join Insider</string>
-         </property>
-        </widget>
         <widget class="QLabel" name="label_22">
          <property name="geometry">
           <rect>
-           <x>530</x>
+           <x>540</x>
            <y>770</y>
            <width>371</width>
            <height>21</height>
@@ -881,7 +847,7 @@ background-color: rgb(123, 0, 0);</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../../images/AboutUs7.jpg</pixmap>
+          <pixmap>../images/AboutUs7.jpg</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -949,7 +915,7 @@ color: rgb(255, 255, 255);
          <property name="geometry">
           <rect>
            <x>430</x>
-           <y>1790</y>
+           <y>1810</y>
            <width>121</width>
            <height>31</height>
           </rect>
@@ -1023,7 +989,7 @@ color:rgb(0, 0, 0);
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>1870</y>
+           <y>1850</y>
            <width>981</width>
            <height>61</height>
           </rect>
@@ -1052,8 +1018,8 @@ color:rgb(0, 0, 0);
          <property name="geometry">
           <rect>
            <x>-10</x>
-           <y>1900</y>
-           <width>991</width>
+           <y>1890</y>
+           <width>1001</width>
            <height>61</height>
           </rect>
          </property>
@@ -1102,7 +1068,6 @@ color:rgb(0, 0, 0);
         <zorder>label_21</zorder>
         <zorder>label_24</zorder>
         <zorder>pushButtonGetTK2</zorder>
-        <zorder>pushButtonJoinInsider</zorder>
         <zorder>label_22</zorder>
         <zorder>label_9</zorder>
         <zorder>label_8</zorder>
@@ -1172,27 +1137,27 @@ color:rgb(0, 0, 0);
     </item>
     <item>
      <property name="text">
-      <string>New Item</string>
+      <string>UEL</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>HAI BÀ TRƯNG</string>
+      <string>HỒ CHÍ MINH</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>QUỐC THANH</string>
+      <string>COMING SOON...</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>New Item</string>
+      <string/>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>New Item</string>
+      <string/>
      </property>
     </item>
    </widget>
@@ -1224,7 +1189,7 @@ color: rgb(0, 0, 0);
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../../images/ic_ticket.png</normaloff>../../images/ic_ticket.png</iconset>
+      <normaloff>../images/ic_ticket.png</normaloff>../images/ic_ticket.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -1261,7 +1226,7 @@ color: rgb(255, 255, 255);
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../../images/ic_popcorn.png</normaloff>../../images/ic_popcorn.png</iconset>
+      <normaloff>../images/ic_popcorn.png</normaloff>../images/ic_popcorn.png</iconset>
     </property>
     <property name="iconSize">
      <size>

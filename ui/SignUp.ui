@@ -84,7 +84,7 @@ color: rgb(255, 255, 255);
     padding: 5px</string>
     </property>
     <property name="text">
-     <string>Mời nhập Gmail</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEditUsername">
@@ -104,7 +104,7 @@ color: rgb(255, 255, 255);
     padding: 5px</string>
     </property>
     <property name="text">
-     <string>Chọn user là tên hiển thị và đăng nhập của bạn</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEditPw">

@@ -151,16 +151,14 @@ class NGTEx(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def open_discount(self):
         from ui.DiscountEx import DiscountEx
-        if self.mainwindow is None:
-            self.mainwindow = DiscountEx()
-        self.mainwindow.show()
+        self.discount_window = DiscountEx()
+        self.discount_window.show()
         self.close()
 
     def open_aboutus(self):
         from ui.AboutUsEx import AboutUsEx
-        if self.mainwindow is None:
-            self.mainwindow = AboutUsEx()
-        self.mainwindow.show()
+        self.aboutus_window = AboutUsEx()
+        self.aboutus_window.show()
         self.close()
     def home(self):
         from ui.MainEx import MainEx

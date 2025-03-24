@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'E:\Personal Projects\___Pycharm___\FN4\ui\SignUp.ui'
+# Form implementation generated from reading ui file 'E:\Personal Projects\___Pycharm___\FN5\ui\SignUp.ui'
 #
 # Created by: PyQt6 UI code generator 6.8.0
 #
@@ -21,13 +21,13 @@ class Ui_MainWindow(object):
         self.label.setGeometry(QtCore.QRect(6, 6, 1000, 600))
         self.label.setMaximumSize(QtCore.QSize(1000, 600))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN4\\ui\\../images/thumble-muataikhoannetflixvn.jpg"))
+        self.label.setPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/thumble-muataikhoannetflixvn.jpg"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(parent=self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(10, 0, 181, 151))
         self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN4\\ui\\../images/logoreal.png"))
+        self.label_2.setPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/logoreal.png"))
         self.label_2.setScaledContents(True)
         self.label_2.setObjectName("label_2")
         self.lineEditGmail = QtWidgets.QLineEdit(parent=self.centralwidget)
@@ -37,6 +37,7 @@ class Ui_MainWindow(object):
 "color: rgb(255, 255, 255);\n"
 "    border-radius: 5px;\n"
 "    padding: 5px")
+        self.lineEditGmail.setText("")
         self.lineEditGmail.setObjectName("lineEditGmail")
         self.lineEditUsername = QtWidgets.QLineEdit(parent=self.centralwidget)
         self.lineEditUsername.setGeometry(QtCore.QRect(360, 240, 291, 41))
@@ -45,6 +46,7 @@ class Ui_MainWindow(object):
 "color: rgb(255, 255, 255);\n"
 "    border-radius: 5px;\n"
 "    padding: 5px")
+        self.lineEditUsername.setText("")
         self.lineEditUsername.setObjectName("lineEditUsername")
         self.lineEditPw = QtWidgets.QLineEdit(parent=self.centralwidget)
         self.lineEditPw.setGeometry(QtCore.QRect(360, 320, 291, 41))
@@ -192,8 +194,6 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.lineEditGmail.setText(_translate("MainWindow", "Mời nhập Gmail"))
-        self.lineEditUsername.setText(_translate("MainWindow", "Chọn user là tên hiển thị và đăng nhập của bạn"))
         self.label_4.setText(_translate("MainWindow", "Sign Up"))
         self.label_5.setText(_translate("MainWindow", "Gmail"))
         self.label_6.setText(_translate("MainWindow", "Username:"))
