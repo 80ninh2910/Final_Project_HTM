@@ -61,14 +61,14 @@ class BuyPopcornEx(QMainWindow, Ui_MainWindow):
 
     def open_aboutus(self):
         """Mở cửa sổ 'Giới thiệu'"""
-        from ui.AboutUs.AboutUsEx import AboutUsEx
+        from ui.AboutUsEx import AboutUsEx
         self.mainwindow = AboutUsEx()
         self.mainwindow.show()
         self.close()
 
     def open_discount(self):
         """Mở cửa sổ 'Khuyến mãi'"""
-        from ui.Discount.DiscountEx import DiscountEx
+        from ui.DiscountEx import DiscountEx
         self.mainwindow = DiscountEx()
         self.mainwindow.show()
         self.close()

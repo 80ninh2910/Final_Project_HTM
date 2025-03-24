@@ -59,14 +59,14 @@ class MainEx(QMainWindow, Ui_MainWindow):
         self.ngt_window.show()
         self.close()
     def open_discount(self):
-        from ui.Discount.DiscountEx import DiscountEx
+        from ui.DiscountEx import DiscountEx
         if self.mainwindow is None:
             self.mainwindow = DiscountEx()
         self.mainwindow.show()
         self.close()
 
     def open_aboutus(self):
-        from ui.AboutUs.AboutUsEx import AboutUsEx
+        from ui.AboutUsEx import AboutUsEx
         if self.mainwindow is None:
             self.mainwindow = AboutUsEx()
         self.mainwindow.show()

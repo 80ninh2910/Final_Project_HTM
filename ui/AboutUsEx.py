@@ -2,10 +2,11 @@ from PyQt6.QtCore import QUrl
 from PyQt6.QtGui import QDesktopServices
 from PyQt6.QtWidgets import QMainWindow
 
-from ui.Discount.Discount import Ui_MainWindow
+
+from ui.AboutUs import Ui_MainWindow
 
 
-class DiscountEx(QMainWindow, Ui_MainWindow):
+class AboutUsEx(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)  # Initialize UI
@@ -16,17 +17,16 @@ class DiscountEx(QMainWindow, Ui_MainWindow):
 
     def setupSignalAndSlots(self):
         self.pushButtonShowtimes.clicked.connect(self.home)
-        self.pushButtonAboutUs.clicked.connect(self.open_aboutus)
+        self.pushButtonDiscounts.clicked.connect(self.open_discount)
         self.pushButtonBuyPop.clicked.connect(self.open_BuyPopcorn_Window)
-        self.pushButtonGetTK1.clicked.connect(self.home)
-        self.pushButtonGetTK2.clicked.connect(self.home)
-        self.pushButtonSeeShowtimes.clicked.connect(self.home)
         self.pushButtonfb.clicked.connect(self.openfb)
-        self.pushButtonPlanYourVisit.clicked.connect(self.home)
-        self.pushButtonSeeShowtimes.clicked.connect(self.home)
-        self.pushButtonJoinInsider.clicked.connect(self.JoinInsider)
-        self.pushButtonSeeMorePromotions.clicked.connect(self.openfb)
-        self.pushButtonTicket_2.clicked.connect(self.home)
+        self.pushButtonLearnMore1.clicked.connect(self.openfb)
+        self.pushButtonLearnMore2.clicked.connect(self.openfb)
+        self.pushButtonLearnMore3.clicked.connect(self.openfb)
+        self.pushButtonLearnMore4.clicked.connect(self.openfb)
+        self.pushButtonTicket.clicked.connect(self.home)
+
+
     def home(self):
         from ui.MainEx import MainEx
 
@@ -36,11 +36,10 @@ class DiscountEx(QMainWindow, Ui_MainWindow):
         self.mainwindow.show()
         self.close()
 
-    def open_aboutus(self):
-        from ui.AboutUs.AboutUsEx import AboutUsEx
+    def open_discount(self):
+        from ui.DiscountEx import DiscountEx
         if self.mainwindow is None:
-            self.mainwindow = AboutUsEx()
-
+            self.mainwindow = DiscountEx()
         self.mainwindow.show()
         self.close()
 
@@ -53,5 +52,3 @@ class DiscountEx(QMainWindow, Ui_MainWindow):
     def openfb(self):
         contact="https://www.facebook.com/profile.php?id=61573908070943"
         QDesktopServices.openUrl(QUrl(contact))
-    def JoinInsider(self):
-        pass
