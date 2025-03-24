@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'E:\Personal Projects\___Pycharm___\FN4\ui\Payment.ui'
+# Form implementation generated from reading ui file 'D:\Final_Project_HTM\ui\Payment.ui'
 #
 # Created by: PyQt6 UI code generator 6.8.0
 #
@@ -163,7 +163,7 @@ class Ui_MainWindow(object):
         self.label_29 = QtWidgets.QLabel(parent=self.frame)
         self.label_29.setGeometry(QtCore.QRect(-10, 0, 991, 251))
         self.label_29.setText("")
-        self.label_29.setPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN4\\ui\\../images/Red And Yellow Illustrated Movie Night Perfomance Invitation Outdor Banner.png"))
+        self.label_29.setPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../images/Red And Yellow Illustrated Movie Night Perfomance Invitation Outdor Banner.png"))
         self.label_29.setScaledContents(True)
         self.label_29.setObjectName("label_29")
         self.pushButtonDiscounts_4 = QtWidgets.QPushButton(parent=self.frame)
@@ -201,7 +201,7 @@ class Ui_MainWindow(object):
         self.label = QtWidgets.QLabel(parent=self.frame)
         self.label.setGeometry(QtCore.QRect(-30, 240, 959, 361))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN4\\ui\\../images/Blue Modern Cinema Ticket.png"))
+        self.label.setPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../images/Blue Modern Cinema Ticket.png"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.label_5 = QtWidgets.QLabel(parent=self.frame)
@@ -386,7 +386,7 @@ class Ui_MainWindow(object):
 "    border-radius: 10px;\n"
 "    padding: 5px")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN4\\ui\\../images/ic_popcorn.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon.addPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../images/ic_popcorn.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButtonConfirm.setIcon(icon)
         self.pushButtonConfirm.setIconSize(QtCore.QSize(30, 30))
         self.pushButtonConfirm.setAutoRepeatDelay(305)
@@ -394,7 +394,7 @@ class Ui_MainWindow(object):
         self.label_2 = QtWidgets.QLabel(parent=self.frame)
         self.label_2.setGeometry(QtCore.QRect(-10, 900, 991, 151))
         self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN4\\ui\\../images/Screenshot 2025-03-17 023822.png"))
+        self.label_2.setPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../images/Screenshot 2025-03-17 023822.png"))
         self.label_2.setScaledContents(True)
         self.label_2.setObjectName("label_2")
         self.line_2 = QtWidgets.QFrame(parent=self.frame)
@@ -443,7 +443,7 @@ class Ui_MainWindow(object):
 "    border-radius: 10px;\n"
 "    padding: 5px")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN4\\ui\\../images/fb.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon1.addPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../images/fb.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButtonfb.setIcon(icon1)
         self.pushButtonfb.setIconSize(QtCore.QSize(30, 30))
         self.pushButtonfb.setAutoRepeatDelay(305)
@@ -459,7 +459,7 @@ class Ui_MainWindow(object):
 "    border: none")
         self.pushButton_4.setText("")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN4\\ui\\../images/logoreal.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon2.addPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../images/logoreal.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButton_4.setIcon(icon2)
         self.pushButton_4.setIconSize(QtCore.QSize(100, 100))
         self.pushButton_4.setObjectName("pushButton_4")
@@ -595,7 +595,7 @@ class Ui_MainWindow(object):
 "    border-radius: 10px;\n"
 "    padding: 5px")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN4\\ui\\../images/home.ico"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon3.addPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../images/home.ico"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButtonHome.setIcon(icon3)
         self.pushButtonHome.setIconSize(QtCore.QSize(30, 30))
         self.pushButtonHome.setAutoRepeat(False)

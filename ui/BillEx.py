@@ -5,9 +5,46 @@ from PyQt6.QtCore import Qt
 
 
 from librarys.PointManager import PointManager
+from librarys.QRFactory import PaymentMethodFactory
 from librarys.TransactionManager import TransactionManager
 from models.Transaction import Transaction
 from ui.Bill import Ui_MainWindow
+
+class PaymentSelectionDialog(QtWidgets.QDialog):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("Chọn phương thức thanh toán")
+        self.setStyleSheet("background-color: white;")
+
+        # Tạo danh sách radio button
+        self.payment_methods = {
+            "Momo": "momo",
+            "VNPay": "vnpay",
+            "VietQR": "vietqr"
+        }
+        self.selected_method = None  # Lưu phương thức đã chọn
+
+        layout = QtWidgets.QVBoxLayout()
+
+        self.radio_buttons = {}
+        for name, method in self.payment_methods.items():
+            radio = QtWidgets.QRadioButton(name)
+            self.radio_buttons[method] = radio
+            layout.addWidget(radio)
+
+        # Nút Xác nhận
+        self.confirm_button = QtWidgets.QPushButton("Xác nhận")
+        self.confirm_button.clicked.connect(self.accept_selection)
+        layout.addWidget(self.confirm_button)
+
+        self.setLayout(layout)
+
+    def accept_selection(self):
+        for method, radio in self.radio_buttons.items():
+            if radio.isChecked():
+                self.selected_method = method
+                break
+        self.accept()  # Đóng dialog
 
 class BillEx(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self,payment_window, username, email,movie, theater, showtime, seat_text, order_items, final_payment):
@@ -21,6 +58,8 @@ class BillEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.set_data(username, email,movie, theater, showtime, seat_text, order_items, final_payment)
         self.pushButtonPay.clicked.connect(self.pay)
         self.pushButtonBack.clicked.connect(self.back)
+
+        self.payment=PaymentMethodFactory()
 
     def set_data(self, username, email,movie, theater, showtime, seat_text, order_items, final_payment):
         self.labelUsername.setText(username)
@@ -64,38 +103,39 @@ class BillEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.show_qr_code()
 
     def show_qr_code(self):
-        # Dialog for confirmation with a QR code
-        dialog = QtWidgets.QDialog(self)
-        dialog.setWindowTitle("QR Code Thanh Toán")
+        'Hiển thị dialog chọn phương thức thanh toán'
+        dialog = PaymentSelectionDialog(self)
+        if dialog.exec():
+            selected_method = dialog.selected_method
 
-        # Load the QR code image
-        pixmap = QtGui.QPixmap("../images/qrcode.jpg")
-        if not pixmap.isNull():
-            pixmap = pixmap.scaled(200, 200, Qt.AspectRatioMode.KeepAspectRatio)
-        else:
-            QtWidgets.QMessageBox.critical(self, "Error", "QR code image not found.")
-            return
+            # Lấy QR tương ứng
+            payment_method = self.payment.get_qr(selected_method)
+            pixmap = QtGui.QPixmap(payment_method.display_qr())
 
-        # Create a label for the QR code
-        label_image = QtWidgets.QLabel()
-        label_image.setPixmap(pixmap)
-        label_image.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            # Hiển thị QR code trong dialog
+            qr_dialog = QtWidgets.QDialog(self)
+            qr_dialog.setWindowTitle("QR Code Thanh Toán")
+            qr_dialog.setStyleSheet("background-color: white;")
 
-        # Create a layout and add the image and buttons
-        layout = QtWidgets.QVBoxLayout()
-        layout.addWidget(label_image)
+            label_image = QtWidgets.QLabel()
+            label_image.setPixmap(pixmap.scaled(200, 200, Qt.AspectRatioMode.KeepAspectRatio))
+            label_image.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        # Yes/No buttons
-        button_box = QtWidgets.QDialogButtonBox(
-            QtWidgets.QDialogButtonBox.StandardButton.Yes | QtWidgets.QDialogButtonBox.StandardButton.No)
-        layout.addWidget(button_box)
+            layout = QtWidgets.QVBoxLayout()
+            layout.addWidget(label_image)
 
-        button_box.accepted.connect(lambda: self.handle_success(dialog, self.final_payment))  # Yes
-        button_box.rejected.connect(dialog.reject)  # No
+            # Thêm nút xác nhận thanh toán
+            button_box = QtWidgets.QDialogButtonBox(QtWidgets.QDialogButtonBox.StandardButton.Yes |
+                                                    QtWidgets.QDialogButtonBox.StandardButton.No)
+            layout.addWidget(button_box)
 
-        dialog.setLayout(layout)
-        dialog.resize(300, 300)
-        dialog.exec()
+            button_box.accepted.connect(lambda: self.handle_success(qr_dialog, self.final_payment))
+            button_box.rejected.connect(qr_dialog.reject)
+
+            qr_dialog.setLayout(layout)
+            qr_dialog.resize(300, 300)
+            qr_dialog.exec()
+
     def handle_success(self, dialog,final_payment):
         QtWidgets.QMessageBox.information(self, "Payment Successful", "Payment Successful!")
         self.finalize_payment(final_payment)
