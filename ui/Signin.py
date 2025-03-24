@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'D:\Final_Project_HTM\ui\Signin.ui'
+# Form implementation generated from reading ui file 'E:\Personal Projects\___Pycharm___\FN5\ui\Signin.ui'
 #
 # Created by: PyQt6 UI code generator 6.8.0
 #
@@ -21,13 +21,13 @@ class Ui_MainWindow(object):
         self.label.setGeometry(QtCore.QRect(6, 6, 1000, 600))
         self.label.setMaximumSize(QtCore.QSize(1000, 600))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../images/thumble-muataikhoannetflixvn.jpg"))
+        self.label.setPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/thumble-muataikhoannetflixvn.jpg"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(parent=self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(10, 0, 181, 151))
         self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap("D:\\Final_Project_HTM\\ui\\../images/logoreal.png"))
+        self.label_2.setPixmap(QtGui.QPixmap("E:\\Personal Projects\\___Pycharm___\\FN5\\ui\\../images/logoreal.png"))
         self.label_2.setScaledContents(True)
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(parent=self.centralwidget)

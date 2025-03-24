@@ -2,7 +2,7 @@ from PyQt6.QtCore import QUrl
 from PyQt6.QtGui import QDesktopServices
 from PyQt6.QtWidgets import QMainWindow
 
-from ui.Discount.Discount import Ui_MainWindow
+from ui.Discount import Ui_MainWindow
 
 
 class DiscountEx(QMainWindow, Ui_MainWindow):

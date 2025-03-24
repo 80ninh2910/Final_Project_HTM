@@ -2,6 +2,8 @@ from PyQt6.QtGui import QDesktopServices
 from PyQt6.QtWidgets import QMainWindow
 from PyQt6.QtCore import QUrl
 
+from ui.AboutUsEx import AboutUsEx
+from ui.DiscountEx import DiscountEx
 from ui.EMMAEx import EMMAEx
 from ui.Main import Ui_MainWindow
 from ui.NGTEx import NGTEx
@@ -55,19 +57,15 @@ class MainEx(QMainWindow, Ui_MainWindow):
         self.close()
 
     def openEMMA(self):
-        self.ngt_window = EMMAEx()
-        self.ngt_window.show()
+        self.emma_window = EMMAEx()
+        self.emma_window.show()
         self.close()
     def open_discount(self):
-        from ui.DiscountEx import DiscountEx
-        if self.mainwindow is None:
-            self.mainwindow = DiscountEx()
-        self.mainwindow.show()
+        self.discount_window = DiscountEx()
+        self.discount_window.show()
         self.close()
 
     def open_aboutus(self):
-        from ui.AboutUsEx import AboutUsEx
-        if self.mainwindow is None:
-            self.mainwindow = AboutUsEx()
-        self.mainwindow.show()
+        self.aboutus_window = AboutUsEx()
+        self.aboutus_window.show()
         self.close()
