@@ -36,6 +36,7 @@ class BillEx(QtWidgets.QMainWindow, Ui_MainWindow):
         username = self.labelUsername.text()
         email = self.labelMail.text()
         theater = self.labelTheater.text()
+        movie = self.labelMovie.text()
         showtime = self.labelTime.text()
         seat_text = self.labelSeat.text()
         order_items = self.labelOrder.text()
@@ -46,6 +47,7 @@ class BillEx(QtWidgets.QMainWindow, Ui_MainWindow):
             user_name=username,
             mail=email,
             theater=theater,
+            movie=movie,
             showtime=showtime,
             seats=seat_text,
             order_items=order_items,
