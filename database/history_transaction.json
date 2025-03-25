@@ -2938,5 +2938,53 @@
         "seats": "C2, D3, D2, C3",
         "order_items": "- Sprite: 4x\n- Cheese: 2x\n- Combo Solo: 5x",
         "price": 898000
+    },
+    {
+        "transaction_id": "TXN-20250325194059",
+        "timestamp": "2025-03-25 19:40:59",
+        "user_name": "viet123",
+        "mail": "viet@gmail.com",
+        "theater": "HCM",
+        "movie": "NHÀ GIA TIÊN",
+        "showtime": "14:20",
+        "seats": "D3, C3",
+        "order_items": "- Sprite: 2x",
+        "price": 164000
+    },
+    {
+        "transaction_id": "TXN-20250325214302",
+        "timestamp": "2025-03-25 21:43:02",
+        "user_name": "su123",
+        "mail": "su@gmail.com",
+        "theater": "UEL",
+        "movie": "QUỶ NHẬP TRÀNG",
+        "showtime": "12:15",
+        "seats": "B2, C2",
+        "order_items": "- Sprite: 3x\n- Cheese: 2x",
+        "price": 321000
+    },
+    {
+        "transaction_id": "TXN-20250325214328",
+        "timestamp": "2025-03-25 21:43:28",
+        "user_name": "su123",
+        "mail": "su@gmail.com",
+        "theater": "UEL",
+        "movie": "QUỶ NHẬP TRÀNG",
+        "showtime": "12:15",
+        "seats": "B2, C2",
+        "order_items": "- Sprite: 3x\n- Cheese: 2x",
+        "price": 321000
+    },
+    {
+        "transaction_id": "TXN-20250325214810",
+        "timestamp": "2025-03-25 21:48:10",
+        "user_name": "su123",
+        "mail": "su@gmail.com",
+        "theater": "UEL",
+        "movie": "NHÀ GIA TIÊN",
+        "showtime": "19:00",
+        "seats": "D4, C4",
+        "order_items": "- Cheese: 1x",
+        "price": 150000
     }
 ]

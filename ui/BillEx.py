@@ -72,33 +72,6 @@ class BillEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.labelOrder.setText(order_items)
         self.labelTotal.setText(f"{final_payment} VND")
     def pay(self):
-        # Retrieve data from labels to pass to the Transaction model
-        username = self.labelUsername.text()
-        email = self.labelMail.text()
-        theater = self.labelTheater.text()
-        movie = self.labelMovie.text()
-        showtime = self.labelTime.text()
-        seat_text = self.labelSeat.text()
-        order_items = self.labelOrder.text()
-        final_payment = int(self.labelTotal.text().replace(" VND", "").replace(",", ""))
-
-        # Create transaction object
-        transaction = Transaction(
-            user_name=username,
-            mail=email,
-            theater=theater,
-            movie=movie,
-            showtime=showtime,
-            seats=seat_text,
-            order_items=order_items,
-            price=final_payment
-        )
-
-        try:
-            self.transaction_manager.save_transaction(transaction.to_dict())
-        except Exception as e:
-            print(f"Lỗi khi lưu giao dịch: {e}")
-            return
 
         # Show QR Code dialog with Yes/No buttons
         self.show_qr_code()
@@ -150,6 +123,33 @@ class BillEx(QtWidgets.QMainWindow, Ui_MainWindow):
     def process_payment(self):
         QtWidgets.QMessageBox.information(self, "Payment Successful", "Thank you for purchasing your ticket!",
                                           QtWidgets.QMessageBox.StandardButton.Ok)
+        # Retrieve data from labels to pass to the Transaction model
+        username = self.labelUsername.text()
+        email = self.labelMail.text()
+        theater = self.labelTheater.text()
+        movie = self.labelMovie.text()
+        showtime = self.labelTime.text()
+        seat_text = self.labelSeat.text()
+        order_items = self.labelOrder.text()
+        final_payment = int(self.labelTotal.text().replace(" VND", "").replace(",", ""))
+
+        # Create transaction object
+        transaction = Transaction(
+            user_name=username,
+            mail=email,
+            theater=theater,
+            movie=movie,
+            showtime=showtime,
+            seats=seat_text,
+            order_items=order_items,
+            price=final_payment
+        )
+
+        try:
+            self.transaction_manager.save_transaction(transaction.to_dict())
+        except Exception as e:
+            print(f"Lỗi khi lưu giao dịch: {e}")
+            return
         self.reset_fields_bill()
         self.payment_window.clear_data()
         self.payment_window.close()
