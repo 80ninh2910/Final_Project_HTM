@@ -2986,5 +2986,41 @@
         "seats": "D4, C4",
         "order_items": "- Cheese: 1x",
         "price": 150000
+    },
+    {
+        "transaction_id": "TXN-20250326012244",
+        "timestamp": "2025-03-26 01:22:44",
+        "user_name": "",
+        "mail": "",
+        "theater": "UEL",
+        "movie": "NHÀ GIA TIÊN",
+        "showtime": "14:20",
+        "seats": "D3, C3",
+        "order_items": "- Fanta: 1x\n- Combo Solo: 4x",
+        "price": 487000
+    },
+    {
+        "transaction_id": "TXN-20250326012436",
+        "timestamp": "2025-03-26 01:24:36",
+        "user_name": "",
+        "mail": "",
+        "theater": "UEL",
+        "movie": "NHÀ GIA TIÊN",
+        "showtime": "14:20",
+        "seats": "C2, D3, C3, D2",
+        "order_items": "- Caramel: 1x",
+        "price": 234700
+    },
+    {
+        "transaction_id": "TXN-20250326012627",
+        "timestamp": "2025-03-26 01:26:27",
+        "user_name": "xinchao",
+        "mail": "xinchao",
+        "theater": "UEL",
+        "movie": "LITTLE EMMA",
+        "showtime": "19:00",
+        "seats": "C3, D4, C4",
+        "order_items": "- Caramel: 1x\n- Combo Solo: 3x",
+        "price": 465000
     }
 ]

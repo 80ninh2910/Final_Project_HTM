@@ -28,7 +28,7 @@ class SignInEx(QtWidgets.QMainWindow, Ui_MainWindow):
         valid_user = self.dc.login(username_or_email, password)
         if valid_user:
             self.us.set_user(username_or_email)
-            self.show_message("Success", "Registration successful!", QtWidgets.QMessageBox.Icon.Information)
+            self.show_message("Success", "Login successful!!!", QtWidgets.QMessageBox.Icon.Information)
             self.home()
         else:
             self.show_message("Error", "Email has already been registered!", QtWidgets.QMessageBox.Icon.Warning)

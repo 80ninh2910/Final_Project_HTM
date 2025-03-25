@@ -41,11 +41,16 @@ class PaymentSelectionDialog(QtWidgets.QDialog):
         self.setLayout(layout)
 
     def accept_selection(self):
+        self.selected_method = None
         for method, radio in self.radio_buttons.items():
             if radio.isChecked():
                 self.selected_method = method
                 break
-        self.accept()  # Đóng dialog
+        if not self.selected_method:
+            # Hiển thị thông báo nếu không có phương thức thanh toán được chọn
+            QtWidgets.QMessageBox.warning(self, "Error", "Please select payment method.")
+        else:
+            self.accept()  # Đóng dialog nếu chọn hợp lệ
 
 class BillEx(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self,payment_window, username, email,movie, theater, showtime, seat_text, order_items, final_payment):
@@ -72,7 +77,6 @@ class BillEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.labelOrder.setText(order_items)
         self.labelTotal.setText(f"{final_payment} VND")
     def pay(self):
-
         # Show QR Code dialog with Yes/No buttons
         self.show_qr_code()
 

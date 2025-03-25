@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
+    <width>1009</width>
     <height>713</height>
    </rect>
   </property>
@@ -29,7 +29,7 @@ color: rgb(255, 255, 255);
    <widget class="QPushButton" name="pushButtonShwtm">
     <property name="geometry">
      <rect>
-      <x>120</x>
+      <x>20</x>
       <y>70</y>
       <width>91</width>
       <height>31</height>
@@ -1289,7 +1289,7 @@ QPushButton {
           <rect>
            <x>260</x>
            <y>840</y>
-           <width>161</width>
+           <width>191</width>
            <height>161</height>
           </rect>
          </property>
@@ -1318,7 +1318,7 @@ QPushButton {
           <rect>
            <x>770</x>
            <y>830</y>
-           <width>171</width>
+           <width>211</width>
            <height>171</height>
           </rect>
          </property>
@@ -1888,68 +1888,13 @@ color: rgb(255, 255, 255);
      <number>305</number>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBoxSelect1">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>80</y>
-      <width>76</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bahnschrift Condensed</family>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border:none
-</string>
-    </property>
-    <property name="sizeAdjustPolicy">
-     <enum>QComboBox::AdjustToContents</enum>
-    </property>
-    <item>
-     <property name="text">
-      <string>ALL THEATER</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>UEL</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>HỒ CHÍ MINH</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>COMING SOON...</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string/>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string/>
-     </property>
-    </item>
-   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1000</width>
+     <width>1009</width>
      <height>18</height>
     </rect>
    </property>
