@@ -28,10 +28,10 @@ class SignInEx(QtWidgets.QMainWindow, Ui_MainWindow):
         valid_user = self.dc.login(username_or_email, password)
         if valid_user:
             self.us.set_user(username_or_email)
-            self.show_message("Thành công", "Đăng nhập thành công!", QtWidgets.QMessageBox.Icon.Information)
+            self.show_message("Success", "Registration successful!", QtWidgets.QMessageBox.Icon.Information)
             self.home()
         else:
-            self.show_message("Lỗi", "Tài khoản không tồn tại hoặc sai mật khẩu! Vui lòng kiểm tra lại.", QtWidgets.QMessageBox.Icon.Warning)
+            self.show_message("Error", "Email has already been registered!", QtWidgets.QMessageBox.Icon.Warning)
 
     def home(self):
         """Chuyển sang màn hình chính"""
@@ -54,7 +54,7 @@ class SignInEx(QtWidgets.QMainWindow, Ui_MainWindow):
         msg.setIcon(icon)
         msg.setWindowTitle(title)
         msg.setText(text)
-        msg.setStyleSheet("QLabel{ color: black; } QWidget{ background-color: white; }")
+        msg.setStyleSheet("QLabel{ color: black; } QWidget{ background-color: white;color: black; }")
         msg.exec()
 
 if __name__ == "__main__":

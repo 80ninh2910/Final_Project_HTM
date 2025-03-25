@@ -68,7 +68,7 @@ class EMMAEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.showtime = None
         self.mainwindow = None
         self.popcorn_window = None
-        self.film = "EMMA"
+        self.film = "LITTLE EMMA"
         self.setup_connections()
         self.display_movie_details()
         self.us=UserSession()
@@ -126,9 +126,9 @@ class EMMAEx(QtWidgets.QMainWindow, Ui_MainWindow):
             if i.MTitle =="LITTLE EMMA":
                 self.cart.add_move("LITTLE EMMA")
                 movie=i
-            self.labelType.setText(movie.MType)
-            self.labelDu.setText(movie.dur)
-            self.labelDes.setText(movie.des)
+                self.labelType.setText(movie.MType)
+                self.labelDu.setText(movie.dur)
+                self.labelDes.setText(movie.des)
 
     @staticmethod
     def open_facebook():
@@ -161,6 +161,6 @@ class EMMAEx(QtWidgets.QMainWindow, Ui_MainWindow):
         self.lineEditPhone.setText(str(info["email"]))
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
-    signup_window = EMMAEx()
-    signup_window.show()
+    emma_window = EMMAEx()
+    emma_window.show()
     sys.exit(app.exec())

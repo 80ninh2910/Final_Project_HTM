@@ -28,27 +28,27 @@ class SignUpEx(QtWidgets.QMainWindow, Ui_MainWindow):
         is_agreed = self.radioButtonAgree.isChecked()  # Kiểm tra checkbox đồng ý
 
         if not is_agreed:
-            self.show_message("Lỗi", "Bạn phải đồng ý với điều khoản để tiếp tục đăng ký!", QtWidgets.QMessageBox.Icon.Warning)
+            self.show_message("Error", "You must agree to the terms to proceed with registration!",
+                              QtWidgets.QMessageBox.Icon.Warning)
             return
 
         if not email or not username or not password or not confirm_password:
-            self.show_message("Lỗi", "Vui lòng nhập đầy đủ thông tin!", QtWidgets.QMessageBox.Icon.Warning)
+            self.show_message("Error", "Please fill in all required information!", QtWidgets.QMessageBox.Icon.Warning)
             return
 
         if password != confirm_password:
-            self.show_message("Lỗi", "Mật khẩu xác nhận không khớp!", QtWidgets.QMessageBox.Icon.Warning)
+            self.show_message("Error", "The confirmation password does not match!", QtWidgets.QMessageBox.Icon.Warning)
             return
 
         customers = self.load_customers()
         if any(user.email == email for user in customers):
-            self.show_message("Lỗi", "Email đã được đăng ký!", QtWidgets.QMessageBox.Icon.Warning)
+            self.show_message("Error", "Email has already been registered!", QtWidgets.QMessageBox.Icon.Warning)
             return
-
         new_customer = Customer(email=email, username=username, password=password)
         customers.append(vars(new_customer))
 
         if self.save_customers(customers):
-            self.show_message("Thành công", "Đăng ký thành công!", QtWidgets.QMessageBox.Icon.Information)
+            self.show_message("Success", "Registration successful!", QtWidgets.QMessageBox.Icon.Information)
             self.switch_to_signin()
 
     def load_customers(self):
@@ -81,7 +81,7 @@ class SignUpEx(QtWidgets.QMainWindow, Ui_MainWindow):
         msg.setIcon(icon)
         msg.setWindowTitle(title)
         msg.setText(text)
-        msg.setStyleSheet("QLabel{ color: black; } QWidget{ background-color: white; }")
+        msg.setStyleSheet("QLabel{ color: black; } QWidget{ background-color: white;color: black; }")
         msg.exec()
 
 if __name__ == "__main__":

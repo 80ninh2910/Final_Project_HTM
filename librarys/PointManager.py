@@ -1,11 +1,8 @@
 import json
 import os
 
-
-
-
 class PointManager:
-    def __init__(self, file_path="../database/customer_points.json"):
+    def __init__(self, file_path="../database/Customer_Points.json"):
         self.file_path = file_path
         self.points_data = self.load_points()
 

@@ -1,21 +1,9 @@
 import json
 import os
 
-from PyQt6.uic.Compiler.qtproxies import QtWidgets
-
-
 class TransactionManager:
     def __init__(self):
-        self.history_file = "../database/history_transaction.json"
-
-    def show_message(self, title, text):
-        msg = QtWidgets.QMessageBox()
-        msg.setIcon(QtWidgets.QMessageBox.Icon.Warning)
-        msg.setWindowTitle(title)
-        msg.setText(text)
-        msg.setStyleSheet("QLabel{ color: black; } QWidget{ background-color: white; }")
-        msg.exec()
-
+        self.history_file = "../database/History_Transaction.json"
     def save_transaction(self, transaction_data):
         # Kiểm tra nếu file tồn tại và có dữ liệu JSON hợp lệ
         if os.path.exists(self.history_file) and os.path.getsize(self.history_file) > 0:
